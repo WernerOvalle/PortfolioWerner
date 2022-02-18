@@ -11,6 +11,7 @@ import {
   NavLink,
   SocialIcons,
   Span,
+  ContactDropDown
 } from "./HeaderStyles";
 
 const Header = () => (
@@ -30,25 +31,23 @@ const Header = () => (
       </Link>
     </Div1>
     <Div2>
-      <li>
-        <Link href="#about">
-          <NavLink>About</NavLink>
-        </Link>
-      </li>
-      <li>
-        <Link href="#tech">
-          <NavLink>Technologies</NavLink>
-        </Link>
-      </li>
-
-      <li>
+    <li>
         <Link href="#projects">
           <NavLink>Projects</NavLink>
         </Link>
       </li>
       <li>
         <Link href="#certificates">
-          <NavLink>Certificates</NavLink>
+          <NavLink>Certficates</NavLink>
+         
+        </Link>
+       
+      </li>
+
+    
+      <li>
+        <Link href="#about">
+          <NavLink>About</NavLink>
         </Link>
       </li>
     </Div2>

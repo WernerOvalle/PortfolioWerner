@@ -17,7 +17,7 @@ const Hero = (props) => (
       <SectionText>
       Hello there, welcome to my portfolio, if you want to see my resume, you can click on the following button
       </SectionText>
-      <Button onClick={() => window.location ='holamundo.com'}>Download</Button>
+      <Button onClick={() => window.location ='https://drive.google.com/file/d/1HOPuUsdMT8opDl6zbX_MwAnotSYjW13G/view?usp=sharing'}>Download</Button>
     </LeftSection>
   </Section>
 </>

@@ -179,7 +179,7 @@ export const TimeLineData = [
   },
   { year: 2019, text: "I start working in E-Solutions" },
   { year: 2020, text: "I graduated as a Systems Engineer" },
-  { year: 2021, text: "I start working in Corporacion BI" },
+  { year: 2021, text: "I started working at Corporación BI and got a Master's degree" },
 ];
 export const data = [
   { number: 1, text: "Course" },

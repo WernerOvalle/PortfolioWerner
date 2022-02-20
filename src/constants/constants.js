@@ -84,7 +84,8 @@ export const projects = [
     tags: ["PHP  ", "MySQL ", "Bootstrap", "jQuery", "Docker"],
     source: "",
     source2: "",
-    visit: "https://www.udemy.com/course/crud-con-php-mysql-bootstrap-jquery-ajax-y-docker/?referralCode=7DA4E7BDFF8902109591",
+    visit:
+      "https://www.udemy.com/course/crud-con-php-mysql-bootstrap-jquery-ajax-y-docker/?referralCode=7DA4E7BDFF8902109591",
     id: 6,
   },
 ];
@@ -191,18 +192,16 @@ export const research = [
     description:
       "Master's Graduation Work prior to opting for the title of Magister Artium en informática con énfasis en banca electrónica y comunicaciones",
     image: "/images/tesis2.png",
-
-    visit: "http://chatos842.shekalug.org/ejemplo/Veterinaria/",
+    visit:
+      "https://drive.google.com/file/d/1-wR6KmFYW7q6SCI7qMMnvIbNhSWhtqri/view",
     id: 0,
   },
   {
     description:
       "Thesis prior to opting for the title of Ingeniería en Sistemas de Información Y Ciencias de la Computación",
     image: "/images/tesis.png",
-    tags: ["Bootstrap", "JS", "MySQL", "PHP"],
-    source: "https://github.com/WernerOvalle/Veterinaria",
-    source2: "",
-    visit: "http://chatos842.shekalug.org/ejemplo/Veterinaria/",
+    visit:
+      "https://drive.google.com/file/d/1_UHBSDxC54dHOFzt0aghxkL4SpeJGyJh/view",
     id: 1,
   },
 ];

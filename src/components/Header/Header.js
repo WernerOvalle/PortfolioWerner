@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { DiCssdeck } from "react-icons/di";
+import { RiBook2Line } from "react-icons/ri";
 
 import {
   Container,
@@ -26,7 +27,7 @@ const Header = () => (
             marginBottom: "20px",
           }}
         >
-          <DiCssdeck size="3rem" /> <Span> Portfolio</Span>
+          <RiBook2Line size="3rem" /> <Span> Portfolio</Span>
         </a>
       </Link>
     </Div1>

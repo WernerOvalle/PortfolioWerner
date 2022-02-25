@@ -48,7 +48,7 @@ const Technologies = () =>  (
         <DiFirebase size="3rem" />
       </picture>
       <ListContainer>
-        <ListTitle>Databases</ListTitle>
+        <ListTitle>Database</ListTitle>
         <ListParagraph>
           Experience with <br />
           MySQL <br />
@@ -69,7 +69,7 @@ const Technologies = () =>  (
           Docker <br />
           Git <br />
           Kubernetes <br />
-          Adobe XD <br />
+          {/* Adobe XD <br /> */}
           Ethical Hacking <br />
           
           

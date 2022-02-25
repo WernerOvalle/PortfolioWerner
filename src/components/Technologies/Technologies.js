@@ -38,7 +38,7 @@ const Technologies = () =>  (
           Node <br />
           Laravel <br />
           .NET <br />
-          Spring<br />
+          Java
 
         </ListParagraph>
       </ListContainer>
@@ -51,24 +51,10 @@ const Technologies = () =>  (
         <ListTitle>Databases</ListTitle>
         <ListParagraph>
           Experience with <br />
-          MongoDB <br />
           MySQL <br />
           SQL Server <br />
-          Oracle
-        </ListParagraph>
-      </ListContainer>
-    </ListItem>
-    <ListItem>
-      <picture>
-        <DiDocker size="3rem" />
-      </picture>
-      <ListContainer>
-        <ListTitle>Tools</ListTitle>
-        <ListParagraph>
-          Experience with <br />
-          Docker <br />
-          Git <br />
-          Kubernetes 
+          Oracle <br />
+          MongoDB <br />
         </ListParagraph>
       </ListContainer>
     </ListItem>
@@ -77,13 +63,20 @@ const Technologies = () =>  (
         <DiScrum size="3rem" />
       </picture>
       <ListContainer>
-        <ListTitle>Methodologies</ListTitle>
+        <ListTitle>Other Knowledge</ListTitle>
         <ListParagraph>
-        Experience with <br />
-        Scrum <br />
+          {/* Experience with <br /> */}
+          Docker <br />
+          Git <br />
+          Kubernetes <br />
+          Adobe XD <br />
+          Ethical Hacking <br />
+          
+          
         </ListParagraph>
       </ListContainer>
     </ListItem>
+   
   </List>
   <SectionDivider colorAlt />
 </Section>

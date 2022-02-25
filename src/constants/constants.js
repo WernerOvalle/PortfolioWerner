@@ -65,7 +65,7 @@ export const projects = [
     visit: "https://angularrrrrr.herokuapp.com/startpage",
     id: 5,
   },
-  {
+  /*{
     title: "FINAL PROJECT OF ADVANCED PROGRAMMING IN JAVA",
     description:
       "Web application developed in my Master's Degree as a final project of the Advanced Programming in Java course, which is a billing system.",
@@ -75,7 +75,7 @@ export const projects = [
     source2: "",
     visit: "https://spring-boot2-heroku-werner.herokuapp.com/listar",
     id: 6,
-  },
+  },*/
   {
     title: "COURSE: CRUD WITH PHP MYSQL BOOTSTRAP JQUERY AJAX AND DOCKER",
     description:

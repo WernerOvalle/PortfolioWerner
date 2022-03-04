@@ -51,7 +51,7 @@ export const projects = [
     tags: ["JQuery ", "PHP ", "MySQL"],
     source: "https://github.com/WernerOvalle/MarcaFarma",
     source2: "",
-    visit: "http://chatos842.shekalug.org/ejemplo/",
+    visit: "http://chatos842.shekalug.org/ejemplo/MarcaFarma/",
     id: 4,
   },
   {

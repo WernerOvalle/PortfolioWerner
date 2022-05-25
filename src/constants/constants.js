@@ -24,7 +24,7 @@ export const projects = [
   {
     title: "VETERINARIA PET MARKET",
     description:
-      "Web application developed for the Pet Market veterinary in order to optimize the control of their inventories as well as develop their own website.",
+      "Web application developed for the Pet Market veterinary to optimize the control of their inventories as well as develop their own website.",
     image: "/images/17.png",
     tags: ["Bootstrap", "JS", "MySQL", "PHP"],
     source: "https://github.com/WernerOvalle/Veterinaria",
@@ -55,6 +55,18 @@ export const projects = [
     id: 4,
   },
   {
+    title: "ATF CONSULTORES",
+    description:
+      "Website developed for ATF Consultores where you can find all the information about the company.",
+    image: "/images/11.png",
+    tags: ["ReactJS  ", "JSON ", "Bootstrap"],
+    source: "https://github.com/WernerOvalle/ATFPagina",
+    source2: "",
+    visit:
+      "https://atfp-agina.vercel.app/",
+    id: 5,
+  },
+  {
     title: "OFICINA CENTRAL DE PROTECCIÓN, S.A.",
     description:
       "Web application developed for the company OCP in university practices to optimize the management of their inventories.",
@@ -63,7 +75,7 @@ export const projects = [
     source: "https://github.com/WernerOvalle/ANGULAR",
     source2: "",
     visit: "https://angularrrrrr.herokuapp.com/startpage",
-    id: 5,
+    id: 6,
   },
   /*{
     title: "FINAL PROJECT OF ADVANCED PROGRAMMING IN JAVA",
@@ -86,8 +98,9 @@ export const projects = [
     source2: "",
     visit:
       "https://www.udemy.com/course/crud-con-php-mysql-bootstrap-jquery-ajax-y-docker/?referralCode=7DA4E7BDFF8902109591",
-    id: 6,
+    id: 7,
   },
+  
 ];
 export const certficates = [
   {
@@ -143,8 +156,8 @@ export const certficates = [
     id: 0,
   },
   {
-    title: "THE COMPLETE REACTJS COURSE",
-    image: "/images/project-7.jpg",
+    title: "DIPLOMA IN REACTJS & NODEJS DEVELOPER",
+    image: "/images/projects-20.jpg",
     visit:
       "https://drive.google.com/file/d/13AOhL8das68wk4k8uNKEkxOq1zwWeTeA/view",
     id: 0,
@@ -156,18 +169,12 @@ export const certficates = [
       "https://drive.google.com/file/d/1wjN-yP3fVwUhIwyOrtWiJoz89h_CfPS1/view",
     id: 0,
   },
+  
   {
-    title: "NODESJS: BUILD THE COMPLETE E-COMMERCE WEB API",
-    image: "/images/project-17.jpg",
+    title: "EFSET English Certificate 55/100 (B2 Upper Intermediate)",
+    image: "/images/projects-19.jpg",
     visit:
-      "https://drive.google.com/file/d/1a_oxCEo5VWzAQbRDL8yTXOXSbFI4NUyx/view",
-    id: 0,
-  },
-  {
-    title: "NETWORK ETHICAL HACKING COURSE (KALI -HANDS-ON)",
-    image: "/images/project-18.jpg",
-    visit:
-      "https://drive.google.com/file/d/1UXIKpXfjf64lojQSp2gf85eC4ku2dOEv/view",
+      "https://www.efset.org/cert/gSKS8F",
     id: 0,
   },
 ];

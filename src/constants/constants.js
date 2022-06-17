@@ -163,10 +163,10 @@ export const certficates = [
     id: 0,
   },
   {
-    title: "FUNDAMENTOS DE DESIGN THINKING",
-    image: "/images/projects-14.jpg",
+    title: "CURSO BÁSICO DE JENKINS",
+    image: "/images/jenkins.png",
     visit:
-      "https://drive.google.com/file/d/1wjN-yP3fVwUhIwyOrtWiJoz89h_CfPS1/view",
+      "https://drive.google.com/file/d/1b2diaemLMco1rG_flM16TW4ezudeJkyL/view?usp=sharing",
     id: 0,
   },
   

@@ -1,5 +1,8 @@
 import React from 'react';
 import { DiFirebase, DiReact, DiZend, DiDocker,DiNodejsSmall,DiScrum } from 'react-icons/di';
+import { FaDocker,FaEthereum } from 'react-icons/fa';
+import { AiOutlineConsoleSql } from 'react-icons/ai';
+
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
 
@@ -11,15 +14,15 @@ const Technologies = () =>  (
     I've worked with a range a technologies in the web development world.
     From Back-end To Design
   </SectionText>
-  <List>
-    <ListItem>
+  <List >
+    <ListItem >
       <picture>
         <DiReact size="3rem" />
       </picture>
       <ListContainer>
         <ListTitle>Front-End</ListTitle>
         <ListParagraph>
-          Experiece with <br />
+        Knowledge in <br />
           JQuery <br />
           React.js<br />
           Angular<br />
@@ -34,9 +37,9 @@ const Technologies = () =>  (
       <ListContainer>
         <ListTitle>Back-End</ListTitle>
         <ListParagraph>
-          Experience with <br />
+        Knowledge in <br />
           Node <br />
-          Laravel <br />
+          PHP <br />
           .NET <br />
           Java
 
@@ -45,38 +48,53 @@ const Technologies = () =>  (
     </ListItem>
     <ListItem>
       <picture>
-        <DiFirebase size="3rem" />
+        <AiOutlineConsoleSql size="3rem" />
       </picture>
       <ListContainer>
         <ListTitle>Database</ListTitle>
         <ListParagraph>
-          Experience with <br />
+          Knowledge in <br />
           MySQL <br />
           SQL Server <br />
           Oracle <br />
-          MongoDB <br />
+          MongoDB
         </ListParagraph>
       </ListContainer>
     </ListItem>
     <ListItem>
       <picture>
-        <DiScrum size="3rem" />
+        <FaDocker size="3rem" />
       </picture>
       <ListContainer>
-        <ListTitle>Other Knowledge</ListTitle>
+        <ListTitle>DevOps</ListTitle>
         <ListParagraph>
           {/* Experience with <br /> */}
           Docker <br />
           Git <br />
           Kubernetes <br />
-          {/* Adobe XD <br /> */}
-          Ethical Hacking <br />
+        
+          Jenkins <br />
           
           
         </ListParagraph>
       </ListContainer>
     </ListItem>
-   
+    <ListItem>
+      <picture>
+        <FaEthereum size="3rem" />
+      </picture>
+      <ListContainer>
+        <ListTitle>Blockchain</ListTitle>
+        <ListParagraph>
+          {/* Experience with <br /> */}
+          Ethereum <br />
+         
+          
+          
+        </ListParagraph>
+      </ListContainer>
+    </ListItem>
+    
   </List>
   <SectionDivider colorAlt />
 </Section>

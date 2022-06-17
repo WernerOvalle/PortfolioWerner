@@ -59,7 +59,7 @@ export const projects = [
     description:
       "Website developed for ATF Consultores where you can find all the information about the company.",
     image: "/images/11.png",
-    tags: ["ReactJS  ", "JSON ", "Bootstrap"],
+    tags: ["ReactJS  ", "Bootstrap", "NodeJS"],
     source: "https://github.com/WernerOvalle/ATFPagina",
     source2: "",
     visit:

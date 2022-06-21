@@ -62,8 +62,7 @@ export const projects = [
     tags: ["ReactJS  ", "Bootstrap", "NodeJS"],
     source: "https://github.com/WernerOvalle/ATFPagina",
     source2: "",
-    visit:
-      "https://atfp-agina.vercel.app/",
+    visit: "https://atfp-agina.vercel.app/",
     id: 5,
   },
   {
@@ -77,17 +76,17 @@ export const projects = [
     visit: "https://angularrrrrr.herokuapp.com/startpage",
     id: 6,
   },
-  /*{
-    title: "FINAL PROJECT OF ADVANCED PROGRAMMING IN JAVA",
-    description:
-      "Web application developed in my Master's Degree as a final project of the Advanced Programming in Java course, which is a billing system.",
-    image: "/images/7.png",
-    tags: ["Spring  ", "JQuery", "Bootstrap", "MySQL"],
-    source: "https://bitbucket.org/wjop5bb/prograavanzadajava/src/master/",
-    source2: "",
-    visit: "https://spring-boot2-heroku-werner.herokuapp.com/listar",
-    id: 6,
-  },*/
+  // {
+  //   title: "FINAL PROJECT OF ADVANCED PROGRAMMING IN JAVA",
+  //   description:
+  //     "Web application developed in my Master's Degree as a final project of the Advanced Programming in Java course, which is a billing system.",
+  //   image: "/images/7.png",
+  //   tags: ["Spring  ", "JQuery", "Bootstrap", "MySQL"],
+  //   source: "https://bitbucket.org/wjop5bb/prograavanzadajava/src/master/",
+  //   source2: "",
+  //   visit: "https://spring-boot2-heroku-werner.herokuapp.com/listar",
+  //   id: 8,
+  // },
   {
     title: "COURSE: CRUD WITH PHP MYSQL BOOTSTRAP JQUERY AJAX AND DOCKER",
     description:
@@ -100,7 +99,6 @@ export const projects = [
       "https://www.udemy.com/course/crud-con-php-mysql-bootstrap-jquery-ajax-y-docker/?referralCode=7DA4E7BDFF8902109591",
     id: 7,
   },
-  
 ];
 export const certficates = [
   {
@@ -117,7 +115,7 @@ export const certficates = [
     image: "/images/diploma.jpg",
     visit:
       "https://drive.google.com/file/d/1TxxB7a42UPRb4Z2fx7TcAyMrnFgCvP6Y/view",
-    id: 0,
+    id: 1,
   },
   {
     title:
@@ -125,57 +123,64 @@ export const certficates = [
     image: "/images/titulomaster.jpg",
     visit:
       "https://drive.google.com/file/d/1W-PBAGia13hxmFtzqwJ00AzH3OOGYjOF/view",
-    id: 0,
+    id: 2,
+  },
+  {
+    title: "EFSET English Certificate 55/100 (B2 Upper Intermediate)",
+    image: "/images/projects-19.jpg",
+    visit: "https://www.efset.org/cert/gSKS8F",
+    id: 3,
   },
   {
     title: "GETTING STARTED WITH GOOGLE KUBERNETES ENGINE",
     image: "/images/projects-12.jpg",
     visit:
       "https://drive.google.com/file/d/1qmTpfCX9pnL65dwhSXqyvsgQ9m71exe0/view",
-    id: 0,
+    id: 4,
   },
-  {
-    title: "CREACIÓN DE APIS REST CON .NET CORE",
-    image: "/images/net.png",
-    visit:
-      "https://drive.google.com/file/d/1LMXSjQFDRzgYfPxMJ5o-olQaLoJ6_CbB/view",
-    id: 0,
-  },
+
   {
     title: "USE GIT FOR DISTRIBUTED DEVELOPMENT",
     image: "/images/projects-11.jpg",
     visit:
       "https://drive.google.com/file/d/1kVMbv6kosC60PeOC0VIKmyR5aK4prHrV/view",
-    id: 0,
+    id: 5,
   },
   {
     title: "FRONT-END WEB UI FRAMEWORKS AND TOOLS BOOTSTRAP 4",
     image: "/images/projects-10.jpg",
     visit:
       "https://drive.google.com/file/d/1E2wdNj8Z-ZH4Ve50g3laHP6dezSjK0IN/view",
-    id: 0,
+    id: 6,
   },
+
   {
     title: "DIPLOMA IN REACTJS & NODEJS DEVELOPER",
     image: "/images/projects-20.jpg",
     visit:
       "https://drive.google.com/file/d/13AOhL8das68wk4k8uNKEkxOq1zwWeTeA/view",
-    id: 0,
+    id: 7,
+  },
+  {
+    title: "CREACIÓN DE APIS REST CON .NET CORE",
+    image: "/images/net.png",
+    visit:
+      "https://drive.google.com/file/d/1LMXSjQFDRzgYfPxMJ5o-olQaLoJ6_CbB/view",
+    id: 8,
   },
   {
     title: "CURSO BÁSICO DE JENKINS",
     image: "/images/jenkins.png",
     visit:
       "https://drive.google.com/file/d/1b2diaemLMco1rG_flM16TW4ezudeJkyL/view?usp=sharing",
-    id: 0,
+    id: 10,
   },
-  
   {
-    title: "EFSET English Certificate 55/100 (B2 Upper Intermediate)",
-    image: "/images/projects-19.jpg",
+    title: "CURSO PROFESIONAL DE DEVOPS",
+    image: "/images/devops.png",
     visit:
-      "https://www.efset.org/cert/gSKS8F",
-    id: 0,
+      "https://drive.google.com/file/d/1yO7SmwF1f-EIV20qrmx4phLTzfBo1H8j/view?usp=sharing",
+    id: 11,
   },
 ];
 export const TimeLineData = [
@@ -186,7 +191,10 @@ export const TimeLineData = [
   },
   { year: 2019, text: "I start working in E-Solutions" },
   { year: 2020, text: "I graduated as a Systems Engineer" },
-  { year: 2021, text: "I started working at Corporación BI and got a Master's degree" },
+  {
+    year: 2021,
+    text: "I started working at Corporación BI and got a Master's degree",
+  },
 ];
 export const data = [
   { number: 1, text: "Course" },

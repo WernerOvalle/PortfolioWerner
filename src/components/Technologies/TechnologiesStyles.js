@@ -26,11 +26,11 @@ export const ImageContainer = styled.div`
 export const MainImage = styled.img`
   width: 100%;
 `
-
+// Modificar para cambiar el numero de columnas werner Date: 7/6/2022
 export const List = styled.ul`
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin: 3rem 0;
   

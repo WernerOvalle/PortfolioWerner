@@ -134,53 +134,56 @@ export const certficates = [
   {
     title: "GETTING STARTED WITH GOOGLE KUBERNETES ENGINE",
     image: "/images/projects-12.jpg",
-    visit:
-      "https://drive.google.com/file/d/1qmTpfCX9pnL65dwhSXqyvsgQ9m71exe0/view",
+    visit: "https://coursera.org/share/1daa46b324cc27189a69978c14c6e65d",
     id: 4,
   },
 
   {
     title: "USE GIT FOR DISTRIBUTED DEVELOPMENT",
     image: "/images/projects-11.jpg",
-    visit:
-      "https://drive.google.com/file/d/1kVMbv6kosC60PeOC0VIKmyR5aK4prHrV/view",
+    visit: "https://coursera.org/share/b0e5756e30ef7b0ee0a7cb34a532fac7",
     id: 5,
   },
   {
     title: "FRONT-END WEB UI FRAMEWORKS AND TOOLS BOOTSTRAP 4",
     image: "/images/projects-10.jpg",
-    visit:
-      "https://drive.google.com/file/d/1E2wdNj8Z-ZH4Ve50g3laHP6dezSjK0IN/view",
+    visit: "https://coursera.org/share/450f0cd06a293548edbbf468deb6695e",
     id: 6,
   },
 
-  {
-    title: "DIPLOMA IN REACTJS & NODEJS DEVELOPER",
-    image: "/images/projects-20.jpg",
-    visit:
-      "https://drive.google.com/file/d/13AOhL8das68wk4k8uNKEkxOq1zwWeTeA/view",
-    id: 7,
-  },
+  // {
+  //   title: "DIPLOMA IN REACTJS & NODEJS DEVELOPER",
+  //   image: "/images/projects-20.jpg",
+  //   visit:
+  //     "https://drive.google.com/file/d/13AOhL8das68wk4k8uNKEkxOq1zwWeTeA/view",
+  //   id: 7,
+  // },
   {
     title: "CREACIÓN DE APIS REST CON .NET CORE",
     image: "/images/net.png",
-    visit:
-      "https://drive.google.com/file/d/1LMXSjQFDRzgYfPxMJ5o-olQaLoJ6_CbB/view",
+    visit: "https://ed.team/@wernerovalle59a/curso/api-punto-net",
     id: 8,
   },
   {
     title: "CURSO BÁSICO DE JENKINS",
     image: "/images/jenkins.png",
     visit:
-      "https://drive.google.com/file/d/1b2diaemLMco1rG_flM16TW4ezudeJkyL/view?usp=sharing",
+      "https://platzi.com/p/werner-ovalle/curso/1436-jenkins-basico/diploma/detalle/",
     id: 10,
   },
   {
     title: "CURSO PROFESIONAL DE DEVOPS",
     image: "/images/devops.png",
     visit:
-      "https://drive.google.com/file/d/1yO7SmwF1f-EIV20qrmx4phLTzfBo1H8j/view?usp=sharing",
+      "https://platzi.com/p/werner-ovalle/curso/1431-devops/diploma/detalle/",
     id: 11,
+  },
+  {
+    title: "FUNDAMENTOS DE TYPESCRIPT",
+    image: "/images/TS.png",
+    visit:
+      "https://platzi.com/p/werner-ovalle/curso/1869-typescript-2020/diploma/detalle/",
+    id: 12,
   },
 ];
 export const TimeLineData = [

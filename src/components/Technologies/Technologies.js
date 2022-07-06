@@ -91,34 +91,12 @@ const Technologies = () => (
             Git <br />
             Kubernetes <br />
             Jenkins <br />
+            AWS
           </ListParagraph>
         </ListContainer>
       </ListItem>
-      <ListItem>
-        <picture>
-          <FaEthereum size="3rem" />
-        </picture>
-        <ListContainer>
-          <ListTitle>Blockchain</ListTitle>
-          <ListParagraph>
-            Knowledge in <br />
-            Solidity <br />
-          </ListParagraph>
-        </ListContainer>
-      </ListItem>
-      {/* <ListItem>
-        <picture>
-          <GrGraphQl size="3rem" />
-        </picture>
-        <ListContainer>
-          <ListTitle>Other Knowledge</ListTitle>
-          <ListParagraph>
-            Knowledge in <br />
-            GraphQL <br />
-            WebSockets <br />
-          </ListParagraph>
-        </ListContainer>
-      </ListItem> */}
+   
+     
     </List>
     <SectionDivider colorAlt />
   </Section>

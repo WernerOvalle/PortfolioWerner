@@ -60,7 +60,7 @@ const Technologies = () => (
             Node <br />
             PHP <br />
             .NET <br />
-            Java
+         
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -75,7 +75,6 @@ const Technologies = () => (
             MySQL <br />
             SQL Server <br />
             Oracle <br />
-            MongoDB
           </ListParagraph>
         </ListContainer>
       </ListItem>

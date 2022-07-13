@@ -90,7 +90,7 @@ const Technologies = () => (
             Git <br />
             Kubernetes <br />
             Jenkins <br />
-            AWS
+           
           </ListParagraph>
         </ListContainer>
       </ListItem>

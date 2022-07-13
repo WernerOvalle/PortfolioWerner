@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components'
 
 export const LeftSection = styled.div`
   width: 100%;
@@ -13,7 +13,7 @@ export const LeftSection = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-
     margin: 0 auto;
   }
 `;
+

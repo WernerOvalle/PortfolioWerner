@@ -1,0 +1,25 @@
+self["webpackHotUpdate_N_E"]("pages/index",{
+
+/***/ "./node_modules/next/dist/compiled/css-loader/cjs.js??ruleSet[1].rules[2].oneOf[2].use[1]!./node_modules/next/dist/compiled/postcss-loader/cjs.js??ruleSet[1].rules[2].oneOf[2].use[2]!./src/components/Hero/hero.module.css":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/compiled/css-loader/cjs.js??ruleSet[1].rules[2].oneOf[2].use[1]!./node_modules/next/dist/compiled/postcss-loader/cjs.js??ruleSet[1].rules[2].oneOf[2].use[2]!./src/components/Hero/hero.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/next/dist/compiled/css-loader/api.js */ "./node_modules/next/dist/compiled/css-loader/api.js");
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(true);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".hero_TappingMachine___WmCu{\r\n    -webkit-animation: hero_escribir__2alu5 5s steps(30) infinite alternate;\r\n            animation: hero_escribir__2alu5 5s steps(30) infinite alternate;\r\n}\r\n\r\n@-webkit-keyframes hero_escribir__2alu5 {\r\n    from { width: 100% }\r\n    to { width:0 }\r\n}\r\n\r\n@keyframes hero_escribir__2alu5 {\r\n    from { width: 100% }\r\n    to { width:0 }\r\n}", "",{"version":3,"sources":["webpack://src/components/Hero/hero.module.css"],"names":[],"mappings":"AAAA;IACI,uEAAmD;YAAnD,+DAAmD;AACvD;;AAEA;IACI,OAAO,YAAY;IACnB,KAAK,QAAQ;AACjB;;AAHA;IACI,OAAO,YAAY;IACnB,KAAK,QAAQ;AACjB","sourcesContent":[".TappingMachine{\r\n    animation: escribir 5s steps(30) infinite alternate;\r\n}\r\n\r\n@keyframes escribir {\r\n    from { width: 100% }\r\n    to { width:0 }\r\n}"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"TappingMachine": "hero_TappingMachine___WmCu",
+	"escribir": "hero_escribir__2alu5"
+};
+module.exports = ___CSS_LOADER_EXPORT___;
+
+
+/***/ })
+
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9fTl9FLy4vc3JjL2NvbXBvbmVudHMvSGVyby9oZXJvLm1vZHVsZS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7QUFBQTtBQUNBLGtDQUFrQyxtQkFBTyxDQUFDLHVIQUE0RDtBQUN0RztBQUNBO0FBQ0Esc0VBQXNFLGdGQUFnRixnRkFBZ0YsS0FBSyxpREFBaUQsY0FBYyxjQUFjLFlBQVksVUFBVSxLQUFLLHlDQUF5QyxjQUFjLGNBQWMsWUFBWSxVQUFVLEtBQUssT0FBTyxvR0FBb0csWUFBWSxhQUFhLE9BQU8sS0FBSyxlQUFlLGdCQUFnQixPQUFPLEtBQUssZUFBZSxnQkFBZ0IsMENBQTBDLDREQUE0RCxLQUFLLDZCQUE2QixjQUFjLGNBQWMsWUFBWSxVQUFVLEtBQUssbUJBQW1CO0FBQy8xQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoic3RhdGljL3dlYnBhY2svcGFnZXMvaW5kZXguMjI2NzhkMWEwNTc1ZWM0OWY2ZjYuaG90LXVwZGF0ZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIEltcG9ydHNcbnZhciBfX19DU1NfTE9BREVSX0FQSV9JTVBPUlRfX18gPSByZXF1aXJlKFwiLi4vLi4vLi4vbm9kZV9tb2R1bGVzL25leHQvZGlzdC9jb21waWxlZC9jc3MtbG9hZGVyL2FwaS5qc1wiKTtcbnZhciBfX19DU1NfTE9BREVSX0VYUE9SVF9fXyA9IF9fX0NTU19MT0FERVJfQVBJX0lNUE9SVF9fXyh0cnVlKTtcbi8vIE1vZHVsZVxuX19fQ1NTX0xPQURFUl9FWFBPUlRfX18ucHVzaChbbW9kdWxlLmlkLCBcIi5oZXJvX1RhcHBpbmdNYWNoaW5lX19fV21DdXtcXHJcXG4gICAgLXdlYmtpdC1hbmltYXRpb246IGhlcm9fZXNjcmliaXJfXzJhbHU1IDVzIHN0ZXBzKDMwKSBpbmZpbml0ZSBhbHRlcm5hdGU7XFxyXFxuICAgICAgICAgICAgYW5pbWF0aW9uOiBoZXJvX2VzY3JpYmlyX18yYWx1NSA1cyBzdGVwcygzMCkgaW5maW5pdGUgYWx0ZXJuYXRlO1xcclxcbn1cXHJcXG5cXHJcXG5ALXdlYmtpdC1rZXlmcmFtZXMgaGVyb19lc2NyaWJpcl9fMmFsdTUge1xcclxcbiAgICBmcm9tIHsgd2lkdGg6IDEwMCUgfVxcclxcbiAgICB0byB7IHdpZHRoOjAgfVxcclxcbn1cXHJcXG5cXHJcXG5Aa2V5ZnJhbWVzIGhlcm9fZXNjcmliaXJfXzJhbHU1IHtcXHJcXG4gICAgZnJvbSB7IHdpZHRoOiAxMDAlIH1cXHJcXG4gICAgdG8geyB3aWR0aDowIH1cXHJcXG59XCIsIFwiXCIse1widmVyc2lvblwiOjMsXCJzb3VyY2VzXCI6W1wid2VicGFjazovL3NyYy9jb21wb25lbnRzL0hlcm8vaGVyby5tb2R1bGUuY3NzXCJdLFwibmFtZXNcIjpbXSxcIm1hcHBpbmdzXCI6XCJBQUFBO0lBQ0ksdUVBQW1EO1lBQW5ELCtEQUFtRDtBQUN2RDs7QUFFQTtJQUNJLE9BQU8sWUFBWTtJQUNuQixLQUFLLFFBQVE7QUFDakI7O0FBSEE7SUFDSSxPQUFPLFlBQVk7SUFDbkIsS0FBSyxRQUFRO0FBQ2pCXCIsXCJzb3VyY2VzQ29udGVudFwiOltcIi5UYXBwaW5nTWFjaGluZXtcXHJcXG4gICAgYW5pbWF0aW9uOiBlc2NyaWJpciA1cyBzdGVwcygzMCkgaW5maW5pdGUgYWx0ZXJuYXRlO1xcclxcbn1cXHJcXG5cXHJcXG5Aa2V5ZnJhbWVzIGVzY3JpYmlyIHtcXHJcXG4gICAgZnJvbSB7IHdpZHRoOiAxMDAlIH1cXHJcXG4gICAgdG8geyB3aWR0aDowIH1cXHJcXG59XCJdLFwic291cmNlUm9vdFwiOlwiXCJ9XSk7XG4vLyBFeHBvcnRzXG5fX19DU1NfTE9BREVSX0VYUE9SVF9fXy5sb2NhbHMgPSB7XG5cdFwiVGFwcGluZ01hY2hpbmVcIjogXCJoZXJvX1RhcHBpbmdNYWNoaW5lX19fV21DdVwiLFxuXHRcImVzY3JpYmlyXCI6IFwiaGVyb19lc2NyaWJpcl9fMmFsdTVcIlxufTtcbm1vZHVsZS5leHBvcnRzID0gX19fQ1NTX0xPQURFUl9FWFBPUlRfX187XG4iXSwic291cmNlUm9vdCI6IiJ9

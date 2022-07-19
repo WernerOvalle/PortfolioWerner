@@ -41,11 +41,9 @@ const Technologies = () => (
           <ListParagraph>
             Knowledge in <br />
             JQuery <br />
-            React
-            <br />
+            Bootstrap <br />
+            React <br />
             Angular
-            <br />
-            Bootstrap
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -60,6 +58,7 @@ const Technologies = () => (
             Node <br />
             PHP <br />
             .NET <br />
+            Java
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -71,10 +70,9 @@ const Technologies = () => (
           <ListTitle>Database</ListTitle>
           <ListParagraph>
             Knowledge in <br />
-            MySQL <br />
             SQL Server <br />
+            MySQL <br />
             Oracle <br />
-            Firebase <br />
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -86,11 +84,9 @@ const Technologies = () => (
           <ListTitle>DevOps</ListTitle>
           <ListParagraph>
             Knowledge in <br />
-            Docker <br />
+            Containers <br />
             Git <br />
-            Kubernetes <br />
-            Jenkins <br />
-            AWS
+            CI/CD
           </ListParagraph>
         </ListContainer>
       </ListItem>

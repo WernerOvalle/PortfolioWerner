@@ -185,6 +185,20 @@ export const certficates = [
       "https://platzi.com/p/werner-ovalle/curso/1869-typescript-2020/diploma/detalle/",
     id: 12,
   },
+  {
+    title: "CURSO DE NEXT.JS",
+    image: "/images/NEXT.png",
+    visit:
+      "https://platzi.com/p/werner-ovalle/curso/1991-next/diploma/detalle/",
+    id: 13,
+  },
+  // {
+  //   title: "CURSO DE NEXT.JS",
+  //   image: "/images/NEXT.png",
+  //   visit:
+  //     "https://platzi.com/p/werner-ovalle/curso/1991-next/diploma/detalle/",
+  //   id: 13,
+  // },
 ];
 export const TimeLineData = [
   { year: 2014, text: "I started my career in systems engineering" },

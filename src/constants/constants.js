@@ -192,13 +192,13 @@ export const certficates = [
       "https://platzi.com/p/werner-ovalle/curso/1991-next/diploma/detalle/",
     id: 13,
   },
-  // {
-  //   title: "CURSO DE NEXT.JS",
-  //   image: "/images/NEXT.png",
-  //   visit:
-  //     "https://platzi.com/p/werner-ovalle/curso/1991-next/diploma/detalle/",
-  //   id: 13,
-  // },
+  {
+    title: "UNIT TESTING CON JEST EN REACT",
+    image: "/images/JEST.png",
+    visit:
+      "https://platzi.com/p/werner-ovalle/curso/1788-course/diploma/detalle/",
+    id: 14,
+  },
 ];
 export const TimeLineData = [
   { year: 2014, text: "I started my career in systems engineering" },

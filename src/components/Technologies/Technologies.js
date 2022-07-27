@@ -9,7 +9,6 @@ import {
 } from "react-icons/di";
 import { FaDocker, FaEthereum } from "react-icons/fa";
 import { AiOutlineConsoleSql } from "react-icons/ai";
-import { GrGraphQl } from "react-icons/gr";
 import {
   Section,
   SectionDivider,

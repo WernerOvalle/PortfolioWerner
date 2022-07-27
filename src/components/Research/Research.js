@@ -7,7 +7,7 @@ import { research } from '../../constants/constants';
 const Research = () => (
   <Section nopadding id="research">
     
-    <SectionTitle main>Research</SectionTitle>
+    <SectionTitle main>Theses</SectionTitle>
     <GridContainer>
       {research.map((p, i) => {
         return (

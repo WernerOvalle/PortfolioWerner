@@ -172,7 +172,6 @@ export const certficates = [
       "https://platzi.com/p/werner-ovalle/curso/1431-devops/diploma/detalle/",
     id: 11,
   },
-
   {
     title: "CURSO DE NEXT.JS",
     image: "/images/NEXT.png",
@@ -181,7 +180,7 @@ export const certficates = [
     id: 13,
   },
   {
-    title: "Curso de Next.js: Autenticación",
+    title: "CURSO DE NEXT.JS: AUTENTICACIÓN",
     image: "/images/nextAuth.png",
     visit:
       "https://platzi.com/p/werner-ovalle/curso/2428-course/diploma/detalle/",

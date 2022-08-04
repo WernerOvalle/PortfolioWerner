@@ -152,13 +152,6 @@ export const certficates = [
     id: 6,
   },
 
-  // {
-  //   title: "DIPLOMA IN REACTJS & NODEJS DEVELOPER",
-  //   image: "/images/projects-20.jpg",
-  //   visit:
-  //     "https://drive.google.com/file/d/13AOhL8das68wk4k8uNKEkxOq1zwWeTeA/view",
-  //   id: 7,
-  // },
   {
     title: "CREACIÓN DE APIS REST CON .NET CORE",
     image: "/images/net.png",
@@ -179,19 +172,27 @@ export const certficates = [
       "https://platzi.com/p/werner-ovalle/curso/1431-devops/diploma/detalle/",
     id: 11,
   },
-  {
-    title: "FUNDAMENTOS DE TYPESCRIPT",
-    image: "/images/TS.png",
-    visit:
-      "https://platzi.com/p/werner-ovalle/curso/1869-typescript-2020/diploma/detalle/",
-    id: 12,
-  },
+
   {
     title: "CURSO DE NEXT.JS",
     image: "/images/NEXT.png",
     visit:
       "https://platzi.com/p/werner-ovalle/curso/1991-next/diploma/detalle/",
     id: 13,
+  },
+  {
+    title: "Curso de Next.js: Autenticación",
+    image: "/images/nextAuth.png",
+    visit:
+      "https://platzi.com/p/werner-ovalle/curso/2428-course/diploma/detalle/",
+    id: 7,
+  },
+  {
+    title: "FUNDAMENTOS DE TYPESCRIPT",
+    image: "/images/TS.png",
+    visit:
+      "https://platzi.com/p/werner-ovalle/curso/1869-typescript-2020/diploma/detalle/",
+    id: 12,
   },
   {
     title: "UNIT TESTING CON JEST EN REACT",

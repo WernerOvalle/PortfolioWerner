@@ -3,7 +3,7 @@ export const projects = [
     title: "HTD GUATEMALA",
     description:
       "Website developed for the client HTD GUATEMALA to show product information and company contact.",
-    image: "/images/5.png",
+    image: "/images/5.jpg",
     tags: ["HTML", "CSS", "Bootstrap", "JS"],
     source: "",
     source2: "",
@@ -14,7 +14,7 @@ export const projects = [
     title: "RENTODITO",
     description:
       "Web application developed for the new Mexican company called Rentodito through the Fiverr website, it is a web application that will be used to start a new project for renting items and services..",
-    image: "/images/8.png",
+    image: "/images/8.jpg",
     tags: ["Angular", "Bootstrap", "Laravel ", "MySQL"],
     source: "https://github.com/WernerOvalle/BackendRentodito",
     source2: "https://github.com/WernerOvalle/FrontendRentodito",
@@ -25,7 +25,7 @@ export const projects = [
     title: "VETERINARIA PET MARKET",
     description:
       "Web application developed for the Pet Market veterinary to optimize the control of their inventories as well as develop their own website.",
-    image: "/images/17.png",
+    image: "/images/17.jpg",
     tags: ["Bootstrap", "JS", "MySQL", "PHP"],
     source: "https://github.com/WernerOvalle/Veterinaria",
     source2: "",
@@ -36,7 +36,7 @@ export const projects = [
     title: "PACO LED",
     description:
       "Web application developed for Paco Led, a company that sells car lights, in order to optimize inventory management and automate the creation of reports on profits.",
-    image: "/images/6.png",
+    image: "/images/6.jpg",
     tags: ["JQuery ", "Materialize", "PHP ", "MySQL"],
     source: "",
     source2: "",
@@ -47,7 +47,7 @@ export const projects = [
     title: "MERCAFARMA",
     description:
       "Web application developed for the pharmaceutical company Merca Farma for the creation of coupons and their exchange.",
-    image: "/images/9.png",
+    image: "/images/9.jpg",
     tags: ["JQuery ", "PHP ", "MySQL"],
     source: "https://github.com/WernerOvalle/MarcaFarma",
     source2: "",
@@ -58,7 +58,7 @@ export const projects = [
     title: "ATF CONSULTORES",
     description:
       "Website developed for ATF Consultores where you can find all the information about the company.",
-    image: "/images/11.png",
+    image: "/images/11.jpg",
     tags: ["ReactJS  ", "Bootstrap", "NodeJS"],
     source: "https://github.com/WernerOvalle/ATFPagina",
     source2: "",
@@ -70,7 +70,7 @@ export const projects = [
     title: "OFICINA CENTRAL DE PROTECCIÓN, S.A.",
     description:
       "Web application developed for the company OCP in university practices to optimize the management of their inventories.",
-    image: "/images/3.png",
+    image: "/images/3.jpg",
     tags: ["Firebase ", "Angular ", "Bootstrap "],
     source: "https://github.com/WernerOvalle/ANGULAR",
     source2: "",
@@ -81,7 +81,7 @@ export const projects = [
   //   title: "FINAL PROJECT OF ADVANCED PROGRAMMING IN JAVA",
   //   description:
   //     "Web application developed in my Master's Degree as a final project of the Advanced Programming in Java course, which is a billing system.",
-  //   image: "/images/7.png",
+  //   image: "/images/7.jpg",
   //   tags: ["Spring  ", "JQuery", "Bootstrap", "MySQL"],
   //   source: "https://bitbucket.org/wjop5bb/prograavanzadajava/src/master/",
   //   source2: "",
@@ -92,7 +92,7 @@ export const projects = [
     title: "COURSE: CRUD WITH PHP MYSQL BOOTSTRAP JQUERY AJAX AND DOCKER",
     description:
       "Course taught by me on the Udemy platform to learn how to create a CRUD from scratch using different technologies.",
-    image: "/images/10.png",
+    image: "/images/10.jpg",
     tags: ["PHP  ", "MySQL ", "Bootstrap", "jQuery", "Docker"],
     source: "",
     source2: "",
@@ -154,48 +154,55 @@ export const certficates = [
 
   {
     title: "CREACIÓN DE APIS REST CON .NET CORE",
-    image: "/images/net.png",
+    image: "/images/net.jpg",
     visit: "https://ed.team/@wernerovalle59a/curso/api-punto-net",
     id: 8,
   },
   {
     title: "CURSO BÁSICO DE JENKINS",
-    image: "/images/jenkins.png",
+    image: "/images/jenkins.jpg",
     visit:
       "https://platzi.com/p/werner-ovalle/curso/1436-jenkins-basico/diploma/detalle/",
     id: 10,
   },
   {
     title: "CURSO PROFESIONAL DE DEVOPS",
-    image: "/images/devops.png",
+    image: "/images/devops.jpg",
     visit:
       "https://platzi.com/p/werner-ovalle/curso/1431-devops/diploma/detalle/",
     id: 11,
   },
   {
     title: "CURSO DE NEXT.JS",
-    image: "/images/NEXT.png",
+    image: "/images/NEXT.jpg",
     visit:
       "https://platzi.com/p/werner-ovalle/curso/1991-next/diploma/detalle/",
     id: 13,
   },
+  // {
+  //   title: "CURSO DE NEXT.JS: AUTENTICACIÓN",
+  //   image: "/images/nextAuth.jpg",
+  //   visit:
+  //     "https://platzi.com/p/werner-ovalle/curso/2428-course/diploma/detalle/",
+  //   id: 7,
+  // },
   {
-    title: "CURSO DE NEXT.JS: AUTENTICACIÓN",
-    image: "/images/nextAuth.png",
+    title: "REACT Y NODEJS DEVELOPER",
+    image: "/images/react&node.jpg",
     visit:
-      "https://platzi.com/p/werner-ovalle/curso/2428-course/diploma/detalle/",
-    id: 7,
+      "https://drive.google.com/file/d/1qbW2fvXiLMQlrcRZu-bjpmVf8MyeFaXX/view?usp=sharing",
+    id: 15,
   },
   {
     title: "FUNDAMENTOS DE TYPESCRIPT",
-    image: "/images/TS.png",
+    image: "/images/TS.jpg",
     visit:
       "https://platzi.com/p/werner-ovalle/curso/1869-typescript-2020/diploma/detalle/",
     id: 12,
   },
   {
     title: "UNIT TESTING CON JEST EN REACT",
-    image: "/images/JEST.png",
+    image: "/images/JEST.jpg",
     visit:
       "https://platzi.com/p/werner-ovalle/curso/1788-course/diploma/detalle/",
     id: 14,
@@ -224,7 +231,7 @@ export const research = [
   {
     description:
       "Master's Graduation Work prior to opting for the title of Magister Artium en informática con énfasis en banca electrónica y comunicaciones",
-    image: "/images/tesis2.png",
+    image: "/images/tesis2.jpg",
     visit:
       "https://drive.google.com/file/d/1-wR6KmFYW7q6SCI7qMMnvIbNhSWhtqri/view",
     id: 0,
@@ -232,7 +239,7 @@ export const research = [
   {
     description:
       "Thesis prior to opting for the title of Ingeniería en Sistemas de Información Y Ciencias de la Computación",
-    image: "/images/tesis.png",
+    image: "/images/tesis.jpg",
     visit:
       "https://drive.google.com/file/d/1_UHBSDxC54dHOFzt0aghxkL4SpeJGyJh/view",
     id: 1,

@@ -89,11 +89,11 @@ export const projects = [
   //   id: 8,
   // },
   {
-    title: "COURSE: CRUD WITH PHP MYSQL BOOTSTRAP JQUERY AJAX AND DOCKER",
+    title: "UDEMY COURSE",
     description:
-      "Course taught by me on the Udemy platform to learn how to create a CRUD from scratch using different technologies.",
+      "Course taught by me on the Udemy platform to learn how to create a CRUD from scratch using PHP MySQL Bootstrap jQuery Ajax and Docker.",
     image: "/images/10.jpg",
-    tags: ["PHP  ", "MySQL ", "Bootstrap", "jQuery", "Docker"],
+    tags: ["PHP  ", "MySQL ", "Bootstrap", "Docker"],
     source: "",
     source2: "",
     visit:

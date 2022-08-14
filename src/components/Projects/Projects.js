@@ -30,8 +30,8 @@ const Projects = () => (
             <UtilityList>
             
             { p.visit !='' && <ExternalLinks href={p.visit}>Visit</ExternalLinks> }
-            { p.source !='' && <ExternalLinks href={p.source}>Code</ExternalLinks> }
-            { p.source2 !='' && <ExternalLinks href={p.source2}>Code</ExternalLinks> }
+            {/* {/* { p.source !='' && <ExternalLinks href={p.source}>Code</ExternalLinks> } */}
+            { p.visitpreview !='' && <ExternalLinks href={p.visitpreview}>Visit Preview</ExternalLinks> } 
             </UtilityList>
           </BlogCard>
         );

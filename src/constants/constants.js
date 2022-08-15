@@ -14,7 +14,7 @@ export const projects = [
     description:
       "Web application developed for the new Mexican company called Rentodito through the Fiverr website, it is a web application that will be used to start a new project for renting items and services..",
     image: "/images/8.jpg",
-    tags: ["Angular", "Bootstrap", "Laravel ", "MySQL"],
+    tags: ["Angular", "Laravel ", "MySQL"],
     visitpreview: "",
     visit: "http://www.rentodito.net/",
     id: 1,

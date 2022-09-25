@@ -50,7 +50,7 @@ const Footer = () => {
           <SocialIcons href="https://bitbucket.org/wjop5bb/">
             <DiBitbucket size="3rem" />
           </SocialIcons>
-          <SocialIcons href="https://cutt.ly/Linkedin-werner">
+          <SocialIcons href="https://bit.ly/linkedin-werner">
             <AiFillLinkedin size="3rem" />
           </SocialIcons>
           <SocialIcons href="https://www.instagram.com/werner_ovalle">

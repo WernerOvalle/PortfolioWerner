@@ -27,8 +27,7 @@ const Technologies = () => (
   <Section id="tech">
     <SectionTitle>Technologies</SectionTitle>
     <SectionText>
-      I've worked with a range a technologies in the web development world. From
-      Back-end To Design
+    I've worked with a range of technologies in the web development world. From Back-end To Design
     </SectionText>
     <List>
       <ListItem>

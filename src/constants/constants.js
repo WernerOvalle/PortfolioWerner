@@ -12,7 +12,7 @@ export const projects = [
   {
     title: "RENTODITO",
     description:
-      "Web application developed for the new Mexican company called Rentodito through the Fiverr website, it is a web application that will be used to start a new project for renting items and services..",
+      "Web application developed for the new Mexican company called Rentodito through the Fiverr website, it is a web application that will be used to start a new project for renting items and services.",
     image: "/images/8.jpg",
     tags: ["Angular", "Laravel ", "MySQL"],
     visitpreview: "",
@@ -204,9 +204,9 @@ export const TimeLineData = [
   { year: 2014, text: "I started my career in systems engineering" },
   {
     year: 2019,
-    text: "I start working in Claro Guatemala and start my master's degree",
+    text: "I started working at Claro Guatemala and started my master's degree",
   },
-  { year: 2019, text: "I start working in E-Solutions" },
+  { year: 2019, text: "I started working at E-Solutions" },
   { year: 2020, text: "I graduated as a Systems Engineer" },
   {
     year: 2021,

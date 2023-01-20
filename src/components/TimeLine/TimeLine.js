@@ -41,13 +41,14 @@ const Timeline = () => {
 
     window.addEventListener('resize', handleResize);
   }, []);
-
+  var today = new Date();
+  var yyyy = today.getFullYear();
   return (
     <Section id="about">
        <SectionDivider divider />
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-      I have been a software developer for more than 3 years. I have experience in frontend and backend development using SCRUM methodology. My motivations have always been continuous learning and professional development.
+      I have worked as software developer for more than {yyyy-2019} years in Guatemala City. I have experience in frontend and backend development. My motivations have always been continuous learning and professional development.
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>

@@ -151,49 +151,49 @@ export const certficates = [
     title: "CREACIÓN DE APIS REST CON .NET CORE",
     image: "/images/net.jpg",
     visit: "https://ed.team/@wernerovalle59a/curso/api-punto-net",
-    id: 8,
+    id: 7,
   },
   {
     title: "CURSO BÁSICO DE JENKINS",
     image: "/images/jenkins.jpg",
     visit:
       "https://platzi.com/p/werner-ovalle/curso/1436-jenkins-basico/diploma/detalle/",
-    id: 10,
+    id: 8,
   },
   {
     title: "CURSO PROFESIONAL DE DEVOPS",
     image: "/images/devops.jpg",
     visit:
       "https://platzi.com/p/werner-ovalle/curso/1431-devops/diploma/detalle/",
-    id: 11,
+    id: 9,
   },
   {
     title: "CURSO DE NEXT.JS",
     image: "/images/NEXT.jpg",
     visit:
       "https://platzi.com/p/werner-ovalle/curso/1991-next/diploma/detalle/",
-    id: 13,
+    id: 10,
   },
-  // {
-  //   title: "CURSO DE NEXT.JS: AUTENTICACIÓN",
-  //   image: "/images/nextAuth.jpg",
-  //   visit:
-  //     "https://platzi.com/p/werner-ovalle/curso/2428-course/diploma/detalle/",
-  //   id: 7,
-  // },
+  {
+    title: "CURSO DE NEXT.JS: AUTENTICACIÓN",
+    image: "/images/nextAuth.jpg",
+    visit:
+      "https://platzi.com/p/werner-ovalle/curso/2428-course/diploma/detalle/",
+    id: 11,
+  },
   {
     title: "REACT Y NODEJS DEVELOPER",
     image: "/images/react&node.jpg",
     visit:
       "https://drive.google.com/file/d/1qbW2fvXiLMQlrcRZu-bjpmVf8MyeFaXX/view?usp=sharing",
-    id: 15,
+    id: 12,
   },
   {
     title: "FUNDAMENTOS DE TYPESCRIPT",
     image: "/images/TS.jpg",
     visit:
       "https://platzi.com/p/werner-ovalle/curso/1869-typescript-2020/diploma/detalle/",
-    id: 12,
+    id: 13,
   },
   {
     title: "UNIT TESTING CON JEST EN REACT",
@@ -201,6 +201,13 @@ export const certficates = [
     visit:
       "https://platzi.com/p/werner-ovalle/curso/1788-course/diploma/detalle/",
     id: 14,
+  },
+  {
+    title: "Desarrollando Aplicaciones en React y ASP.NET Core",
+    image: "/images/ReactNet.jpg",
+    visit:
+      "https://www.udemy.com/certificate/UC-a8156d0d-8cdd-4a6e-8548-8efd35f2544a/",
+    id: 15,
   },
 ];
 export const TimeLineData = [

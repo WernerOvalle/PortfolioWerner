@@ -53,7 +53,7 @@ const Technologies = () => (
           <ListParagraph>
             Knowledge in <br />
             Express <br />
-            PHP <br />
+            Laravel <br />
             .NET            
           </ListParagraph>
         </ListContainer>

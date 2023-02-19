@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "HTD GUATEMALA",
     description:
-      "Website developed for the client HTD GUATEMALA to show product information and company contact.",
+      "Using my web design and development expertise, I created a modern site for HTD GUATEMALA that showcases their products, elevates their online presence, and enables easy user engagement via responsive design and an intuitive contact portal.",
     image: "/images/5.jpg",
     tags: ["HTML", "CSS", "Bootstrap", "JS"],
     visitpreview: "",
@@ -12,7 +12,7 @@ export const projects = [
   {
     title: "RENTODITO",
     description:
-      "Web application developed for the new Mexican company called Rentodito through the Fiverr website, it is a web application that will be used to start a new project for renting items and services.",
+      "Using my web application development skills, I created a robust solution for Rentodito, a new Mexican company, via the Fiverr platform. This web application will serve as the foundation for their rental services project, enabling customers to rent a wide range of items and services with ease and efficiency.",
     image: "/images/8.jpg",
     tags: ["Angular", "Laravel ", "MySQL"],
     visitpreview: "",
@@ -22,10 +22,9 @@ export const projects = [
   {
     title: "VETERINARIA PET MARKET",
     description:
-      "Web application developed for the Pet Market veterinary to optimize the control of their inventories as well as develop their own website.",
+      "Utilizing my expertise in web development, I created a custom web application for Pet Market veterinary, enhancing their inventory management and establishing a dynamic online presence through their website.",
     image: "/images/17.jpg",
     tags: ["Bootstrap", "JS", "MySQL", "PHP"],
-    // visitpreview: "https://exquisite-kleicha-8f22b1.netlify.app/",
     visitpreview: "",
     visit: "",
     id: 2,
@@ -33,10 +32,9 @@ export const projects = [
   {
     title: "PACO LED",
     description:
-      "Web application developed for Paco Led, a company that sells car lights, in order to optimize inventory management and automate the creation of reports on profits.",
+      "Drawing on my expertise in web application development, I designed and built a custom solution for Paco Led, a leading provider of automotive lighting products. This cutting-edge web application streamlines inventory management and automates the creation of financial reports, maximizing operational efficiency and providing real-time insights into profitability.",
     image: "/images/6.jpg",
     tags: ["JQuery ", "Materialize", "PHP ", "MySQL"],
-    // visitpreview: "https://idyllic-kataifi-bea291.netlify.app/",
     visitpreview: "",
     visit: "",
     id: 3,
@@ -44,10 +42,9 @@ export const projects = [
   {
     title: "MERCAFARMA",
     description:
-      "Web application developed for the pharmaceutical company Merca Farma for the creation of coupons and their exchange.",
+      "Utilizing my expertise in web application development, I created a solution for Merca Farma, a pharmaceutical company, to streamline the process of coupon creation and exchange through a custom-built web application. This platform provides an easy-to-use interface for both customers and employees, optimizing the exchange process and enhancing the company's overall efficiency.",
     image: "/images/9.jpg",
     tags: ["JQuery ", "PHP ", "MySQL"],
-    // visitpreview: "https://melodic-choux-67e959.netlify.app/",
     visitpreview: "",
     visit: "",
     id: 4,
@@ -55,7 +52,7 @@ export const projects = [
   {
     title: "ATF CONSULTORES",
     description:
-      "Website developed for ATF Consultores where you can find all the information about the company.",
+      "Utilizing my web design and development skills, I expertly crafted a website for ATF Consultores that effectively showcases their business information in a sleek and modern design. This website provides visitors with a comprehensive understanding of the company's services and values, while offering seamless access to the company's contact details.",
     image: "/images/11.jpg",
     tags: ["ReactJS  ", "Bootstrap", "NodeJS"],
     visitpreview: "",
@@ -66,7 +63,7 @@ export const projects = [
   {
     title: "OFICINA CENTRAL DE PROTECCIÓN, S.A.",
     description:
-      "Web application developed for the company OCP in university practices to optimize the management of their inventories.",
+      "During my university practices, I created a custom solution for OCP to streamline their inventory management. Through intuitive and user-friendly interfaces, the web application enables efficient and accurate tracking of inventory levels, minimizing waste and enhancing productivity.",
     image: "/images/3.jpg",
     tags: ["Firebase ", "Angular ", "Bootstrap "],
     visitpreview: "",
@@ -87,7 +84,7 @@ export const projects = [
   {
     title: "UDEMY COURSE",
     description:
-      "Course taught by me on the Udemy platform to learn how to create a CRUD from scratch using PHP MySQL Bootstrap jQuery Ajax and Docker.",
+      "I designed and delivered a comprehensive Udemy course on building full-stack web applications using PHP, MySQL, Bootstrap, jQuery, Ajax, and Docker. Students gained practical experience in database design, back-end development, and front-end design, and mastered CRUD operations through video lectures, code snippets, and practical exercises. By course end, students were proficient in creating dynamic, data-driven web applications.",
     image: "/images/10.jpg",
     tags: ["PHP  ", "MySQL ", "Bootstrap", "Docker"],
     visitpreview: "",
@@ -236,7 +233,7 @@ export const data = [
 export const research = [
   {
     description:
-      "Master's Graduation Work prior to opting for the title of Magister Artium en informática con énfasis en banca electrónica y comunicaciones",
+      "Master's Thesis completed as part of the requirements for the degree of \"Magister Artium en informática con énfasis en banca electrónica y comunicaciones\".",
     image: "/images/tesis2.jpg",
     visit:
       "https://drive.google.com/file/d/1-wR6KmFYW7q6SCI7qMMnvIbNhSWhtqri/view",
@@ -244,7 +241,7 @@ export const research = [
   },
   {
     description:
-      "Thesis prior to opting for the title of Ingeniería en Sistemas de Información Y Ciencias de la Computación",
+      "Thesis completed as part of the requirements for the degree of \"Ingeniería en Sistemas de Información Y Ciencias de la Computación\"",
     image: "/images/tesis.jpg",
     visit:
       "https://drive.google.com/file/d/1_UHBSDxC54dHOFzt0aghxkL4SpeJGyJh/view",

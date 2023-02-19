@@ -48,7 +48,7 @@ const Timeline = () => {
        <SectionDivider divider />
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-      I have worked as software developer for more than {yyyy-2019} years in Guatemala City. I have experience in frontend and backend development. My motivations have always been continuous learning and professional development.
+      With over {yyyy-2019} years of experience in frontend and backend development, I am a skilled software developer based in Guatemala City. My commitment to ongoing learning and professional development drives my unwavering motivation and ambition in this dynamic field.
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>

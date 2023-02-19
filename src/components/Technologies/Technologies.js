@@ -80,9 +80,9 @@ const Technologies = () => (
           <ListTitle>DevOps</ListTitle>
           <ListParagraph>
             Knowledge in <br />
-            Containers <br />
+            Docker <br />
             Git <br />
-            CI/CD
+            Jenkins
           </ListParagraph>
         </ListContainer>
       </ListItem>

@@ -39,7 +39,6 @@ const Technologies = () => (
           <ListParagraph>
             Knowledge in <br />
             JQuery <br />
-            Bootstrap <br />
             React <br />
             Angular
           </ListParagraph>
@@ -53,10 +52,9 @@ const Technologies = () => (
           <ListTitle>Back-End</ListTitle>
           <ListParagraph>
             Knowledge in <br />
-            Node <br />
+            Express <br />
             PHP <br />
-            .NET <br />
-            Java
+            .NET            
           </ListParagraph>
         </ListContainer>
       </ListItem>

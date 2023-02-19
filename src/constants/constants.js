@@ -208,20 +208,20 @@ export const certficates = [
   },
 ];
 export const TimeLineData = [
-  { year: 2014, text: "I started my systems engineering career." },
+  { year: 2014, text: "I began my career in systems engineering." },
   {
     year: 2019,
-    text: "I started working at Avantia Consultores and started my master's degree",
+    text: "I joined Avantia Consultores while also pursuing a master's degree.",
   },
-  { year: 2019, text: "I started working at E-Solutions" },
-  { year: 2020, text: "I graduated as a Systems Engineer" },
+  { year: 2019, text: "Later that same year, I transitioned to a new role at E-Solutions." },
+  { year: 2020, text: "I graduated with a degree in Systems Engineering." },
   {
     year: 2021,
-    text: "I started working at Corporación BI and got a Master's degree",
+    text: "I joined Corporación BI and also earned a Master's degree.",
   },
   {
     year: 2023,
-    text: "I started working at FHA",
+    text: "I am currently working at FHA.",
   },
 ];
 export const data = [

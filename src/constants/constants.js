@@ -211,17 +211,21 @@ export const TimeLineData = [
   { year: 2014, text: "I began my career in systems engineering." },
   {
     year: 2019,
-    text: "I joined Avantia Consultores while also pursuing a master's degree.",
+    text: "I joined Avantia Consultores while I also started my master's degree.",
   },
-  { year: 2019, text: "Later that same year, I transitioned to a new role at E-Solutions." },
+  { year: 2019, text: "Later that same year, I transitioned to a new role at Corporación BI." },
   { year: 2020, text: "I graduated with a degree in Systems Engineering." },
   {
     year: 2021,
-    text: "I joined Corporación BI and also earned a Master's degree.",
+    text: "I graduated from my master's degree.",
   },
   {
     year: 2023,
-    text: "I am currently working at FHA.",
+    text: "I started working at FHA.",
+  },
+  {
+    year: 2024,
+    text: "I started working at BDG Panama, S.A.",
   },
 ];
 export const data = [

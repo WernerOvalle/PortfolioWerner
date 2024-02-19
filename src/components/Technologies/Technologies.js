@@ -39,7 +39,7 @@ const Technologies = () => (
           <ListParagraph>
             Knowledge in <br />
             ASP <br />
-            NextJS <br />
+            ReactJS <br />
             JQuery
           </ListParagraph>
         </ListContainer>

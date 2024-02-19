@@ -14,7 +14,7 @@ const Hero = (props) => (
       <LeftSection>
         <SectionTitle main center>
           Werner Ovalle <br />
-          Full Stack Developer
+          Software Developer
         </SectionTitle>
 
         <SectionText>

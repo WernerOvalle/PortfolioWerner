@@ -16,6 +16,7 @@ export const projects = [
     image: "/images/8.jpg",
     tags: ["Angular", "Laravel ", "MySQL"],
     visitpreview: "",
+    // visit: "",
     visit: "http://www.rentodito.net/",
     id: 1,
   },
@@ -40,13 +41,13 @@ export const projects = [
     id: 3,
   },
   {
-    title: "MERCAFARMA",
+    title: "UDEMY COURSE",
     description:
-      "Utilizing my expertise in web application development, I created a solution for Merca Farma, a pharmaceutical company, to streamline the process of coupon creation and exchange through a custom-built web application. This platform provides an easy-to-use interface for both customers and employees, optimizing the exchange process and enhancing the company's overall efficiency.",
+      "I crafted and published an extensive Udemy course on building fingerprint attendance systems using .NET, PostgreSQL, and Railway Material Skin 2. Learners delved into system architecture, UI design, database management, and biometric authentication. The course featured video lessons, code samples, and hands-on projects, empowering students to create secure, efficient, and visually pleasing attendance solutions aligned with contemporary business requirements.",
     image: "/images/9.jpg",
-    tags: ["JQuery ", "PHP ", "MySQL"],
+    tags: [".NET ", "Railway", "PgSQL"],
     visitpreview: "",
-    visit: "",
+    visit: "https://www.udemy.com/course/sistema-marcaje-huella-net-pgsql-railway-material-skin-2/?referralCode=05527E9AAB14B1397CBD&couponCode=24T6MT62024",
     id: 4,
   },
   {
@@ -67,7 +68,8 @@ export const projects = [
     image: "/images/3.jpg",
     tags: ["Firebase ", "Angular ", "Bootstrap "],
     visitpreview: "",
-    visit: "https://angularrrrrr.herokuapp.com/startpage",
+    // visit: "https://angularrrrrr.herokuapp.com/startpage",
+    visit: "",
     id: 6,
   },
   // {

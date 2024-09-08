@@ -38,9 +38,9 @@ const Technologies = () => (
           <ListTitle>Front-End</ListTitle>
           <ListParagraph>
             Knowledge in <br />
-            ASP <br />
-            ReactJS <br />
-            JQuery
+            ASP.NET<br />
+            React.js <br />
+            Vue.js
           </ListParagraph>
         </ListContainer>
       </ListItem>
@@ -80,9 +80,9 @@ const Technologies = () => (
           <ListTitle>DevOps</ListTitle>
           <ListParagraph>
             Knowledge in <br />
+            Azure DevOps <br />
             Docker <br />
-            Git <br />
-            Jenkins
+            Git
           </ListParagraph>
         </ListContainer>
       </ListItem>

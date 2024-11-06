@@ -6,10 +6,10 @@ const BackgroundAnimation = () => (
        <img id="profileImg"src="/images/profile.png" alt="Kiwi standing on oval" 
        style={{
         position: "absolute",
-        marginTop: "-70px",
+        marginTop: "20px",
         marginLeft: "120px",
-        width: "460px",
-        height: "650px",
+        width: "420px",
+        height: "420px",
         
        }}
        ></img>

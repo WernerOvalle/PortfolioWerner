@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "HTD GUATEMALA",
     description:
-      "Using my web design and development expertise, I created a modern site for HTD GUATEMALA that showcases their products, elevates their online presence, and enables easy user engagement via responsive design and an intuitive contact portal.",
+      "I leveraged my web design and development skills to build a modern website for HTD GUATEMALA, showcasing their products, enhancing their online presence, and providing users with a responsive design and an intuitive contact portal.",
     image: "/images/5.jpg",
     tags: ["HTML", "CSS", "Bootstrap", "JS"],
     visitpreview: "",
@@ -12,9 +12,9 @@ export const projects = [
   {
     title: "RENTODITO",
     description:
-      "Using my web application development skills, I created a robust solution for Rentodito, a new Mexican company, via the Fiverr platform. This web application will serve as the foundation for their rental services project, enabling customers to rent a wide range of items and services with ease and efficiency.",
+      "I developed a robust web application for Rentodito, a Mexican startup, through Fiverr. This project laid the foundation for their rental services platform, enabling customers to easily rent products and services with efficiency.",
     image: "/images/8.jpg",
-    tags: ["Angular", "Laravel ", "MySQL"],
+    tags: ["Angular", "Laravel", "MySQL"],
     visitpreview: "",
     // visit: "",
     visit: "http://www.rentodito.net/",
@@ -23,7 +23,7 @@ export const projects = [
   {
     title: "VETERINARIA PET MARKET",
     description:
-      "Utilizing my expertise in web development, I created a custom web application for Pet Market veterinary, enhancing their inventory management and establishing a dynamic online presence through their website.",
+      "I created a custom web application for Pet Market Veterinary, improving their inventory management and establishing a dynamic online presence through a user-friendly and visually appealing website.",
     image: "/images/17.jpg",
     tags: ["Bootstrap", "JS", "MySQL", "PHP"],
     visitpreview: "",
@@ -33,29 +33,29 @@ export const projects = [
   {
     title: "PACO LED",
     description:
-      "Drawing on my expertise in web application development, I designed and built a custom solution for Paco Led, a leading provider of automotive lighting products. This cutting-edge web application streamlines inventory management and automates the creation of financial reports, maximizing operational efficiency and providing real-time insights into profitability.",
+      "I designed and implemented a tailored solution for Paco Led, a leader in automotive lighting, to optimize inventory management and automate financial reporting, enhancing operational efficiency and profitability insights.",
     image: "/images/6.jpg",
-    tags: ["JQuery ", "Materialize", "PHP ", "MySQL"],
+    tags: ["JQuery", "Materialize", "PHP", "MySQL"],
     visitpreview: "",
     visit: "",
     id: 3,
   },
-  {
-    title: "UDEMY COURSE",
-    description:
-      "I crafted and published an extensive Udemy course on building fingerprint attendance systems using .NET, PostgreSQL, and Railway Material Skin 2. Learners delved into system architecture, UI design, database management, and biometric authentication. The course featured video lessons, code samples, and hands-on projects, empowering students to create secure, efficient, and visually pleasing attendance solutions aligned with contemporary business requirements.",
-    image: "/images/9.jpg",
-    tags: [".NET ", "Railway", "PgSQL"],
-    visitpreview: "",
-    visit: "https://www.udemy.com/course/sistema-marcaje-huella-net-pgsql-railway-material-skin-2/?referralCode=05527E9AAB14B1397CBD&couponCode=24T6MT62024",
-    id: 4,
-  },
+  // {
+  //   title: "UDEMY COURSE",
+  //   description:
+  //     "I crafted and published an extensive Udemy course on building fingerprint attendance systems using .NET, PostgreSQL, and Railway Material Skin 2. Learners delved into system architecture, UI design, database management, and biometric authentication. The course featured video lessons, code samples, and hands-on projects, empowering students to create secure, efficient, and visually pleasing attendance solutions aligned with contemporary business requirements.",
+  //   image: "/images/9.jpg",
+  //   tags: [".NET ", "Railway", "PgSQL"],
+  //   visitpreview: "",
+  //   visit: "https://www.udemy.com/course/sistema-marcaje-huella-net-pgsql-railway-material-skin-2/?referralCode=05527E9AAB14B1397CBD&couponCode=24T6MT62024",
+  //   id: 4,
+  // },
   {
     title: "ATF CONSULTORES",
     description:
-      "Utilizing my web design and development skills, I expertly crafted a website for ATF Consultores that effectively showcases their business information in a sleek and modern design. This website provides visitors with a comprehensive understanding of the company's services and values, while offering seamless access to the company's contact details.",
+      "I developed a sleek and functional website for ATF Consultores, effectively presenting their business information and providing users with seamless access to their services and contact details.",
     image: "/images/11.jpg",
-    tags: ["ReactJS  ", "Bootstrap", "NodeJS"],
+    tags: ["ReactJS", "Bootstrap", "NodeJS"],
     visitpreview: "",
     visit: "https://atfconsultoresgt.com/",
     // visit: "https://atfp-agina.vercel.app/",
@@ -64,9 +64,9 @@ export const projects = [
   {
     title: "OFICINA CENTRAL DE PROTECCIÓN, S.A.",
     description:
-      "During my university practices, I created a custom solution for OCP to streamline their inventory management. Through intuitive and user-friendly interfaces, the web application enables efficient and accurate tracking of inventory levels, minimizing waste and enhancing productivity.",
+      "During my university internship, I created a custom solution for OCP to streamline inventory management. The application features intuitive interfaces, enabling efficient tracking and reducing waste.",
     image: "/images/3.jpg",
-    tags: ["Firebase ", "Angular ", "Bootstrap "],
+    tags: ["Firebase", "Angular", "Bootstrap"],
     visitpreview: "",
     // visit: "https://angularrrrrr.herokuapp.com/startpage",
     visit: "",
@@ -86,13 +86,23 @@ export const projects = [
   {
     title: "UDEMY COURSE",
     description:
-      "I designed and delivered a comprehensive Udemy course on building full-stack web applications using PHP, MySQL, Bootstrap, jQuery, Ajax, and Docker. Students gained practical experience in database design, back-end development, and front-end design, and mastered CRUD operations through video lectures, code snippets, and practical exercises. By course end, students were proficient in creating dynamic, data-driven web applications.",
+      "I designed and published a comprehensive Udemy course on building full-stack web applications using PHP, MySQL, Bootstrap, jQuery, Ajax, and Docker. Students gained hands-on experience in creating dynamic, data-driven web applications.",
     image: "/images/10.jpg",
-    tags: ["PHP  ", "MySQL ", "Bootstrap", "Docker"],
+    tags: ["PHP", "MySQL", "Bootstrap", "Docker"],
     visitpreview: "",
     visit:
       "https://www.udemy.com/course/crud-con-php-mysql-bootstrap-jquery-ajax-y-docker/?referralCode=7DA4E7BDFF8902109591",
     id: 7,
+  },
+  {
+    title: "IPTV Services",
+    description:
+      "I developed a modern IPTV platform using Next.js and TypeScript, allowing users to access over 10,000 channels. The application features a responsive design and an intuitive interface for a seamless streaming experience.",
+    image: "/images/18.jpg",
+    tags: ["Next.js", "TypeScript", "React", "Vercel"],
+    visitpreview: "",
+    visit: "https://iptvapp-neon.vercel.app/",
+    id: 8,
   },
 ];
 export const certficates = [
@@ -213,28 +223,19 @@ export const TimeLineData = [
   { year: 2014, text: "I began my career in systems engineering." },
   {
     year: 2019,
-    text: "I joined Avantia Consultores while I also started my master's degree.",
+    text: "I joined Avantia Consultores while starting my master's degree.",
   },
-  { year: 2019, text: "Later that same year, I transitioned to a new role at Corporación BI." },
+  { year: 2019, text: "Later that year, I transitioned to Corporación BI." },
   { year: 2020, text: "I graduated with a degree in Systems Engineering." },
-  {
-    year: 2021,
-    text: "I graduated from my master's degree.",
-  },
-  {
-    year: 2023,
-    text: "I started working at FHA.",
-  },
-  {
-    year: 2024,
-    text: "I started working at BDG Panama, S.A.",
-  },
+  { year: 2021, text: "I completed my master's degree." },
+  { year: 2023, text: "I started working at FHA." },
+  { year: 2024, text: "I began a new role at BDG Panama, S.A." },
 ];
 export const data = [
   { number: 1, text: "Course" },
   { number: 1000, text: "Students" },
-  { number: 1900, text: "Github Followers" },
-  { number: 5000, text: "Github Stars" },
+  { number: 1900, text: "GitHub Followers" },
+  { number: 5000, text: "GitHub Stars" },
 ];
 export const research = [
   {
@@ -247,7 +248,7 @@ export const research = [
   },
   {
     description:
-      "Thesis completed as part of the requirements for the degree of \"Ingeniería en Sistemas de Información Y Ciencias de la Computación\"",
+      "Thesis completed as part of the requirements for the degree of \"Ingeniería en Sistemas de Información y Ciencias de la Computación\".",
     image: "/images/tesis.jpg",
     visit:
       "https://drive.google.com/file/d/1_UHBSDxC54dHOFzt0aghxkL4SpeJGyJh/view",

@@ -16,8 +16,8 @@ export const projects = [
     image: "/images/8.jpg",
     tags: ["Angular", "Laravel", "MySQL"],
     visitpreview: "",
-    // visit: "",
-    visit: "http://www.rentodito.net/",
+    visit: "",
+    // visit: "http://www.rentodito.net/",
     id: 1,
   },
   {
@@ -39,17 +39,17 @@ export const projects = [
     visitpreview: "",
     visit: "",
     id: 3,
-  },
-  // {
-  //   title: "UDEMY COURSE",
-  //   description:
-  //     "I crafted and published an extensive Udemy course on building fingerprint attendance systems using .NET, PostgreSQL, and Railway Material Skin 2. Learners delved into system architecture, UI design, database management, and biometric authentication. The course featured video lessons, code samples, and hands-on projects, empowering students to create secure, efficient, and visually pleasing attendance solutions aligned with contemporary business requirements.",
-  //   image: "/images/9.jpg",
-  //   tags: [".NET ", "Railway", "PgSQL"],
-  //   visitpreview: "",
-  //   visit: "https://www.udemy.com/course/sistema-marcaje-huella-net-pgsql-railway-material-skin-2/?referralCode=05527E9AAB14B1397CBD&couponCode=24T6MT62024",
-  //   id: 4,
-  // },
+  }, {
+    title: "UDEMY COURSE",
+    description:
+      "I published a Udemy course on building fingerprint attendance systems using .NET, PostgreSQL and Railway Material Skin 2. Through video lessons and code samples, students learn to implement biometric authentication and create secure attendance tracking solutions.",
+    image: "/images/9.jpg",
+    tags: [".NET ", "Railway", "PgSQL"],
+    visitpreview: "",
+    visit: "https://www.udemy.com/course/sistema-marcaje-huella-net-pgsql-railway-material-skin-2/?referralCode=05527E9AAB14B1397CBD&couponCode=24T6MT62024",
+    id: 4,
+  }
+  ,
   {
     title: "ATF CONSULTORES",
     description:
@@ -61,17 +61,17 @@ export const projects = [
     // visit: "https://atfp-agina.vercel.app/",
     id: 5,
   },
-  {
-    title: "OFICINA CENTRAL DE PROTECCIÓN, S.A.",
-    description:
-      "During my university internship, I created a custom solution for OCP to streamline inventory management. The application features intuitive interfaces, enabling efficient tracking and reducing waste.",
-    image: "/images/3.jpg",
-    tags: ["Firebase", "Angular", "Bootstrap"],
-    visitpreview: "",
-    // visit: "https://angularrrrrr.herokuapp.com/startpage",
-    visit: "",
-    id: 6,
-  },
+  // {
+  //   title: "OFICINA CENTRAL DE PROTECCIÓN, S.A.",
+  //   description:
+  //     "During my university internship, I created a custom solution for OCP to streamline inventory management. The application features intuitive interfaces, enabling efficient tracking and reducing waste.",
+  //   image: "/images/3.jpg",
+  //   tags: ["Firebase", "Angular", "Bootstrap"],
+  //   visitpreview: "",
+  //   // visit: "https://angularrrrrr.herokuapp.com/startpage",
+  //   visit: "",
+  //   id: 6,
+  // },
   // {
   //   title: "FINAL PROJECT OF ADVANCED PROGRAMMING IN JAVA",
   //   description:
@@ -93,17 +93,17 @@ export const projects = [
     visit:
       "https://www.udemy.com/course/crud-con-php-mysql-bootstrap-jquery-ajax-y-docker/?referralCode=7DA4E7BDFF8902109591",
     id: 7,
-  },
-  {
+  }, {
     title: "IPTV Services",
     description:
       "I developed a modern IPTV platform using Next.js and TypeScript, allowing users to access over 10,000 channels. The application features a responsive design and an intuitive interface for a seamless streaming experience.",
     image: "/images/18.jpg",
     tags: ["Next.js", "TypeScript", "React", "Vercel"],
     visitpreview: "",
-    visit: "https://iptvapp-neon.vercel.app/",
+    visit: "https://iptvapp-buster.vercel.app/",
     id: 8,
-  },
+  }
+  ,
 ];
 export const certficates = [
   {

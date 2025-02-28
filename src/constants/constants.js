@@ -100,7 +100,7 @@ export const projects = [
     image: "/images/18.jpg",
     tags: ["Next.js", "TypeScript", "React", "Vercel"],
     visitpreview: "",
-    visit: "https://iptvapp-buster.vercel.app/",
+    visit: "https://iptv-app-buster.vercel.app/",
     id: 8,
   }
   ,

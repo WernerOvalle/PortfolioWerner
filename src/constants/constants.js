@@ -20,16 +20,16 @@ export const projects = [
     // visit: "http://www.rentodito.net/",
     id: 1,
   },
-  {
-    title: "VETERINARIA PET MARKET",
-    description:
-      "I created a custom web application for Pet Market Veterinary, improving their inventory management and establishing a dynamic online presence through a user-friendly and visually appealing website.",
-    image: "/images/17.jpg",
-    tags: ["Bootstrap", "JS", "MySQL", "PHP"],
-    visitpreview: "",
-    visit: "",
-    id: 2,
-  },
+  // {
+  //   title: "VETERINARIA PET MARKET",
+  //   description:
+  //     "I created a custom web application for Pet Market Veterinary, improving their inventory management and establishing a dynamic online presence through a user-friendly and visually appealing website.",
+  //   image: "/images/17.jpg",
+  //   tags: ["Bootstrap", "JS", "MySQL", "PHP"],
+  //   visitpreview: "",
+  //   visit: "",
+  //   id: 2,
+  // },
   {
     title: "PACO LED",
     description:
@@ -39,17 +39,17 @@ export const projects = [
     visitpreview: "",
     visit: "",
     id: 3,
-  }, {
-    title: "UDEMY COURSE",
-    description:
-      "I published a Udemy course on building fingerprint attendance systems using .NET, PostgreSQL and Railway Material Skin 2. Through video lessons and code samples, students learn to implement biometric authentication and create secure attendance tracking solutions.",
-    image: "/images/9.jpg",
-    tags: [".NET ", "Railway", "PgSQL"],
-    visitpreview: "",
-    visit: "https://www.udemy.com/course/sistema-marcaje-huella-net-pgsql-railway-material-skin-2/?referralCode=05527E9AAB14B1397CBD&couponCode=24T6MT62024",
-    id: 4,
-  }
-  ,
+  },
+  //  {
+  //   title: "UDEMY COURSE",
+  //   description:
+  //     "I published a Udemy course on building fingerprint attendance systems using .NET, PostgreSQL and Railway Material Skin 2. Through video lessons and code samples, students learn to implement biometric authentication and create secure attendance tracking solutions.",
+  //   image: "/images/9.jpg",
+  //   tags: [".NET ", "Railway", "PgSQL"],
+  //   visitpreview: "",
+  //   visit: "https://www.udemy.com/course/sistema-marcaje-huella-net-pgsql-railway-material-skin-2/?referralCode=05527E9AAB14B1397CBD&couponCode=24T6MT62024",
+  //   id: 4,
+  // },
   {
     title: "ATF CONSULTORES",
     description:

@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: "HTD GUATEMALA",
+    title: "HTD - GUATEMALA",
     description:
       "I leveraged my web design and development skills to build a modern website for HTD GUATEMALA, showcasing their products, enhancing their online presence, and providing users with a responsive design and an intuitive contact portal.",
     image: "/images/5.jpg",
@@ -10,15 +10,14 @@ export const projects = [
     id: 0,
   },
   {
-    title: "RENTODITO",
+    title: "FHA - GUATEMALA",
     description:
-      "I developed a robust web application for Rentodito, a Mexican startup, through Fiverr. This project laid the foundation for their rental services platform, enabling customers to easily rent products and services with efficiency.",
-    image: "/images/8.jpg",
-    tags: ["Angular", "Laravel", "MySQL"],
+      "I developed a modern and accessible website for FHA (Instituto de Fomento de Hipotecas Aseguradas), a state institution that facilitates access to mortgage loans for housing acquisition in Guatemala. Built with Next.js and Tailwind UI, the site provides users with comprehensive information about mortgage services and housing opportunities.",
+    image: "/images/19.jpg",
+    tags: ["Next.js", "Tailwind", "Prisma", "PostgreSQL"],
     visitpreview: "",
-    visit: "",
-    // visit: "http://www.rentodito.net/",
-    id: 1,
+    visit: "https://fha.gob.gt/",
+    id: 10,
   },
   // {
   //   title: "VETERINARIA PET MARKET",
@@ -30,16 +29,17 @@ export const projects = [
   //   visit: "",
   //   id: 2,
   // },
-  {
-    title: "PACO LED",
-    description:
-      "I designed and implemented a tailored solution for Paco Led, a leader in automotive lighting, to optimize inventory management and automate financial reporting, enhancing operational efficiency and profitability insights.",
-    image: "/images/6.jpg",
-    tags: ["JQuery", "Materialize", "PHP", "MySQL"],
-    visitpreview: "",
-    visit: "",
-    id: 3,
-  },
+  // {
+  //   title: "PACO LED",
+  //   description:
+  //     "I designed and implemented a tailored solution for Paco Led, a leader in automotive lighting, to optimize inventory management and automate financial reporting, enhancing operational efficiency and profitability insights.",
+  //   image: "/images/6.jpg",
+  //   tags: ["JQuery", "Materialize", "PHP", "MySQL"],
+  //   visitpreview: "",
+  //   visit: "",
+  //   id: 3,
+  // },
+
   //  {
   //   title: "UDEMY COURSE",
   //   description:
@@ -88,7 +88,7 @@ export const projects = [
     description:
       "I designed and published a comprehensive Udemy course on building full-stack web applications using PHP, MySQL, Bootstrap, jQuery, Ajax, and Docker. Students gained hands-on experience in creating dynamic, data-driven web applications.",
     image: "/images/10.jpg",
-    tags: ["PHP", "MySQL", "Bootstrap", "Docker"],
+    tags: ["PHP", "MySQL", "JQuery", "Docker"],
     visitpreview: "",
     visit:
       "https://www.udemy.com/course/crud-con-php-mysql-bootstrap-jquery-ajax-y-docker/?referralCode=7DA4E7BDFF8902109591",
@@ -98,12 +98,21 @@ export const projects = [
     description:
       "I developed a modern IPTV platform using Next.js and TypeScript, allowing users to access over 10,000 channels. The application features a responsive design and an intuitive interface for a seamless streaming experience.",
     image: "/images/18.jpg",
-    tags: ["Next.js", "TypeScript", "React", "Vercel"],
+    tags: ["Next.js", "TypeScript", "ShadcnUI", "Vercel"],
     visitpreview: "",
     visit: "https://iptv-app-buster.vercel.app/",
-    id: 8,
-  }
-  ,
+    id: 9,
+  }, {
+    title: "RENTODITO",
+    description:
+      "I developed a robust web application for Rentodito, a Mexican startup, through Fiverr. This project laid the foundation for their rental services platform, enabling customers to easily rent products and services with efficiency.",
+    image: "/images/8.jpg",
+    tags: ["Angular", "Laravel", "MySQL"],
+    visitpreview: "",
+    visit: "https://www.fiverr.com/wernerovalle299",
+    // visit: "http://www.rentodito.net/",
+    id: 1,
+  },
 ];
 export const certficates = [
   {

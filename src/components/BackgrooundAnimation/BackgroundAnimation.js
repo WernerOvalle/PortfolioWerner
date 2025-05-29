@@ -1,27 +1,64 @@
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const BackgroundAnimation = () => (
   <div>
        
-       <Image 
-         id="profileImg"
-         src="/images/profile.png" 
-         alt="Profile picture" 
-         width={420}
-         height={420}
-         style={{
-          position: "absolute",
-          marginTop: "20px",
-          marginLeft: "120px",
+       <motion.div
+         initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+         animate={{ 
+           opacity: 1, 
+           scale: 1, 
+           rotate: 0,
+           y: [0, -10, 0]
          }}
-       />
-    <svg
+         transition={{ 
+           duration: 1.5,
+           ease: "easeOut",
+           y: {
+             duration: 3,
+             repeat: Infinity,
+             ease: "easeInOut"
+           }
+         }}
+         whileHover={{ 
+           scale: 1.05,
+           rotate: 5,
+           transition: { duration: 0.3 }
+         }}
+         style={{
+           position: "absolute",
+           marginTop: "20px",
+           marginLeft: "120px",
+           zIndex: 10,
+         }}
+       >
+         <Image 
+           id="profileImg"
+           src="/images/profile.png" 
+           alt="Profile picture" 
+           width={420}
+           height={420}
+           style={{
+             borderRadius: "20px"
+           }}
+         />
+       </motion.div>
+    <motion.svg
       className="BgAnimation__svg"
       viewBox="0 0 602 602"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      
+      initial={{ opacity: 0, rotate: 0 }}
+      animate={{ 
+        opacity: 1, 
+        rotate: 360 
+      }}
+      transition={{ 
+        opacity: { duration: 2, delay: 0.5 },
+        rotate: { duration: 20, repeat: Infinity, ease: "linear" }
+      }}
     >
       <g opacity="0.15">
         <path
@@ -373,7 +410,7 @@ const BackgroundAnimation = () => (
           <stop offset="1" stopColor="#13ADC7" stopOpacity="0" />
         </linearGradient>
       </defs>
-    </svg>
+    </motion.svg>
     
  
 

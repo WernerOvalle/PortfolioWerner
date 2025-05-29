@@ -17,3 +17,37 @@ export const LeftSection = styled.div`
   }
 `;
 
+export const TypedContainer = styled.span`
+  color: ${props => props.theme.colors.accent1};
+  font-weight: 800;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  min-height: 1.2em;
+  
+  > * {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  &::before {
+    content: "Full Stack Developer_";
+    grid-column: 1;
+    grid-row: 1;
+    visibility: hidden;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  
+  .typed-cursor {
+    color: ${props => props.theme.colors.accent1};
+    font-weight: 100;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+`;
+

@@ -1,18 +1,21 @@
 import React from 'react';
+import Image from 'next/image';
 
 const BackgroundAnimation = () => (
   <div>
        
-       <img id="profileImg"src="/images/profile.png" alt="Kiwi standing on oval" 
-       style={{
-        position: "absolute",
-        marginTop: "20px",
-        marginLeft: "120px",
-        width: "420px",
-        height: "420px",
-        
-       }}
-       ></img>
+       <Image 
+         id="profileImg"
+         src="/images/profile.png" 
+         alt="Profile picture" 
+         width={420}
+         height={420}
+         style={{
+          position: "absolute",
+          marginTop: "20px",
+          marginLeft: "120px",
+         }}
+       />
     <svg
       className="BgAnimation__svg"
       viewBox="0 0 602 602"

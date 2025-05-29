@@ -18,27 +18,27 @@ import {
 const Header = () => (
   <Container>
     <Div1>
-      <Link href="/">
-        <a
-          style={{
-            display: "flex",
-            alignItems: "center",
-            color: "white",
-            marginBottom: "20px",
-          }}
-        >
-          <RiBook2Line size="3rem" /> <Span> Portfolio</Span>
-        </a>
+      <Link
+        href="/"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          color: "white",
+          marginBottom: "20px",
+        }}>
+
+        <RiBook2Line size="3rem" /> <Span> Portfolio</Span>
+
       </Link>
     </Div1>
     <Div2>
     <li>
-        <Link href="#projects">
+        <Link href="#projects" legacyBehavior>
           <NavLink>Projects</NavLink>
         </Link>
       </li>
       <li>
-        <Link href="#certificates">
+        <Link href="#certificates" legacyBehavior>
           <NavLink>Certficates</NavLink>
          
         </Link>
@@ -47,7 +47,7 @@ const Header = () => (
 
     
       <li>
-        <Link href="#about">
+        <Link href="#about" legacyBehavior>
           <NavLink>About</NavLink>
         </Link>
       </li>

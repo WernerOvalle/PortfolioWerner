@@ -1,4 +1,4 @@
-export default {
+const theme = {
   // Temp fonts
   fonts: {
     title: "Space Grotesk, sans-serif",
@@ -19,4 +19,6 @@ export default {
     lg: 'screen and (max-width: 1024px)',
     xl: 'screen and (max-width: 1280px)'
   },
-}
+};
+
+export default theme;

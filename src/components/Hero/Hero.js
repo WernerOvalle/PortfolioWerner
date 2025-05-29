@@ -30,7 +30,7 @@ const Hero = (props) => (
                 <ReactTyped
                   strings={[
                     "Software Developer",
-                    "Full Stack Developer", 
+                    "Full Stack Developer",
                     ".NET Specialist",
                     "React Expert",
                     "Backend Developer",
@@ -52,13 +52,10 @@ const Hero = (props) => (
             transition={{ duration: 1, delay: 0.6 }}
           >
             <SectionText>
-              Hello there, welcome to my portfolio! If you&apos;d <br/> 
-              like to learn more about my experience and <br/>
-              skills, you can view my resume by clicking <br/>
-              the button below.
+              Hello there, welcome to my portfolio! If you&apos;d like to discover my experience and skills, you can view my resume by clicking the button below.
             </SectionText>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -67,8 +64,8 @@ const Hero = (props) => (
           >
             <Button
               onClick={() =>
-                (window.location =
-                  "https://drive.google.com/file/d/1HOPuUsdMT8opDl6zbX_MwAnotSYjW13G/view?usp=sharing")
+              (window.location =
+                "https://drive.google.com/file/d/1HOPuUsdMT8opDl6zbX_MwAnotSYjW13G/view?usp=sharing")
               }
             >
               View Resume

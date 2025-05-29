@@ -62,14 +62,7 @@ const Timeline = () => {
         <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
           <>
             {TimeLineData.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                whileHover={{ scale: 1.02, y: -5 }}
-              >
+              <div key={index}>
                 <CarouselMobileScrollNode
                   final={index === TOTAL_CAROUSEL_COUNT - 1}>
                   <CarouselItem
@@ -113,7 +106,7 @@ const Timeline = () => {
                     <CarouselItemText>{item.text}</CarouselItemText>
                   </CarouselItem>
                 </CarouselMobileScrollNode>
-              </motion.div>
+              </div>
             ))}
           </>
         </CarouselContainer>
@@ -124,11 +117,7 @@ const Timeline = () => {
         <CarouselButtons>
           {TimeLineData.map((item, index) => {
             return (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              >
+              <div key={index}>
                 <CarouselButton
                   index={index}
                   active={activeItem}
@@ -136,7 +125,7 @@ const Timeline = () => {
                   type="button">
                   <CarouselButtonDot active={activeItem} />
                 </CarouselButton>
-              </motion.div>
+              </div>
             );
           })}
         </CarouselButtons>

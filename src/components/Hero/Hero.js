@@ -26,7 +26,7 @@ const Hero = (props) => (
           >
             <SectionTitle main center>
               Werner Ovalle <br />
-              <TypedContainer>
+              <TypedContainer className={styles.gradientText}>
                 <ReactTyped
                   strings={[
                     "Software Developer",

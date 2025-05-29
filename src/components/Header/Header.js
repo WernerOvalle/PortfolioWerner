@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { DiCssdeck } from "react-icons/di";
 import { RiBook2Line } from "react-icons/ri";
@@ -32,25 +33,40 @@ const Header = () => (
       </Link>
     </Div1>
     <Div2>
-    <li>
+    <motion.li
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.1 }}
+      whileHover={{ scale: 1.1, y: -2 }}
+    >
         <Link href="#projects" legacyBehavior>
           <NavLink>Projects</NavLink>
         </Link>
-      </li>
-      <li>
+      </motion.li>
+      <motion.li
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        whileHover={{ scale: 1.1, y: -2 }}
+      >
         <Link href="#certificates" legacyBehavior>
           <NavLink>Certficates</NavLink>
          
         </Link>
        
-      </li>
+      </motion.li>
 
     
-      <li>
+      <motion.li
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        whileHover={{ scale: 1.1, y: -2 }}
+      >
         <Link href="#about" legacyBehavior>
           <NavLink>About</NavLink>
         </Link>
-      </li>
+      </motion.li>
     </Div2>
     <Div3>
       <SocialIcons href="https://github.com/WernerOvalle">

@@ -85,20 +85,51 @@ export const UtilityList = styled.ul`
   padding: 0;
   display: flex;
   justify-content: space-around;
-  margin: 2.5rem 0;
+  margin: 2.5rem 0 1.25rem 0;
 `;
 
 export const ExternalLinks = styled.a`
-color:#d4c0c0;
-font-size: 1.6rem;
-padding:1rem 1.5rem;
-background: #6b3030;
-border-radius: 15px;
-transition: 0.5s;
-&:hover{
-  background: #801414;
-
-}
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(135deg, hsl(34.9, 98.6%, 72.9%) 0%, hsl(205.1, 100%, 36.1%) 100%);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, hsl(205.1, 100%, 36.1%) 0%, hsl(34.9, 98.6%, 72.9%) 100%);
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    
+    &::before {
+      left: 0;
+    }
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const TagList = styled.ul`

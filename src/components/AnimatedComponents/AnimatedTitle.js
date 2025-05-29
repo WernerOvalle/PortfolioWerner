@@ -14,11 +14,11 @@ const titleVariants = {
     }
   },
   hover: {
-    scale: 1.02,
+    scale: 1.01,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       type: "spring",
-      stiffness: 300
+      stiffness: 150
     }
   }
 };
@@ -99,6 +99,11 @@ const AnimatedTitle = ({
   return (
     <motion.div
       viewport={{ once: true, margin: "-100px" }}
+      style={{ 
+        transformOrigin: 'center',
+        overflow: 'visible',
+        padding: '0 10px'
+      }}
       {...getAnimation()}
     >
       <SectionTitle {...props}>

@@ -1,0 +1,22 @@
+.gradientText {
+  background: linear-gradient(
+    120deg,
+    hsl(34.9, 98.6%, 72.9%) 0%,
+    hsl(205.1, 100%, 36.1%) 50%, 
+    hsl(34.9, 98.6%, 72.9%) 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}

@@ -43,7 +43,7 @@ const Technologies = () => (
                 Knowledge in <br />
                 ASP.NET<br />
                 React.js <br />
-                Vue.js
+                NextJS
               </ListParagraph>
             </ListContainer>
           </ListItem>

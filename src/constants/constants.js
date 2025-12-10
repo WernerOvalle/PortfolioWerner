@@ -192,11 +192,18 @@ export const certficates = [
       "https://platzi.com/p/werner-ovalle/curso/1991-next/diploma/detalle/",
     id: 10,
   },
+  // {
+  //   title: "CURSO DE NEXT.JS: AUTENTICACIÓN",
+  //   image: "/images/nextAuth.jpg",
+  //   visit:
+  //     "https://platzi.com/p/werner-ovalle/curso/2428-course/diploma/detalle/",
+  //   id: 11,
+  // },
   {
-    title: "CURSO DE NEXT.JS: AUTENTICACIÓN",
-    image: "/images/nextAuth.jpg",
+    title: "CLAUDE CODE IN ACTION",
+    image: "/images/claudecode.jpg",
     visit:
-      "https://platzi.com/p/werner-ovalle/curso/2428-course/diploma/detalle/",
+      "https://verify.skilljar.com/c/zzivhd7k6hgy ",
     id: 11,
   },
   {

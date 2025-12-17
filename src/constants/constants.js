@@ -98,7 +98,7 @@ export const projects = [
     description:
       "I developed a modern IPTV platform using Next.js and TypeScript, allowing users to access over 10,000 channels. The application features a responsive design and an intuitive interface for a seamless streaming experience.",
     image: "/images/18.jpg",
-    tags: ["Next.js", "TypeScript", "ShadcnUI", "Vercel"],
+    tags: ["Next.js", "TypeScript", "MagicUI", "Vercel"],
     visitpreview: "",
     visit: "https://iptv-app-buster.vercel.app/",
     id: 9,

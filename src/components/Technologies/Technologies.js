@@ -59,8 +59,8 @@ const Technologies = () => (
               <ListParagraph>
                 Knowledge in <br />
                 .NET <br />
-                NodeJS <br />
-                PHP
+                C# <br />
+                NodeJS
               </ListParagraph>
             </ListContainer>
           </ListItem>

@@ -10,6 +10,7 @@ const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
 const Timeline = () => {
   const [activeItem, setActiveItem] = useState(0);
+  const [yearsOfExperience, setYearsOfExperience] = useState(5);
   const carouselRef = useRef();
 
   const scroll = (node, left) => {
@@ -42,9 +43,12 @@ const Timeline = () => {
     }
 
     window.addEventListener('resize', handleResize);
+    
+    // Calculate years of experience on client side only to avoid hydration mismatch
+    const currentYear = new Date().getFullYear();
+    setYearsOfExperience(currentYear - 2019);
   }, []);
-  var today = new Date();
-  var yyyy = today.getFullYear();
+
   return (
     <Section id="about">
       <SectionDivider divider />
@@ -54,7 +58,7 @@ const Timeline = () => {
       
       {/* Texto animado */}
       <AnimatedText delay={0.3}>
-        With over {yyyy-2019} years of experience in frontend and backend development. I&apos;m a software developer in Guatemala City. I really enjoy learning and growing in this field.
+        With over {yearsOfExperience} years of experience in frontend and backend development. I&apos;m a software developer in Guatemala City. I really enjoy learning and growing in this field.
       </AnimatedText>
 
       {/* Carousel con animación de contenedor */}

@@ -23,6 +23,7 @@ row-gap: 3rem;
 
 `
 export const BlogCard = styled.div`
+  position: relative;
   border-radius: 10px;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
@@ -140,4 +141,31 @@ padding: 2rem;
 export const Tag = styled.li`
 color: #d8bfbf;
 font-size: 1.5rem;
+`
+
+export const Badge = styled.span`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 15px;
+  color: #fff;
+  background: ${(props) => {
+    switch(props.type) {
+      case 'Work':
+        return 'linear-gradient(135deg, #0077b6 0%, #00b4d8 100%)';
+      case 'Course':
+        return 'linear-gradient(135deg, #7b2cbf 0%, #c77dff 100%)';
+      case 'Personal':
+        return 'linear-gradient(135deg, #2d6a4f 0%, #52b788 100%)';
+      default:
+        return 'linear-gradient(135deg, #f77f00 0%, #fcbf49 100%)';
+    }
+  }};
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
 `

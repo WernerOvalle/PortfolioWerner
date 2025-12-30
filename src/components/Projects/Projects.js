@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { AnimatedTitle, AnimatedContainer } from '../AnimatedComponents';
 
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
+import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img, Badge } from './ProjectsStyles';
 import { Section, SectionDivider } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 
@@ -23,6 +23,7 @@ const Projects = () => (
               }}
             >
               <BlogCard>
+                {p.badge && <Badge type={p.badge}>{p.badge}</Badge>}
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}

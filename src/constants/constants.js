@@ -7,6 +7,7 @@ export const projects = [
     tags: ["HTML", "CSS", "Bootstrap", "JS"],
     visitpreview: "",
     visit: "http://www.htdguatemala.com.gt/",
+    badge: "Freelance",
     id: 0,
   },
   {
@@ -17,6 +18,7 @@ export const projects = [
     tags: ["Next.js", "Tailwind", "Prisma", "PostgreSQL"],
     visitpreview: "",
     visit: "https://fha.gob.gt/",
+    badge: "Work",
     id: 10,
   },
   // {
@@ -59,6 +61,7 @@ export const projects = [
     visitpreview: "",
     visit: "https://atfconsultoresgt.com/",
     // visit: "https://atfp-agina.vercel.app/",
+    badge: "Freelance",
     id: 5,
   },
   // {
@@ -92,6 +95,7 @@ export const projects = [
     visitpreview: "",
     visit:
       "https://www.udemy.com/course/crud-con-php-mysql-bootstrap-jquery-ajax-y-docker/?referralCode=7DA4E7BDFF8902109591",
+    badge: "Course",
     id: 7,
   }, {
     title: "IPTV Services",
@@ -101,6 +105,7 @@ export const projects = [
     tags: ["Next.js", "TypeScript", "MagicUI", "Vercel"],
     visitpreview: "",
     visit: "https://iptv-app-buster.vercel.app/",
+    badge: "Personal",
     id: 9,
   }, {
     title: "RENTODITO",
@@ -111,6 +116,7 @@ export const projects = [
     visitpreview: "",
     visit: "https://www.fiverr.com/wernerovalle299",
     // visit: "http://www.rentodito.net/",
+    badge: "Freelance",
     id: 1,
   },
 ];
@@ -236,16 +242,14 @@ export const certficates = [
   },
 ];
 export const TimeLineData = [
-  { year: 2014, text: "I began my career in systems engineering." },
-  {
-    year: 2019,
-    text: "I joined Avantia Consultores while starting my master's degree.",
-  },
-  { year: 2019, text: "Later that year, I transitioned to Corporación BI." },
-  { year: 2020, text: "I graduated with a degree in Systems Engineering." },
-  { year: 2021, text: "I completed my master's degree." },
-  { year: 2023, text: "I started working at FHA." },
-  { year: 2024, text: "I began a new role at BDG Panama, S.A." },
+  { year: 2014, text: "Started my journey in Systems Engineering at university." },
+  { year: 2019, text: "Joined Avantia Consultores and began my Master's degree program." },
+  { year: 2019, text: "Transitioned to Corporación BI as a Software Developer." },
+  { year: 2020, text: "Earned my Bachelor's degree in Systems Engineering and Computer Science." },
+  { year: 2021, text: "Completed my Master's degree in IT with a focus on Electronic Banking." },
+  { year: 2023, text: "Joined FHA Guatemala as a Full Stack Developer." },
+  { year: 2024, text: "Expanded my career internationally at BDG Panama, S.A." },
+  { year: 2026, text: "Joined Improving, a U.S.-based consulting firm, as a Full Stack Developer." },
 ];
 export const data = [
   { number: 1, text: "Course" },

@@ -9,8 +9,8 @@ import {
   DiNodejsSmall,
   DiScrum,
 } from "react-icons/di";
-import { FaDocker, FaEthereum } from "react-icons/fa";
-import { AiOutlineConsoleSql } from "react-icons/ai";
+import { FaDocker, FaEthereum, FaCloud } from "react-icons/fa";
+import { AiOutlineConsoleSql, AiOutlineCloud } from "react-icons/ai";
 import {
   Section,
   SectionDivider,
@@ -95,6 +95,23 @@ const Technologies = () => (
                 Azure DevOps <br />
                 Docker <br />
                 Git
+              </ListParagraph>
+            </ListContainer>
+          </ListItem>
+        </motion.div>
+
+        <motion.div whileHover={{ scale: 1.05, y: -5 }}>
+          <ListItem>
+            <picture>
+              <AiOutlineCloud size="3rem" />
+            </picture>
+            <ListContainer>
+              <ListTitle>Cloud</ListTitle>
+              <ListParagraph>
+                Knowledge in <br />
+                Microsoft Azure <br />
+                App Services <br />
+                Azure Functions
               </ListParagraph>
             </ListContainer>
           </ListItem>

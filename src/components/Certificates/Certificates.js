@@ -43,7 +43,7 @@ const Certificates = () => (
                       transition={{ duration: 0.2 }}
                     >
                       <ExternalLinks href={p.visit}>
-                        View Certificate
+                        {p.inProgress ? 'Learn More' : 'View Certificate'}
                       </ExternalLinks>
                     </motion.div>
                   }

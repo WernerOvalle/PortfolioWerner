@@ -110,8 +110,8 @@ const Technologies = () => (
               <ListParagraph>
                 Knowledge in <br />
                 Microsoft Azure <br />
-                App Services <br />
-                Azure Functions
+                PaaS & IaaS <br />
+                Cloud Solutions
               </ListParagraph>
             </ListContainer>
           </ListItem>

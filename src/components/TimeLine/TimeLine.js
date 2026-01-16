@@ -45,8 +45,11 @@ const Timeline = () => {
     window.addEventListener('resize', handleResize);
     
     // Calculate years of experience on client side only to avoid hydration mismatch
-    const currentYear = new Date().getFullYear();
-    setYearsOfExperience(currentYear - 2019);
+    // Started working in February 2019
+    const now = new Date();
+    const startDate = new Date(2019, 1); // February 2019 (month is 0-indexed)
+    const years = Math.floor((now - startDate) / (365.25 * 24 * 60 * 60 * 1000));
+    setYearsOfExperience(years);
   }, []);
 
   return (

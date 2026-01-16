@@ -250,13 +250,13 @@ export const certficates = [
 ];
 export const TimeLineData = [
   { year: 2014, text: "Started my journey in Systems Engineering at university." },
-  { year: 2019, text: "Joined Avantia Consultores and began my Master's degree program." },
-  { year: 2019, text: "Transitioned to Corporación BI as a Software Developer." },
+  { year: 2019, text: "Joined Claro as a Business Intelligence Developer and began my Master's degree program." },
+  { year: 2019, text: "Transitioned to Banco Industrial as a Software Developer." },
   { year: 2020, text: "Earned my Bachelor's degree in Systems Engineering and Computer Science." },
   { year: 2021, text: "Completed my Master's degree in IT with a focus on Electronic Banking." },
-  { year: 2023, text: "Joined FHA Guatemala as a Full Stack Developer." },
-  { year: 2024, text: "Expanded my career internationally at BDG Panama, S.A." },
-  { year: 2026, text: "Joined Improving, a U.S.-based consulting firm, as a Full Stack Developer." },
+  { year: 2023, text: "Joined FHA Guatemala as a Software Engineer." },
+  { year: 2024, text: "Expanded my career internationally at BDG Panama, S.A. as a Software Engineer." },
+  { year: 2026, text: "Joined Improving, a U.S.-based consulting firm, as a Software Engineer." },
 ];
 export const data = [
   { number: 1, text: "Course" },

@@ -256,7 +256,6 @@ export const TimeLineData = [
   { year: 2021, text: "Completed my Master's degree in IT with a focus on Electronic Banking." },
   { year: 2023, text: "Joined FHA Guatemala as a Software Engineer." },
   { year: 2024, text: "Expanded my career internationally at BDG Panama, S.A. as a Software Engineer." },
-  { year: 2026, text: "Joined Improving, a U.S.-based consulting firm, as a Software Engineer." },
 ];
 export const data = [
   { number: 1, text: "Course" },

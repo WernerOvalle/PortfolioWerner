@@ -212,13 +212,13 @@ export const certficates = [
       "https://platzi.com/p/werner-ovalle/curso/1991-next/diploma/detalle/",
     id: 12,
   },
-  // {
-  //   title: "CURSO DE NEXT.JS: AUTENTICACIÓN",
-  //   image: "/images/nextjs-authentication-certificate.jpg",
-  //   visit:
-  //     "https://platzi.com/p/werner-ovalle/curso/2428-course/diploma/detalle/",
-  //   id: 13,
-  // },
+  {
+    title: "CURSO DE NEXT.JS: AUTENTICACIÓN",
+    image: "/images/nextjs-authentication-certificate.jpg",
+    visit:
+      "https://platzi.com/p/werner-ovalle/curso/2428-course/diploma/detalle/",
+    id: 13,
+  },
   {
     title: "FUNDAMENTOS DE TYPESCRIPT",
     image: "/images/typescript-fundamentals-certificate.jpg",
@@ -233,12 +233,12 @@ export const certficates = [
       "https://platzi.com/p/werner-ovalle/curso/1788-course/diploma/detalle/",
     id: 15,
   },
-  // {
-  //   title: "EFSET English Certificate 55/100 (B2 Upper Intermediate)",
-  //   image: "/images/efset-english-certificate.jpg",
-  //   visit: "https://www.efset.org/cert/gSKS8F",
-  //   id: 16,
-  // },
+  {
+    title: "EFSET English Certificate 55/100 (B2 Upper Intermediate)",
+    image: "/images/efset-english-certificate.jpg",
+    visit: "https://www.efset.org/cert/gSKS8F",
+    id: 16,
+  },
   {
     title:
       "AZ-204: DEVELOPING SOLUTIONS FOR MICROSOFT AZURE (IN PROGRESS)",

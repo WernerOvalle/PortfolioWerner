@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { DiCssdeck } from "react-icons/di";
 import { RiBook2Line } from "react-icons/ri";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import { useThemeContext } from "../../contexts/ThemeContext";
 
 import {
   Container,
@@ -16,7 +18,10 @@ import {
   ContactDropDown
 } from "./HeaderStyles";
 
-const Header = () => (
+const Header = () => {
+  const { isDark } = useThemeContext();
+
+  return (
   <Container>
     <Div1>
       <Link
@@ -24,7 +29,7 @@ const Header = () => (
         style={{
           display: "flex",
           alignItems: "center",
-          color: "white",
+          color: isDark ? "white" : "#0F1624",
           marginBottom: "20px",
         }}>
 
@@ -51,12 +56,12 @@ const Header = () => (
       >
         <Link href="#certificates" legacyBehavior>
           <NavLink>Certficates</NavLink>
-         
+
         </Link>
-       
+
       </motion.li>
 
-    
+
       <motion.li
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -69,6 +74,7 @@ const Header = () => (
       </motion.li>
     </Div2>
     <Div3>
+      <ThemeToggle />
       <SocialIcons href="https://github.com/WernerOvalle">
         <AiFillGithub size="3rem" />
       </SocialIcons>
@@ -78,9 +84,10 @@ const Header = () => (
       <SocialIcons href="https://www.instagram.com/werner_ovalle">
         <AiFillInstagram size="3rem" />
       </SocialIcons>
-      
+
     </Div3>
   </Container>
-);
+  );
+};
 
 export default Header;

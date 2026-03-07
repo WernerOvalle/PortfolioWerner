@@ -11,6 +11,14 @@ const theme = {
     accent1: "hsl(34.9,98.6%,72.9%)",
     button: "hsl(205.1,100%,36.1%)",
     background2: "hsl(232.7,27.3%,23.7%)",
+    cardBg: "#0F1624",
+    cardTitle: "#9cc9e3",
+    titleGradient: "linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%)",
+    textMuted: "rgba(255, 255, 255, 0.75)",
+    textSubtle: "rgba(255, 255, 255, 0.5)",
+    textFaint: "rgba(255, 255, 255, 0.4)",
+    borderSubtle: "rgba(255, 255, 255, 0.1)",
+    borderMuted: "rgba(255, 255, 255, 0.33)",
   },
   // Breakpoints for responsive design
   breakpoints: {

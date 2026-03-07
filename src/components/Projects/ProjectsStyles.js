@@ -28,6 +28,7 @@ export const BlogCard = styled.div`
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
   width: 400px;
+  background: ${props => props.theme.colors.cardBg};
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
@@ -43,7 +44,7 @@ export const TitleContent = styled.div`
 export const HeaderThree = styled.h3`
   font-weight: 500;
   letter-spacing: 2px;
-  color: #9cc9e3;
+  color: ${props => props.theme.colors.cardTitle};
   padding: .5rem 0;
   font-size: ${(props) => props.title ? '3rem' : '2rem'};
 `;
@@ -59,7 +60,7 @@ export const Hr = styled.hr`
 export const Intro = styled.div`
   width: 170px;
   margin: 0 auto;
-  color: #dce3e7;
+  color: ${props => props.theme.colors.textMuted};
   font-family: 'Droid Serif', serif;
   font-size: 13px;
   font-style: italic;
@@ -70,7 +71,7 @@ export const Intro = styled.div`
 export const CardInfo = styled.p`
   width: 100%;
   padding: 0 50px;
-  color: #e4e6e7;
+  color: ${props => props.theme.colors.textMuted};
   font-style: 2rem;
   line-height: 24px;
   text-align: justify;
@@ -139,7 +140,7 @@ justify-content: space-around;
 padding: 2rem;
 `
 export const Tag = styled.li`
-color: #d8bfbf;
+color: ${props => props.theme.colors.textMuted};
 font-size: 1.5rem;
 `
 

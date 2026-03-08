@@ -6,6 +6,9 @@ import { HiMail } from "react-icons/hi";
 import { SocialIcons } from "../Header/HeaderStyles";
 import {
   CompanyContainer,
+  CopyrightBar,
+  CopyrightDivider,
+  CopyrightText,
   FooterWrapper,
   LinkColumn,
   LinkItem,
@@ -14,6 +17,7 @@ import {
   Slogan,
   SocialContainer,
   SocialIconsContainer,
+  TechBadge,
 } from "./FooterStyles";
 
 const Footer = () => {
@@ -58,6 +62,13 @@ const Footer = () => {
           </SocialIcons>
         </SocialContainer>
       </SocialIconsContainer>
+      <CopyrightBar>
+        <CopyrightText>© {new Date().getFullYear()} Werner</CopyrightText>
+        <CopyrightDivider>—</CopyrightDivider>
+        <TechBadge>Built with Next.js</TechBadge>
+        <CopyrightDivider>•</CopyrightDivider>
+        <TechBadge>Deployed on Azure</TechBadge>
+      </CopyrightBar>
     </FooterWrapper>
   );
 };

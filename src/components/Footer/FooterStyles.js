@@ -157,3 +157,39 @@ export const LinkTitle = styled.h4`
 		margin-bottom: 8px;
 	}
 `
+
+export const CopyrightBar = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	padding: 1.25rem 0 0;
+	margin-top: 1.5rem;
+	border-top: 1px solid ${props => props.theme.colors.borderSubtle};
+	font-size: 13px;
+	letter-spacing: 0.02em;
+	color: ${props => props.theme.colors.textMuted};
+	text-align: center;
+
+	@media ${props => props.theme.breakpoints.sm} {
+		font-size: 11px;
+		padding: 1rem 0 0;
+		margin-top: 1rem;
+	}
+`
+
+export const CopyrightText = styled.span`
+	opacity: 0.9;
+`
+
+export const CopyrightDivider = styled.span`
+	opacity: 0.5;
+	user-select: none;
+`
+
+export const TechBadge = styled.span`
+	color: ${props => props.theme.colors.primary1};
+	font-weight: 500;
+	opacity: 0.95;
+`

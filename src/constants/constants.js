@@ -241,7 +241,7 @@ export const certficates = [
   },
   {
     title:
-      "AZ-204: DEVELOPING SOLUTIONS FOR MICROSOFT AZURE (IN PROGRESS)",
+      "AZ-204 Developing Solutions for Microsoft Azure",
     image: "/images/azure-developer-az204-certificate.jpg",
     visit: "https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/",
     inProgress: true,

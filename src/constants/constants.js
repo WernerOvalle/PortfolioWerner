@@ -212,12 +212,18 @@ export const certficates = [
       "https://platzi.com/p/werner-ovalle/curso/1991-next/diploma/detalle/",
     id: 12,
   },
+  // {
+  //   title: "CURSO DE NEXT.JS: AUTENTICACIÓN",
+  //   image: "/images/nextjs-authentication-certificate.jpg",
+  //   visit:
+  //     "https://platzi.com/p/werner-ovalle/curso/2428-course/diploma/detalle/",
+  //   id: 13,
+  // },
   {
-    title: "CURSO DE NEXT.JS: AUTENTICACIÓN",
-    image: "/images/nextjs-authentication-certificate.jpg",
-    visit:
-      "https://platzi.com/p/werner-ovalle/curso/2428-course/diploma/detalle/",
-    id: 13,
+    title: "INTRODUCTION TO AGENT SKILLS",
+    image: "/images/introduction-agent-skills-certificate.png",
+    visit: "https://verify.skilljar.com/c/c524fjzst4ki",
+    id: 18,
   },
   {
     title: "FUNDAMENTOS DE TYPESCRIPT",

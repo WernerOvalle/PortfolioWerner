@@ -75,7 +75,7 @@ const AnimatedContainer = ({
 
   return (
     <motion.div
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: "200px" }}
       className={className}
       {...getAnimation()}
       {...props}

@@ -32,7 +32,7 @@ const Certificates = () => (
         variants={catVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true, margin: "200px" }}
       >
         <CategoryTitle $color={cat.color}>{cat.category}</CategoryTitle>
         <CategoryDesc>{cat.description}</CategoryDesc>
@@ -50,12 +50,7 @@ const Certificates = () => (
                 }}
               >
                 <BlogCard>
-                  <motion.div
-                    whileHover={{ scale: 1.03 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Img src={p.image} />
-                  </motion.div>
+                  <Img src={p.image} />
                   <TitleContent>
                     <HeaderThree title>{p.title}</HeaderThree>
                     <Hr />

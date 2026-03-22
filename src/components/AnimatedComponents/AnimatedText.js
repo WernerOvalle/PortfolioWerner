@@ -77,7 +77,7 @@ const AnimatedText = ({
 
   return (
     <motion.div
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "200px" }}
       {...getAnimation()}
     >
       <SectionText {...props}>

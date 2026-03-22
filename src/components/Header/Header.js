@@ -1,92 +1,195 @@
 import Link from "next/link";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
-import { DiCssdeck } from "react-icons/di";
 import { RiBook2Line } from "react-icons/ri";
+import { RiMenu4Line, RiCloseLine } from "react-icons/ri";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { useThemeContext } from "../../contexts/ThemeContext";
 
 import {
-  Container,
-  Div1,
-  Div2,
-  Div3,
+  NavBar,
+  NavInner,
+  Logo,
+  NavLinks,
   NavLink,
+  NavActions,
   SocialIcons,
-  Span,
-  ContactDropDown
+  HamburgerBtn,
+  MobileMenuOverlay,
+  MobileMenuPanel,
+  MobileNavLink,
+  MobileSocials,
 } from "./HeaderStyles";
+
+const navItems = [
+  { label: "Projects", href: "#projects" },
+  { label: "Certificates", href: "#certificates" },
+  { label: "About", href: "#about" },
+];
+
+const socials = [
+  { href: "https://github.com/WernerOvalle", icon: AiFillGithub },
+  { href: "https://www.linkedin.com/in/werner-ovalle/", icon: AiFillLinkedin },
+  { href: "https://www.instagram.com/werner_ovalle", icon: AiFillInstagram },
+];
+
+const menuVariants = {
+  hidden: { opacity: 0, y: -16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.22, ease: "easeOut" } },
+  exit: { opacity: 0, y: -10, transition: { duration: 0.18 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -12 },
+  visible: (i) => ({
+    opacity: 1, x: 0,
+    transition: { duration: 0.2, delay: i * 0.06 },
+  }),
+};
 
 const Header = () => {
   const { isDark } = useThemeContext();
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState(0);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    if (navRef.current) setHeaderHeight(navRef.current.offsetHeight);
+  }, []);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
-  <Container>
-    <Div1>
-      <Link
-        href="/"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          color: isDark ? "white" : "#0F1624",
-          marginBottom: "20px",
-        }}>
+    <>
+      <div style={{ height: headerHeight }} />
 
-        <RiBook2Line size="3rem" /> <Span> Portfolio</Span>
+      <NavBar ref={navRef} $scrolled={scrolled}>
+        <NavInner>
+          {/* Logo */}
+          <Link href="/" passHref legacyBehavior>
+            <Logo>
+              <RiBook2Line size="2.8rem" />
+              <span>Portfolio</span>
+            </Logo>
+          </Link>
 
-      </Link>
-    </Div1>
-    <Div2>
-    <motion.li
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.1 }}
-      whileHover={{ scale: 1.1, y: -2 }}
-    >
-        <Link href="#projects" legacyBehavior>
-          <NavLink>Projects</NavLink>
-        </Link>
-      </motion.li>
-      <motion.li
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        whileHover={{ scale: 1.1, y: -2 }}
-      >
-        <Link href="#certificates" legacyBehavior>
-          <NavLink>Certficates</NavLink>
+          {/* Desktop nav links */}
+          <NavLinks>
+            {navItems.map((item, i) => (
+              <motion.li
+                key={item.href}
+                initial={{ opacity: 0, y: -16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+                whileHover={{ y: -2 }}
+                style={{ listStyle: "none" }}
+              >
+                <Link href={item.href} legacyBehavior>
+                  <NavLink>{item.label}</NavLink>
+                </Link>
+              </motion.li>
+            ))}
+          </NavLinks>
 
-        </Link>
+          {/* Desktop actions */}
+          <NavActions>
+            <ThemeToggle />
+            {socials.map((s) => (
+              <SocialIcons key={s.href} href={s.href} target="_blank" rel="noopener noreferrer">
+                <s.icon size="2.6rem" />
+              </SocialIcons>
+            ))}
+          </NavActions>
 
-      </motion.li>
+          {/* Mobile hamburger */}
+          <HamburgerBtn
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              {menuOpen ? (
+                <motion.span
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  style={{ display: "flex" }}
+                >
+                  <RiCloseLine size="2.8rem" />
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="open"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  style={{ display: "flex" }}
+                >
+                  <RiMenu4Line size="2.8rem" />
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </HamburgerBtn>
+        </NavInner>
+      </NavBar>
 
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <>
+            <motion.div
+              key="overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              style={{
+                position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
+                background: "rgba(0,0,0,0.45)", zIndex: 998,
+              }}
+              onClick={closeMenu}
+            />
 
-      <motion.li
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        whileHover={{ scale: 1.1, y: -2 }}
-      >
-        <Link href="#about" legacyBehavior>
-          <NavLink>About</NavLink>
-        </Link>
-      </motion.li>
-    </Div2>
-    <Div3>
-      <ThemeToggle />
-      <SocialIcons href="https://github.com/WernerOvalle">
-        <AiFillGithub size="3rem" />
-      </SocialIcons>
-      <SocialIcons href="https://www.linkedin.com/in/werner-ovalle/">
-        <AiFillLinkedin size="3rem" />
-      </SocialIcons>
-      <SocialIcons href="https://www.instagram.com/werner_ovalle">
-        <AiFillInstagram size="3rem" />
-      </SocialIcons>
+            <MobileMenuPanel
+              as={motion.div}
+              key="panel"
+              variants={menuVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              style={{ top: headerHeight }}
+            >
+              {navItems.map((item, i) => (
+                <motion.div key={item.href} custom={i} variants={itemVariants} initial="hidden" animate="visible">
+                  <Link href={item.href} legacyBehavior>
+                    <MobileNavLink onClick={closeMenu}>{item.label}</MobileNavLink>
+                  </Link>
+                </motion.div>
+              ))}
 
-    </Div3>
-  </Container>
+              <MobileSocials>
+                <ThemeToggle />
+                {socials.map((s) => (
+                  <SocialIcons key={s.href} href={s.href} target="_blank" rel="noopener noreferrer">
+                    <s.icon size="2.8rem" />
+                  </SocialIcons>
+                ))}
+              </MobileSocials>
+            </MobileMenuPanel>
+          </>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 

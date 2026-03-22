@@ -39,8 +39,8 @@ const Footer = () => {
           <LinkTitle>
             <HiMail /> Email
           </LinkTitle>
-          <LinkItem href="mailto:wernerovalle1995@hotmail.com">
-            wernerovalle1995@hotmail.com
+          <LinkItem href="mailto:wovalle@protonmail.com">
+            wovalle@protonmail.com
           </LinkItem>
         </LinkColumn>
       </LinkList>

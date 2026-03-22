@@ -144,6 +144,44 @@ color: ${props => props.theme.colors.textMuted};
 font-size: 1.5rem;
 `
 
+export const CategoryTitle = styled.h3`
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: ${props => props.$color || props.theme.colors.cardTitle};
+  margin: 4rem 0 0.4rem 3rem;
+  padding-left: 1.2rem;
+  border-left: 4px solid ${props => props.$color || props.theme.colors.accent1};
+
+  @media ${props => props.theme.breakpoints.md} {
+    font-size: 2rem;
+    margin: 3rem 0 0.4rem 2rem;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 1.8rem;
+    margin: 2.5rem 0 0.4rem 1rem;
+  }
+`
+
+export const CategoryDesc = styled.p`
+  font-size: 1.5rem;
+  color: ${props => props.theme.colors.textSubtle};
+  margin: 0.4rem 0 1rem 3rem;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+
+  @media ${props => props.theme.breakpoints.md} {
+    font-size: 1.4rem;
+    margin: 0.4rem 0 1rem 2rem;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 1.3rem;
+    margin: 0.4rem 0 1rem 1rem;
+  }
+`
+
 export const Badge = styled.span`
   position: absolute;
   top: 10px;

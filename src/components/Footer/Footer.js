@@ -3,6 +3,7 @@ import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { FaTelegramPlane } from "react-icons/fa";
 import { DiCssdeck, DiBitbucket } from "react-icons/di";
 import { HiMail } from "react-icons/hi";
+import { VscAzure } from "react-icons/vsc";
 import { SocialIcons } from "../Header/HeaderStyles";
 import {
   CompanyContainer,
@@ -67,7 +68,7 @@ const Footer = () => {
         <CopyrightDivider>—</CopyrightDivider>
         <TechBadge>Built with Next.js</TechBadge>
         <CopyrightDivider>•</CopyrightDivider>
-        <TechBadge>Deployed on Azure</TechBadge>
+        <TechBadge azure><VscAzure /> Deployed on Azure Static Web Apps</TechBadge>
       </CopyrightBar>
     </FooterWrapper>
   );

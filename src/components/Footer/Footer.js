@@ -3,9 +3,13 @@ import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { FaTelegramPlane } from "react-icons/fa";
 import { DiCssdeck, DiBitbucket } from "react-icons/di";
 import { HiMail } from "react-icons/hi";
+import { VscAzure } from "react-icons/vsc";
 import { SocialIcons } from "../Header/HeaderStyles";
 import {
   CompanyContainer,
+  CopyrightBar,
+  CopyrightDivider,
+  CopyrightText,
   FooterWrapper,
   LinkColumn,
   LinkItem,
@@ -14,6 +18,7 @@ import {
   Slogan,
   SocialContainer,
   SocialIconsContainer,
+  TechBadge,
 } from "./FooterStyles";
 
 const Footer = () => {
@@ -34,8 +39,8 @@ const Footer = () => {
           <LinkTitle>
             <HiMail /> Email
           </LinkTitle>
-          <LinkItem href="mailto:wernerovalle1995@hotmail.com">
-            wernerovalle1995@hotmail.com
+          <LinkItem href="mailto:wovalle@protonmail.com">
+            wovalle@protonmail.com
           </LinkItem>
         </LinkColumn>
       </LinkList>
@@ -50,7 +55,7 @@ const Footer = () => {
           <SocialIcons href="https://bitbucket.org/wjop5bb/">
             <DiBitbucket size="3rem" />
           </SocialIcons>
-          <SocialIcons href="https://bit.ly/linkedin-werner">
+          <SocialIcons href="https://www.linkedin.com/in/werner-ovalle/">
             <AiFillLinkedin size="3rem" />
           </SocialIcons>
           <SocialIcons href="https://www.instagram.com/werner_ovalle">
@@ -58,6 +63,13 @@ const Footer = () => {
           </SocialIcons>
         </SocialContainer>
       </SocialIconsContainer>
+      <CopyrightBar>
+        <CopyrightText>© {new Date().getFullYear()} Werner</CopyrightText>
+        <CopyrightDivider>—</CopyrightDivider>
+        <TechBadge>Built with Next.js</TechBadge>
+        <CopyrightDivider>•</CopyrightDivider>
+        <TechBadge azure><VscAzure /> Deployed on Azure Static Web Apps</TechBadge>
+      </CopyrightBar>
     </FooterWrapper>
   );
 };

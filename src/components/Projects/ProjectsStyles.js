@@ -1,33 +1,37 @@
 import styled from 'styled-components';
 
 export const Img = styled.img`
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 220px;
   object-fit: cover;
-  overflow: hidden;
+  display: block;
 `
 
 export const GridContainer = styled.section`
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-padding: 3rem;
-place-items: center;
-column-gap: 2rem;
-row-gap: 3rem;
-@media ${(props) => props.theme.breakpoints.sm} {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  padding-bottom: 0;
-}
-
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  padding: 3rem;
+  justify-items: center;
+  align-items: stretch;
+  column-gap: 2rem;
+  row-gap: 3rem;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-bottom: 0;
+  }
 `
 export const BlogCard = styled.div`
   position: relative;
-  border-radius: 10px;
+  border-radius: 12px;
+  overflow: hidden;
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   text-align: center;
   width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   background: ${props => props.theme.colors.cardBg};
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
@@ -70,15 +74,15 @@ export const Intro = styled.div`
 
 export const CardInfo = styled.p`
   width: 100%;
-  padding: 0 50px;
+  padding: 0 2rem;
   color: ${props => props.theme.colors.textMuted};
-  font-style: 2rem;
-  line-height: 24px;
+  font-size: 1.4rem;
+  line-height: 1.6;
   text-align: justify;
+  flex: 1;
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding:.3rem
-  
-}
+    padding: 0 1rem;
+  }
 `;
 
 
@@ -88,6 +92,7 @@ export const UtilityList = styled.ul`
   display: flex;
   justify-content: space-around;
   margin: 2.5rem 0 1.25rem 0;
+  margin-top: auto;
 `;
 
 export const ExternalLinks = styled.a`
@@ -142,6 +147,44 @@ padding: 2rem;
 export const Tag = styled.li`
 color: ${props => props.theme.colors.textMuted};
 font-size: 1.5rem;
+`
+
+export const CategoryTitle = styled.h3`
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: ${props => props.$color || props.theme.colors.cardTitle};
+  margin: 4rem 0 0.4rem 3rem;
+  padding-left: 1.2rem;
+  border-left: 4px solid ${props => props.$color || props.theme.colors.accent1};
+
+  @media ${props => props.theme.breakpoints.md} {
+    font-size: 2rem;
+    margin: 3rem 0 0.4rem 2rem;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 1.8rem;
+    margin: 2.5rem 0 0.4rem 1rem;
+  }
+`
+
+export const CategoryDesc = styled.p`
+  font-size: 1.5rem;
+  color: ${props => props.theme.colors.textSubtle};
+  margin: 0.4rem 0 1rem 3rem;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+
+  @media ${props => props.theme.breakpoints.md} {
+    font-size: 1.4rem;
+    margin: 0.4rem 0 1rem 2rem;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 1.3rem;
+    margin: 0.4rem 0 1rem 1rem;
+  }
 `
 
 export const Badge = styled.span`

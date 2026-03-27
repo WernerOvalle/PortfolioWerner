@@ -30,6 +30,7 @@ const Hero = (props) => (
                 <ReactTyped
                   strings={[
                     "Software Developer",
+                    "Software Engineer",
                     "Full Stack Developer",
                     ".NET Specialist",
                     "React Expert",

@@ -98,7 +98,7 @@ const AnimatedTitle = ({
 
   return (
     <motion.div
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "200px" }}
       style={{ 
         transformOrigin: 'center',
         overflow: 'visible',

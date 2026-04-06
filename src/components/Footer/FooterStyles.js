@@ -189,17 +189,17 @@ export const CopyrightDivider = styled.span`
 `
 
 export const TechBadge = styled.span`
-	color: ${props => props.azure ? '#0078d4' : props.theme.colors.primary1};
-	font-weight: ${props => props.azure ? '600' : '500'};
+	color: ${props => props.netlify ? '#00c7b7' : props.theme.colors.primary1};
+	font-weight: ${props => props.netlify ? '600' : '500'};
 	opacity: 0.95;
 	display: inline-flex;
 	align-items: center;
 	gap: 0.3rem;
-	${props => props.azure && `
-		background: rgba(0, 120, 212, 0.1);
-		border: 1px solid rgba(0, 120, 212, 0.3);
-		border-radius: 4px;
-		padding: 2px 8px;
+	${props => props.netlify && `
+		background: rgba(0, 199, 183, 0.12);
+		border: 1px solid rgba(0, 199, 183, 0.25);
+		border-radius: 6px;
+		padding: 4px 10px;
 		font-size: 12px;
 	`}
 `

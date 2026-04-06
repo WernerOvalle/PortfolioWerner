@@ -1,0 +1,27 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio_dev
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount the entire project root into /app for live source editing
+      - .:/app
+      # Anonymous volume for node_modules — critical on Windows:
+      # prevents the host bind mount from overwriting the container's
+      # own installed packages with an empty or mismatched host folder
+      - /app/node_modules
+      # Named volume for pnpm store — persists between docker compose up and
+      # docker compose run so pnpm update/add commands work without store conflicts
+      - pnpm-store:/root/.local/share/pnpm/store
+    environment:
+      - WATCHPACK_POLLING=true
+      - NEXT_TELEMETRY_DISABLED=1
+    # Allow clean Ctrl+C shutdown
+    stdin_open: true
+    tty: true
+
+volumes:
+  pnpm-store:

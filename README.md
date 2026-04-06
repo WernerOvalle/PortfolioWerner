@@ -1,88 +1,108 @@
 # Personal Portfolio
 
-A modern, responsive portfolio website built with Next.js 15 and React 19, featuring smooth animations and a clean design.
+A modern, responsive portfolio website built with Next.js 16 and React 19, featuring smooth animations and a clean design.
 
-## 📸 Preview
+## Preview
 
 ![Portfolio Preview](https://i.imgur.com/3ot7j9n.png)
 
-## 🚀 Tech Stack
+## Tech Stack
 
-- **Next.js 15.3.2** - React framework with App Router
-- **React 19.1.0** - Latest React with concurrent features
-- **Styled Components 6.1.18** - CSS-in-JS styling
-- **Framer Motion 12.15.0** - Advanced animations
-- **React Icons 5.5.0** - Icon library
-- **TypeScript Support** - Type-safe development
+- **Next.js 16** - React framework, static export
+- **React 19** - Latest React with concurrent features
+- **Styled Components 6** - CSS-in-JS styling with dark/light theme
+- **Framer Motion 12** - Advanced animations
+- **React Icons 5** - Icon library
+- **pnpm** - Fast, disk-efficient package manager with supply chain protection
 
-## 🛠️ Getting Started
+## Prerequisites
 
-### Prerequisites
-- Node.js 18+ (recommended: Node.js 20+)
-- npm or yarn package manager
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) — all development runs inside Docker
 
-### Development Setup
+No Node.js installation required on your machine. Netlify deployment is configured automatically via `netlify.toml`.
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd PortfolioWerner
-   ```
+## Local Development (Docker)
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-### Build for Production
+### Start the dev server
 
 ```bash
-npm run build
-npm start
+docker compose up
 ```
 
-## 📦 Scripts
+Open [http://localhost:3000](http://localhost:3000). Hot reload is active — save a file and the browser updates instantly.
 
-- `npm run dev` - Start development server with Turbopack
-- `npm run build` - Build for production
-- `npm start` - Start production server
-- `npm run lint` - Run ESLint
+### Stop the dev server
 
-## 🌐 Deployment
+```bash
+docker compose down
+```
 
-This portfolio is optimized for deployment on:
-- **Vercel** (recommended for Next.js)
-- **Netlify**
-- **GitHub Pages**
+### Build the image (first time or after adding packages)
 
-## 📁 Project Structure
+```bash
+docker compose build
+```
+
+## Common Commands
+
+All commands run inside the container — nothing is installed on your host machine.
+
+| Task | Command |
+|---|---|
+| Start dev server | `docker compose up` |
+| Stop dev server | `docker compose down` |
+| Rebuild image | `docker compose build` |
+| Update all deps to latest | `docker compose run --rm portfolio pnpm update --latest` |
+| Add a package | `docker compose run --rm portfolio pnpm add <package>` |
+| Run lint | `docker compose run --rm portfolio pnpm lint` |
+| Audit for vulnerabilities | `docker compose run --rm portfolio pnpm audit --audit-level=high` |
+
+After running `pnpm update --latest`, commit both `package.json` and `pnpm-lock.yaml` so Netlify picks up the updated versions.
+
+## Deployment
+
+Deployed on **Netlify**. Configuration in `netlify.toml`:
+
+- Build command: `pnpm run build`
+- Publish directory: `out`
+- Node version: 22
+
+Push to the main branch to trigger a deploy. Docker is not involved in the deployment process.
+
+## Security
+
+Dependencies are protected via `.npmrc`:
+
+- `ignore-scripts=true` — blocks malicious postinstall scripts
+- `save-exact=true` — pins exact versions, no silent upgrades
+- `minimum-release-age=10080` — rejects packages published less than 7 days ago
+- `block-exotic-subdeps=true` — blocks exotic sub-dependencies
+- `trust-policy=no-downgrade` — prevents trust downgrades
+
+Docker adds an additional isolation layer: dev tooling runs inside a container, keeping the host machine clean.
+
+## Project Structure
 
 ```
 src/
-├── components/          # Reusable UI components
-├── pages/              # Next.js pages
-├── styles/             # Global styles and themes
-├── constants/          # Application constants
-└── layout/             # Layout components
+├── components/     # UI components (each has ComponentName.js + ComponentNameStyles.js)
+├── pages/          # Next.js pages (index.js is the single page)
+├── styles/         # Global styles and theme primitives
+├── constants/      # Portfolio content — edit this to update projects, certs, timeline
+├── contexts/       # React context (ThemeContext)
+├── themes/         # Dark and light theme tokens
+└── layout/         # Layout wrapper
 ```
 
-## ✨ Features
+## Features
 
-- 🎨 Modern and responsive design
-- 🚀 Optimized performance with Next.js 15
-- 📱 Mobile-first approach
-- 🎭 Smooth animations with Framer Motion
-- 🎯 SEO optimized
-- ⚡ Fast loading with Turbopack
+- Responsive design, mobile-first
+- Dark/light mode with localStorage persistence
+- Smooth animations with Framer Motion
+- SEO optimized static export
+- Fast dev builds with Turbopack
+- Supply-chain protected dependencies
 
 ---
 
-Built with ❤️ using Next.js and React
+Built with Next.js and React

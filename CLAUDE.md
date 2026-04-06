@@ -4,13 +4,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Commands
 
+All development runs inside Docker — do not run pnpm directly on the host.
+
 ```bash
-pnpm dev      # Start dev server with Turbopack (http://localhost:3000)
-pnpm build    # Static export to /out directory
-pnpm lint     # ESLint check
+docker compose up                                              # Start dev server (http://localhost:3000)
+docker compose down                                           # Stop dev server
+docker compose build                                          # Rebuild image (after adding packages)
+docker compose run --rm portfolio pnpm build                  # Static export to /out directory
+docker compose run --rm portfolio pnpm lint                   # ESLint check
+docker compose run --rm portfolio pnpm add <pkg>              # Add a package
+docker compose run --rm portfolio pnpm audit --audit-level=high  # Security audit
 ```
 
 No test suite is configured. There is no `npm test` command.
+
+### Supply Chain Protection
+
+`.npmrc` enforces: `ignore-scripts=true`, `save-exact=true`, `minimum-release-age=10080` (7 days), `block-exotic-subdeps=true`, `trust-policy=no-downgrade`.
+
+`package.json` has `pnpm.onlyBuiltDependencies: ["esbuild"]` — esbuild is the only package allowed to run its postinstall script (needed by Next.js for its native binary).
 
 ## Architecture
 
@@ -62,3 +74,10 @@ The `ThemeToggle` component (`src/components/ThemeToggle/ThemeToggle.js`) is the
 - Images must be in `/public/images/` and referenced as `/images/filename.jpg`
 - Image optimization is disabled (`unoptimized: true`)
 - Build output goes to `/out/`
+
+### Docker / Local Dev
+
+- `Dockerfile` — Node 22 Alpine, pnpm via corepack, dev-only (not used by Netlify)
+- `docker-compose.yml` — mounts source as live volume, anonymous volume for `node_modules`, named volume `pnpm-store` for pnpm store persistence across `docker compose run` calls
+- `WATCHPACK_POLLING=true` is set in the container for hot reload on Windows
+- Netlify reads `netlify.toml` directly and runs `pnpm run build` in its own environment — Docker has no effect on deployment

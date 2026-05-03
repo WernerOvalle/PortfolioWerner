@@ -108,6 +108,16 @@ export const projects = [
     badge: "Personal",
     id: 9,
   }, {
+    title: "IMPOSTOR GAME",
+    description:
+      "A party web game where everyone receives a secret word — except the impostor, who gets nothing and must figure it out from the conversation. Players discuss and try to expose who's bluffing, while the impostor uses every clue to stay hidden.",
+    image: "/images/impostor-game.png",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    visitpreview: "",
+    visit: "https://impostor-game-eight-bay.vercel.app/game",
+    badge: "Personal",
+    id: 11,
+  }, {
     title: "RENTODITO",
     description:
       "I developed a robust web application for Rentodito, a Mexican startup, through Fiverr. This project laid the foundation for their rental services platform, enabling customers to easily rent products and services with efficiency.",
@@ -478,6 +488,17 @@ export const projectCategories = [
         visit: "https://iptv-app-buster.vercel.app/",
         badge: "Personal",
         id: 9,
+      },
+      {
+        title: "IMPOSTOR GAME",
+        description:
+          "A party web game where everyone receives a secret word — except the impostor, who gets nothing and must figure it out from the conversation. Players discuss and try to expose who's bluffing, while the impostor uses every clue to stay hidden.",
+        image: "/images/impostor-game.png",
+        tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+        visitpreview: "",
+        visit: "https://impostor-game-eight-bay.vercel.app/game",
+        badge: "Personal",
+        id: 11,
       },
       {
         title: "UDEMY COURSE",

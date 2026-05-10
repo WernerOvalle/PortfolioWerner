@@ -258,9 +258,8 @@ export const certficates = [
   {
     title:
       "AZ-204 Developing Solutions for Microsoft Azure",
-    image: "/images/azure-developer-az204-certificate.jpg",
-    visit: "https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/",
-    inProgress: true,
+    image: "/images/udemy-az204-certificate.jpg",
+    visit: "https://www.udemy.com/certificate/UC-1b880a76-4fc7-48ad-86ad-e720ab9520ff/",
     id: 17,
   },
 ];
@@ -298,9 +297,8 @@ export const certificateCategories = [
     items: [
       {
         title: "AZ-204 Developing Solutions for Microsoft Azure",
-        image: "/images/azure-developer-az204-certificate.jpg",
-        visit: "https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/",
-        inProgress: true,
+        image: "/images/udemy-az204-certificate.jpg",
+        visit: "https://www.udemy.com/certificate/UC-1b880a76-4fc7-48ad-86ad-e720ab9520ff/",
         description: "Focused on App Service, Azure Functions, Cosmos DB, Azure Storage, Microsoft Identity Platform, and API Management. Study complemented with AZ-204 Exam Guide (2nd ed.) by Paul Ivey & Alex Ivanov — Packt, 2024 (ISBN: 978-1835080047) — with strong results on official mock exams.",
         id: 17,
       },

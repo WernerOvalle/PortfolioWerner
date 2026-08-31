@@ -2,15 +2,28 @@ import React from "react";
 import { motion } from "framer-motion";
 import { SectionTitle } from "../../styles/GlobalComponents";
 
-const titleVariants = {
-  hidden: { opacity: 0, y: 50 },
+// The title animates as ONE block, and deliberately so.
+//
+// This used to render a <motion.span> per letter to fake a typing effect. But
+// SectionTitle paints its text through -webkit-background-clip: text with
+// -webkit-text-fill-color: transparent, and giving its descendants their own
+// transform/opacity layers makes Chrome briefly paint every glyph stacked at the
+// element origin — a dark blob above the title on each reveal.
+//
+// Hero animates its wrapper this same way, around the same SectionTitle, and has
+// never shown the artifact. Animate the wrapper, never the text inside it.
+//
+// delay lives inside the variant: passing it as a `transition` prop on the
+// motion.div would override the variant's own duration and easing.
+const buildTitleVariants = (delay) => ({
+  hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
-      type: "spring",
-      bounce: 0.4
+      duration: 0.5,
+      delay,
+      ease: "easeOut"
     }
   },
   hover: {
@@ -21,46 +34,14 @@ const titleVariants = {
       stiffness: 150
     }
   }
-};
+});
 
-const letterVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.3,
-      delay: i * 0.05,
-      ease: "easeOut"
-    }
-  })
-};
-
-const AnimatedTitle = ({ 
-  children, 
-  delay = 0, 
-  animation = "letter", // "letter", "slide", "bounce", "fade"
-  ...props 
+const AnimatedTitle = ({
+  children,
+  delay = 0,
+  animation = "block", // "block", "slide", "bounce", "fade"
+  ...props
 }) => {
-  const renderContent = () => {
-    if (animation === "letter" && typeof children === 'string') {
-      return children.split('').map((char, index) => (
-        <motion.span
-          key={index}
-          custom={index}
-          variants={letterVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          style={{ display: 'inline-block' }}
-        >
-          {char === ' ' ? '\u00A0' : char}
-        </motion.span>
-      ));
-    }
-    return children;
-  };
-
   const getAnimation = () => {
     switch (animation) {
       case "slide":
@@ -73,8 +54,8 @@ const AnimatedTitle = ({
         return {
           initial: { opacity: 0, scale: 0 },
           whileInView: { opacity: 1, scale: 1 },
-          transition: { 
-            duration: 0.6, 
+          transition: {
+            duration: 0.6,
             delay,
             type: "spring",
             bounce: 0.6
@@ -86,9 +67,9 @@ const AnimatedTitle = ({
           whileInView: { opacity: 1 },
           transition: { duration: 0.8, delay }
         };
-      default: // letter animation
+      default: // block
         return {
-          variants: titleVariants,
+          variants: buildTitleVariants(delay),
           initial: "hidden",
           whileInView: "visible",
           whileHover: "hover"
@@ -98,8 +79,8 @@ const AnimatedTitle = ({
 
   return (
     <motion.div
-      viewport={{ once: true, margin: "200px" }}
-      style={{ 
+      viewport={{ once: true, amount: 0.5 }}
+      style={{
         transformOrigin: 'center',
         overflow: 'visible',
         padding: '0 10px'
@@ -107,7 +88,7 @@ const AnimatedTitle = ({
       {...getAnimation()}
     >
       <SectionTitle {...props}>
-        {renderContent()}
+        {children}
       </SectionTitle>
     </motion.div>
   );

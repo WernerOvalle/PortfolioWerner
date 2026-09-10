@@ -48,12 +48,26 @@ The app has a dual-theme system:
 - `titleGradient` — CSS gradient for `SectionTitle` and `CarouselItemTitle` (white gradient dark / dark gradient light)
 - `textMuted` / `textSubtle` / `textFaint` — rgba opacity variants of primary1
 - `borderSubtle` / `borderMuted` — rgba opacity variants for borders
+- `cardSurface` — card background gradient (glassy dark gradient / near-white in light)
+- `cardShadow` / `cardShadowHover` — resting and hover elevation for cards
+- `cardSheen` — gradient used for the hairline border that lights up on card hover
+- `cardFade` — overlay that fades a card image into the card surface
+- `chipBg` / `chipBorder` — stack/tag pill background and border
 
 When adding new styled-components that need theme-awareness, always use `${props => props.theme.colors.TOKEN}` — never hardcode colors like `white`, `#fff`, or `rgba(255,255,255,...)`.
 
 ### Data / Content
 
-All portfolio content lives in `src/constants/constants.js`: projects, certificates, timeline entries, technologies, research. To add/edit portfolio entries, edit only this file.
+All portfolio content lives in `src/constants/constants.js`: projects, certificates, timeline entries, technologies. To add/edit portfolio entries, edit only this file.
+
+Two grouped arrays drive the page:
+
+- `projectCategories` — three groups: `Client Work` (keeps the `badge` field, `Work` vs `Freelance`), `Side Projects` and `Teaching` (no badge; the category name already says it).
+- `certificateCategories` — four groups: `🎓 Education & Research` (degrees + theses), `🤖 AI & Automation`, `☁️ Cloud & DevOps`, `🌐 Web Development`. The `Certificates` component flattens these into a single filterable grid, so the category name and `color` become a filter chip and the tag shown on each card.
+
+The certificates grid shows `PREVIEW_COUNT` (6) cards and a `Show all (N)` toggle. In the unfiltered `All` view, items marked `featured: true` are sorted first — that flag controls which six a recruiter sees before expanding.
+
+There is no separate Research/Theses section: the two theses are entries inside `🎓 Education & Research`.
 
 ### Global Styles
 

@@ -3,7 +3,6 @@ import BgAnimation from '../components/BackgrooundAnimation/BackgroundAnimation'
 import Hero from '../components/Hero/Hero';
 import Projects from '../components/Projects/Projects';
 import Certficates from '../components/Certificates/Certificates';
-import Research from '../components/Research/Research';
 import Technologies from '../components/Technologies/Technologies';
 import Timeline from '../components/TimeLine/TimeLine';
 import { Layout } from '../layout/Layout';
@@ -21,7 +20,6 @@ const Home = () => {
       <Technologies />
       <Projects />
       <Certficates />
-      <Research />
       {/* <Acomplishments /> */}
     </Layout>
   );

@@ -45,7 +45,7 @@ export const projects = [
   //  {
   //   title: "UDEMY COURSE",
   //   description:
-  //     "I published a Udemy course on building fingerprint attendance systems using .NET, PostgreSQL and Railway Material Skin 2. Through video lessons and code samples, students learn to implement biometric authentication and create secure attendance tracking solutions.",
+  //     "I published a Udemy course on building fingerprint attendance systems using .NET, PostgreSQL and Railway Material Skin 2. Through video lessons and code samples, students learned to implement biometric authentication and build secure attendance tracking solutions.",
   //   image: "/images/udemy-dotnet-attendance-course.jpg",
   //   tags: [".NET ", "Railway", "PgSQL"],
   //   visitpreview: "",
@@ -266,15 +266,36 @@ export const certficates = [
 
 export const certificateCategories = [
   {
-    category: "🎓 Academic Degrees",
+    category: "🎓 Education & Research",
     color: "#d4af37",
-    description: "Formal university degrees and diplomas in Systems Engineering and Information Technology.",
     items: [
+      {
+        title: "TÍTULO DE MÁSTER EN INFORMÁTICA CON ÉNFASIS EN BANCA ELECTRÓNICA Y COMUNICACIONES",
+        image: "/images/master-degree-informatics-banking.jpg",
+        visit: "https://drive.google.com/file/d/1W-PBAGia13hxmFtzqwJ00AzH3OOGYjOF/view",
+        featured: true,
+        id: 2,
+      },
       {
         title: "TITULO DE INGENIERÍA EN SISTEMAS DE INFORMACIÓN Y CIENCIAS DE LA COMPUTACIÓN",
         image: "/images/bachelor-degree-systems-engineering.jpg",
         visit: "https://drive.google.com/file/d/1JpxYRTsGJfDIUs7y6kJBDPwm4p5NC2Bn/view",
+        featured: true,
         id: 0,
+      },
+      {
+        title: "MASTER'S THESIS — INFORMÁTICA CON ÉNFASIS EN BANCA ELECTRÓNICA",
+        description: "Master's Thesis completed as part of the requirements for the degree of \"Magister Artium en informática con énfasis en banca electrónica y comunicaciones\".",
+        image: "/images/master-thesis-informatics-banking.jpg",
+        visit: "https://drive.google.com/file/d/1-wR6KmFYW7q6SCI7qMMnvIbNhSWhtqri/view",
+        id: 19,
+      },
+      {
+        title: "BACHELOR'S THESIS — INGENIERÍA EN SISTEMAS DE INFORMACIÓN",
+        description: "Thesis completed as part of the requirements for the degree of \"Ingeniería en Sistemas de Información y Ciencias de la Computación\".",
+        image: "/images/bachelor-thesis-systems-engineering.jpg",
+        visit: "https://drive.google.com/file/d/1_UHBSDxC54dHOFzt0aghxkL4SpeJGyJh/view",
+        id: 20,
       },
       {
         title: "DIPLOMA DE LICENCIADO DE INGENIERÍA EN SISTEMAS DE INFORMACIÓN Y CIENCIAS DE LA COMPUTACIÓN",
@@ -283,37 +304,56 @@ export const certificateCategories = [
         id: 1,
       },
       {
-        title: "TÍTULO DE MÁSTER EN INFORMÁTICA CON ÉNFASIS EN BANCA ELECTRÓNICA Y COMUNICACIONES",
-        image: "/images/master-degree-informatics-banking.jpg",
-        visit: "https://drive.google.com/file/d/1W-PBAGia13hxmFtzqwJ00AzH3OOGYjOF/view",
-        id: 2,
+        title: "EFSET ENGLISH CERTIFICATE 55/100 (B2 UPPER INTERMEDIATE)",
+        image: "/images/efset-english-certificate.jpg",
+        visit: "https://www.efset.org/cert/gSKS8F",
+        id: 16,
       },
     ],
   },
   {
-    category: "☁️ Cloud & Azure",
-    color: "#0078d4",
-    description: "Cloud platform expertise and enterprise-level Azure certifications.",
+    category: "🤖 AI & Automation",
+    color: "#a855f7",
     items: [
       {
-        title: "AZ-204 Developing Solutions for Microsoft Azure",
+        title: "CLAUDE CODE IN ACTION",
+        image: "/images/claude-code-action-certificate.jpg",
+        visit: "https://verify.skilljar.com/c/zzivhd7k6hgy",
+        featured: true,
+        id: 6,
+      },
+      {
+        title: "INTRODUCTION TO AGENT SKILLS",
+        image: "/images/introduction-agent-skills-certificate.png",
+        visit: "https://verify.skilljar.com/c/c524fjzst4ki",
+        featured: true,
+        id: 18,
+      },
+    ],
+  },
+  {
+    category: "☁️ Cloud & DevOps",
+    color: "#0078d4",
+    items: [
+      {
+        title: "AZ-204 DEVELOPING SOLUTIONS FOR MICROSOFT AZURE",
         image: "/images/udemy-az204-certificate.jpg",
         visit: "https://www.udemy.com/certificate/UC-1b880a76-4fc7-48ad-86ad-e720ab9520ff/",
         description: "Focused on App Service, Azure Functions, Cosmos DB, Azure Storage, Microsoft Identity Platform, and API Management. Study complemented with AZ-204 Exam Guide (2nd ed.) by Paul Ivey & Alex Ivanov — Packt, 2024 (ISBN: 978-1835080047) — with strong results on official mock exams.",
+        featured: true,
         id: 17,
       },
-    ],
-  },
-  {
-    category: "🐳 Containers & DevOps",
-    color: "#2496ed",
-    description: "DevOps practices, CI/CD pipelines, container orchestration, and version control.",
-    items: [
       {
         title: "CURSO PROFESIONAL DE DEVOPS",
         image: "/images/devops-professional-course-certificate.jpg",
         visit: "https://platzi.com/p/werner-ovalle/curso/1431-devops/diploma/detalle/",
         id: 11,
+      },
+      {
+        title: "GETTING STARTED WITH GOOGLE KUBERNETES ENGINE",
+        image: "/images/kubernetes-course.jpg",
+        visit: "https://coursera.org/share/1daa46b324cc27189a69978c14c6e65d",
+        id: 3,
       },
       {
         title: "CURSO BÁSICO DE JENKINS",
@@ -327,35 +367,17 @@ export const certificateCategories = [
         visit: "https://coursera.org/share/b0e5756e30ef7b0ee0a7cb34a532fac7",
         id: 4,
       },
-      {
-        title: "GETTING STARTED WITH GOOGLE KUBERNETES ENGINE",
-        image: "/images/kubernetes-course.jpg",
-        visit: "https://coursera.org/share/1daa46b324cc27189a69978c14c6e65d",
-        id: 3,
-      },
     ],
   },
   {
     category: "🌐 Web Development",
     color: "#10b981",
-    description: "Full-stack web development with modern frameworks and languages.",
     items: [
-      {
-        title: "REACT Y NODEJS DEVELOPER",
-        image: "/images/react-nodejs-developer-certificate.jpg",
-        visit: "https://drive.google.com/file/d/1qbW2fvXiLMQlrcRZu-bjpmVf8MyeFaXX/view?usp=sharing",
-        id: 8,
-      },
-      {
-        title: "Desarrollando Aplicaciones en React y ASP.NET Core",
-        image: "/images/react-aspnet-core-certificate.jpg",
-        visit: "https://www.udemy.com/certificate/UC-a8156d0d-8cdd-4a6e-8548-8efd35f2544a/",
-        id: 9,
-      },
       {
         title: "CURSO DE NEXT.JS",
         image: "/images/nextjs-course-certificate.jpg",
         visit: "https://platzi.com/p/werner-ovalle/curso/1991-next/diploma/detalle/",
+        featured: true,
         id: 12,
       },
       {
@@ -365,16 +387,28 @@ export const certificateCategories = [
         id: 13,
       },
       {
-        title: "CREACIÓN DE APIS REST CON .NET CORE",
-        image: "/images/dotnet-core-api-certificate.jpg",
-        visit: "https://ed.team/@wernerovalle59a/curso/api-punto-net",
-        id: 7,
-      },
-      {
         title: "FUNDAMENTOS DE TYPESCRIPT",
         image: "/images/typescript-fundamentals-certificate.jpg",
         visit: "https://platzi.com/p/werner-ovalle/curso/1869-typescript-2020/diploma/detalle/",
         id: 14,
+      },
+      {
+        title: "REACT Y NODEJS DEVELOPER",
+        image: "/images/react-nodejs-developer-certificate.jpg",
+        visit: "https://drive.google.com/file/d/1qbW2fvXiLMQlrcRZu-bjpmVf8MyeFaXX/view?usp=sharing",
+        id: 8,
+      },
+      {
+        title: "DESARROLLANDO APLICACIONES EN REACT Y ASP.NET CORE",
+        image: "/images/react-aspnet-core-certificate.jpg",
+        visit: "https://www.udemy.com/certificate/UC-a8156d0d-8cdd-4a6e-8548-8efd35f2544a/",
+        id: 9,
+      },
+      {
+        title: "CREACIÓN DE APIS REST CON .NET CORE",
+        image: "/images/dotnet-core-api-certificate.jpg",
+        visit: "https://ed.team/@wernerovalle59a/curso/api-punto-net",
+        id: 7,
       },
       {
         title: "UNIT TESTING CON JEST EN REACT",
@@ -390,46 +424,23 @@ export const certificateCategories = [
       },
     ],
   },
-  {
-    category: "🤖 AI & Automation",
-    color: "#a855f7",
-    description: "Artificial intelligence tools, agent frameworks, and automation skills.",
-    items: [
-      {
-        title: "CLAUDE CODE IN ACTION",
-        image: "/images/claude-code-action-certificate.jpg",
-        visit: "https://verify.skilljar.com/c/zzivhd7k6hgy",
-        id: 6,
-      },
-      {
-        title: "INTRODUCTION TO AGENT SKILLS",
-        image: "/images/introduction-agent-skills-certificate.png",
-        visit: "https://verify.skilljar.com/c/c524fjzst4ki",
-        id: 18,
-      },
-    ],
-  },
-  {
-    category: "🌍 Language",
-    color: "#f59e0b",
-    description: "English language proficiency certification.",
-    items: [
-      {
-        title: "EFSET English Certificate 55/100 (B2 Upper Intermediate)",
-        image: "/images/efset-english-certificate.jpg",
-        visit: "https://www.efset.org/cert/gSKS8F",
-        id: 16,
-      },
-    ],
-  },
 ];
 
 export const projectCategories = [
   {
     category: "Client Work",
     color: "#0077b6",
-    description: "Websites and web applications delivered for companies and freelance clients.",
     items: [
+      {
+        title: "PETER GIESEMANN ARQUITECTO",
+        description: "I designed and built the website for Peter Giesemann Arquitecto, a Guatemalan architecture studio with more than 50 years of practice. The site presents their portfolio of residences, buildings and master plans with a full-bleed editorial layout, and was built with Next.js and Tailwind CSS, developed alongside Claude Code and deployed on Cloudflare.",
+        image: "/images/peter-giesemann-arquitecto.jpg",
+        tags: ["Next.js", "Tailwind", "Claude Code", "Cloudflare"],
+        visitpreview: "",
+        visit: "https://www.petergiesemanns.com/",
+        badge: "Freelance",
+        id: 12,
+      },
       {
         title: "FHA - GUATEMALA",
         description: "I developed a modern and accessible website for FHA (Instituto de Fomento de Hipotecas Aseguradas), a state institution that facilitates access to mortgage loans for housing acquisition in Guatemala. Built with Next.js and Tailwind UI, the site provides users with comprehensive information about mortgage services and housing opportunities.",
@@ -466,47 +477,57 @@ export const projectCategories = [
         image: "/images/rentodito.jpg",
         tags: ["Angular", "Laravel", "MySQL"],
         visitpreview: "",
-        visit: "https://www.fiverr.com/wernerovalle299",
+        visit: "",
         badge: "Freelance",
         id: 1,
       },
     ],
   },
   {
-    category: "Personal Projects & Courses",
+    category: "Side Projects",
     color: "#2d6a4f",
-    description: "Side projects built to explore new technologies and published online courses sharing knowledge with the developer community.",
     items: [
       {
-        title: "IPTV Services",
+        title: "IMPOSTOR GAME",
+        description: "A party web game where everyone receives a secret word — except the impostor, who gets nothing and must figure it out from the conversation. Players discuss and try to expose who's bluffing, while the impostor uses every clue to stay hidden.",
+        image: "/images/impostor-game.png",
+        tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+        visitpreview: "",
+        visit: "https://impostor-game-eight-bay.vercel.app/game",
+        id: 11,
+      },
+      {
+        title: "IPTV SERVICES",
         description: "I developed a modern IPTV platform using Next.js and TypeScript, allowing users to access over 10,000 channels. The application features a responsive design and an intuitive interface for a seamless streaming experience.",
         image: "/images/iptv-services.jpg",
         tags: ["Next.js", "TypeScript", "MagicUI", "Vercel"],
         visitpreview: "",
         visit: "https://iptv-app-buster.vercel.app/",
-        badge: "Personal",
         id: 9,
       },
+    ],
+  },
+  {
+    category: "Teaching",
+    color: "#7b2cbf",
+    items: [
       {
-        title: "IMPOSTOR GAME",
-        description:
-          "A party web game where everyone receives a secret word — except the impostor, who gets nothing and must figure it out from the conversation. Players discuss and try to expose who's bluffing, while the impostor uses every clue to stay hidden.",
-        image: "/images/impostor-game.png",
-        tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-        visitpreview: "",
-        visit: "https://impostor-game-eight-bay.vercel.app/game",
-        badge: "Personal",
-        id: 11,
-      },
-      {
-        title: "UDEMY COURSE",
+        title: "UDEMY — FULL-STACK CRUD WITH PHP & DOCKER",
         description: "I designed and published a comprehensive Udemy course on building full-stack web applications using PHP, MySQL, Bootstrap, jQuery, Ajax, and Docker. Students gained hands-on experience in creating dynamic, data-driven web applications.",
         image: "/images/udemy-php-course.jpg",
         tags: ["PHP", "MySQL", "JQuery", "Docker"],
         visitpreview: "",
         visit: "https://www.udemy.com/course/crud-con-php-mysql-bootstrap-jquery-ajax-y-docker/?referralCode=7DA4E7BDFF8902109591",
-        badge: "Course",
         id: 7,
+      },
+      {
+        title: "UDEMY — FINGERPRINT ATTENDANCE SYSTEM WITH .NET",
+        description: "I published a Udemy course on building fingerprint attendance systems using .NET, PostgreSQL and Railway Material Skin 2. Through video lessons and code samples, students learn to implement biometric authentication and create secure attendance tracking solutions.",
+        image: "/images/udemy-dotnet-attendance-course.jpg",
+        tags: [".NET", "Railway", "PostgreSQL"],
+        visitpreview: "",
+        visit: "",
+        id: 4,
       },
     ],
   },
@@ -525,22 +546,4 @@ export const data = [
   { number: 1000, text: "Students" },
   { number: 1900, text: "GitHub Followers" },
   { number: 5000, text: "GitHub Stars" },
-];
-export const research = [
-  {
-    description:
-      "Master's Thesis completed as part of the requirements for the degree of \"Magister Artium en informática con énfasis en banca electrónica y comunicaciones\".",
-    image: "/images/master-thesis-informatics-banking.jpg",
-    visit:
-      "https://drive.google.com/file/d/1-wR6KmFYW7q6SCI7qMMnvIbNhSWhtqri/view",
-    id: 0,
-  },
-  {
-    description:
-      "Thesis completed as part of the requirements for the degree of \"Ingeniería en Sistemas de Información y Ciencias de la Computación\".",
-    image: "/images/bachelor-thesis-systems-engineering.jpg",
-    visit:
-      "https://drive.google.com/file/d/1_UHBSDxC54dHOFzt0aghxkL4SpeJGyJh/view",
-    id: 1,
-  },
 ];

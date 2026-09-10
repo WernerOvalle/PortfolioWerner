@@ -13,9 +13,10 @@ import {
   TitleContent,
   UtilityList,
   Img,
+  ImgWrapper,
   Badge,
   CategoryTitle,
-  CategoryDesc,
+  StackLabel,
 } from './ProjectsStyles';
 import { Section, SectionDivider } from '../../styles/GlobalComponents';
 import { projectCategories } from '../../constants/constants';
@@ -38,37 +39,31 @@ const Projects = () => (
         viewport={{ once: true, margin: "200px" }}
       >
         <CategoryTitle $color={cat.color}>{cat.category}</CategoryTitle>
-        <CategoryDesc>{cat.description}</CategoryDesc>
 
         <AnimatedContainer animation="stagger" delay={0.2} staggerDelay={0.15}>
           <GridContainer>
             {cat.items.map((p, i) => (
               <motion.div
                 key={i}
-                whileHover={{
-                  y: -10,
-                  boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
-                  transition: { duration: 0.3 },
-                }}
+                whileHover={{ y: -10, transition: { duration: 0.3 } }}
               >
                 <BlogCard>
                   {p.badge && <Badge type={p.badge}>{p.badge}</Badge>}
-                  <Img src={p.image} />
+                  <ImgWrapper>
+                    <Img src={p.image} alt={p.title} loading="lazy" />
+                  </ImgWrapper>
                   <TitleContent>
                     <HeaderThree title>{p.title}</HeaderThree>
                     <Hr />
                   </TitleContent>
                   <CardInfo className="card-info">{p.description}</CardInfo>
                   <div>
-                    <br />
-                    <TitleContent>
-                      <strong>Stack</strong>
-                    </TitleContent>
+                    <StackLabel>Stack</StackLabel>
                     <TagList>
                       {p.tags.map((t, j) => (
                         <motion.div
                           key={j}
-                          whileHover={{ scale: 1.1, y: -2 }}
+                          whileHover={{ scale: 1.08, y: -2 }}
                           transition={{ duration: 0.2 }}
                         >
                           <Tag>{t}</Tag>
@@ -82,7 +77,9 @@ const Projects = () => (
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <ExternalLinks href={p.visit}>Visit</ExternalLinks>
+                        <ExternalLinks href={p.visit} target="_blank" rel="noopener noreferrer">
+                          Visit
+                        </ExternalLinks>
                       </motion.div>
                     )}
                     {p.visitpreview !== '' && (
@@ -90,7 +87,7 @@ const Projects = () => (
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <ExternalLinks href={p.visitpreview}>
+                        <ExternalLinks href={p.visitpreview} target="_blank" rel="noopener noreferrer">
                           Visit Preview
                         </ExternalLinks>
                       </motion.div>

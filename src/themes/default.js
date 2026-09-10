@@ -19,6 +19,14 @@ const theme = {
     textFaint: "rgba(255, 255, 255, 0.4)",
     borderSubtle: "rgba(255, 255, 255, 0.1)",
     borderMuted: "rgba(255, 255, 255, 0.33)",
+    // Card surface system
+    cardSurface: "linear-gradient(160deg, #1a2440 0%, #121b2d 45%, #0d1421 100%)",
+    cardShadow: "0 10px 30px rgba(0, 0, 0, 0.45)",
+    cardShadowHover: "0 26px 55px rgba(0, 0, 0, 0.65), 0 0 45px rgba(0, 119, 182, 0.18)",
+    cardSheen: "linear-gradient(135deg, rgba(156, 201, 227, 0.7) 0%, rgba(255, 255, 255, 0.06) 35%, rgba(255, 255, 255, 0) 60%, rgba(252, 191, 73, 0.55) 100%)",
+    cardFade: "linear-gradient(to bottom, rgba(26, 36, 64, 0) 40%, rgba(24, 33, 58, 0.65) 75%, #1a2440 100%)",
+    chipBg: "rgba(255, 255, 255, 0.06)",
+    chipBorder: "rgba(255, 255, 255, 0.12)",
   },
   // Breakpoints for responsive design
   breakpoints: {

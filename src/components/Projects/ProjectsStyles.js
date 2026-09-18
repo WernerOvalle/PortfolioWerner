@@ -150,7 +150,6 @@ export const CardInfo = styled.p`
   font-size: 1.4rem;
   line-height: 1.7;
   text-align: left;
-  flex: 1;
 
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 1.4rem 1.6rem 0;

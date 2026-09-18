@@ -60,7 +60,10 @@ const BackgroundAnimation = () => (
         rotate: { duration: 20, repeat: Infinity, ease: "linear" }
       }}
     >
-      <g opacity="0.15">
+      {/* The three paths below are the tracks each light rides through
+          <mpath>, so they must stay in the DOM. opacity 0 hides the
+          trajectory and leaves only the moving lights visible. */}
+      <g opacity="0">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -106,7 +109,7 @@ const BackgroundAnimation = () => (
         transform="translate(-295.027 -193.118)"
         rx="1.07306"
         ry="1.07433"
-        fill="#46737"
+        fill="#F46737"
       >
         <animateMotion
           dur="5s"

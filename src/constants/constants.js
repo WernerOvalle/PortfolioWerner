@@ -433,7 +433,7 @@ export const projectCategories = [
     items: [
       {
         title: "PETER GIESEMANN ARQUITECTO",
-        description: "I designed and built the website for Peter Giesemann Arquitecto, a Guatemalan architecture studio with more than 50 years of practice. The site presents their portfolio of residences, buildings and master plans with a full-bleed editorial layout, and was built with Next.js and Tailwind CSS, developed alongside Claude Code and deployed on Cloudflare.",
+        description: "Website for a Guatemalan architecture studio with over 50 years of practice, presenting its residences, buildings and master plans in a full-bleed editorial layout.",
         image: "/images/peter-giesemann-arquitecto.jpg",
         tags: ["Next.js", "Tailwind", "Claude Code", "Cloudflare"],
         visitpreview: "",
@@ -443,7 +443,7 @@ export const projectCategories = [
       },
       {
         title: "FHA - GUATEMALA",
-        description: "I developed a modern and accessible website for FHA (Instituto de Fomento de Hipotecas Aseguradas), a state institution that facilitates access to mortgage loans for housing acquisition in Guatemala. Built with Next.js and Tailwind UI, the site provides users with comprehensive information about mortgage services and housing opportunities.",
+        description: "Public site for the Guatemalan state institution behind insured mortgage loans, guiding citizens through its mortgage services and housing programs.",
         image: "/images/fha-guatemala.jpg",
         tags: ["Next.js", "Tailwind", "Prisma", "PostgreSQL"],
         visitpreview: "",
@@ -453,7 +453,7 @@ export const projectCategories = [
       },
       {
         title: "HTD - GUATEMALA",
-        description: "I leveraged my web design and development skills to build a modern website for HTD GUATEMALA, showcasing their products, enhancing their online presence, and providing users with a responsive design and an intuitive contact portal.",
+        description: "Corporate site for HTD Guatemala, showcasing their product range with a responsive layout and a contact portal for enquiries.",
         image: "/images/htd-guatemala.jpg",
         tags: ["HTML", "CSS", "Bootstrap", "JS"],
         visitpreview: "",
@@ -463,7 +463,7 @@ export const projectCategories = [
       },
       {
         title: "ATF CONSULTORES",
-        description: "I developed a sleek and functional website for ATF Consultores, effectively presenting their business information and providing users with seamless access to their services and contact details.",
+        description: "Business site for ATF Consultores, presenting their services and giving clients direct access to their contact details.",
         image: "/images/atf-consultores.jpg",
         tags: ["ReactJS", "Bootstrap", "NodeJS"],
         visitpreview: "",
@@ -473,7 +473,7 @@ export const projectCategories = [
       },
       {
         title: "RENTODITO",
-        description: "I developed a robust web application for Rentodito, a Mexican startup, through Fiverr. This project laid the foundation for their rental services platform, enabling customers to easily rent products and services with efficiency.",
+        description: "Rental platform for a Mexican startup, contracted through Fiverr — the foundation their customers use to rent products and services.",
         image: "/images/rentodito.jpg",
         tags: ["Angular", "Laravel", "MySQL"],
         visitpreview: "",
@@ -489,7 +489,7 @@ export const projectCategories = [
     items: [
       {
         title: "IMPOSTOR GAME",
-        description: "A party web game where everyone receives a secret word — except the impostor, who gets nothing and must figure it out from the conversation. Players discuss and try to expose who's bluffing, while the impostor uses every clue to stay hidden.",
+        description: "A party game where everyone gets a secret word — except the impostor, who has to bluff through the conversation and work out what it is.",
         image: "/images/impostor-game.png",
         tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
         visitpreview: "",
@@ -498,7 +498,7 @@ export const projectCategories = [
       },
       {
         title: "IPTV SERVICES",
-        description: "I developed a modern IPTV platform using Next.js and TypeScript, allowing users to access over 10,000 channels. The application features a responsive design and an intuitive interface for a seamless streaming experience.",
+        description: "Streaming platform offering access to more than 10,000 IPTV channels through a responsive, uncluttered interface.",
         image: "/images/iptv-services.jpg",
         tags: ["Next.js", "TypeScript", "MagicUI", "Vercel"],
         visitpreview: "",
@@ -513,7 +513,7 @@ export const projectCategories = [
     items: [
       {
         title: "UDEMY — FULL-STACK CRUD WITH PHP & DOCKER",
-        description: "I designed and published a comprehensive Udemy course on building full-stack web applications using PHP, MySQL, Bootstrap, jQuery, Ajax, and Docker. Students gained hands-on experience in creating dynamic, data-driven web applications.",
+        description: "Published Udemy course on building a full-stack CRUD application end to end, from the database layer to a containerised deployment.",
         image: "/images/udemy-php-course.jpg",
         tags: ["PHP", "MySQL", "JQuery", "Docker"],
         visitpreview: "",
@@ -522,7 +522,7 @@ export const projectCategories = [
       },
       {
         title: "UDEMY — FINGERPRINT ATTENDANCE SYSTEM WITH .NET",
-        description: "I published a Udemy course on building fingerprint attendance systems using .NET, PostgreSQL and Railway Material Skin 2. Through video lessons and code samples, students learn to implement biometric authentication and create secure attendance tracking solutions.",
+        description: "Published Udemy course on building a biometric attendance system, from fingerprint authentication to a deployed PostgreSQL backend.",
         image: "/images/udemy-dotnet-attendance-course.jpg",
         tags: [".NET", "Railway", "PostgreSQL"],
         visitpreview: "",

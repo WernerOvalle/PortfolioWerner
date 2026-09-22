@@ -23,7 +23,7 @@ import { Section, SectionDivider } from '../../styles/GlobalComponents';
 import { certificateCategories } from '../../constants/constants';
 
 const ALL = 'All';
-const PREVIEW_COUNT = 4;
+const PREVIEW_COUNT = 6;
 
 const Certificates = () => {
   const [active, setActive] = useState(ALL);

@@ -78,7 +78,7 @@ const Projects = () => (
                         whileTap={{ scale: 0.95 }}
                       >
                         <ExternalLinks href={p.visit} target="_blank" rel="noopener noreferrer">
-                          Visit
+                          {p.visitLabel || 'Visit'}
                         </ExternalLinks>
                       </motion.div>
                     )}

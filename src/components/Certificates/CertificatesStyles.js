@@ -107,8 +107,8 @@ export const TitleContent = styled.div`
 
 
 export const HeaderThree = styled.h3`
-  font-weight: 600;
-  letter-spacing: 1.2px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
   color: ${props => props.theme.colors.cardTitle};
   padding: ${(props) => props.title ? '1.6rem 1.8rem 0' : '.5rem 0'};
   margin: 0;
@@ -122,11 +122,7 @@ export const Hr = styled.hr`
   margin: 1.4rem auto 0;
   border: 0;
   border-radius: 2px;
-  background: linear-gradient(
-    90deg,
-    ${props => props.theme.colors.accent1} 0%,
-    ${props => props.theme.colors.button} 100%
-  );
+  background: ${props => props.theme.colors.accentGradient};
 `;
 
 export const Intro = styled.div`
@@ -170,16 +166,9 @@ export const ExternalLinks = styled.a`
   font-weight: 600;
   letter-spacing: 0.5px;
   padding: 1.1rem 2.6rem;
-  background: linear-gradient(
-    120deg,
-    hsl(34.9, 98.6%, 72.9%) 0%,
-    hsl(205.1, 100%, 36.1%) 50%,
-    hsl(34.9, 98.6%, 72.9%) 100%
-  );
-  background-size: 220% 100%;
-  background-position: 0% 50%;
+  background: ${props => props.theme.colors.accentGradient};
   border-radius: 999px;
-  transition: background-position 0.55s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transition: filter 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -187,9 +176,9 @@ export const ExternalLinks = styled.a`
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 
   &:hover {
-    background-position: 100% 50%;
+    filter: brightness(1.12);
     transform: translateY(-2px);
-    box-shadow: 0 10px 26px rgba(0, 119, 182, 0.35);
+    box-shadow: 0 10px 26px ${props => props.theme.colors.accentGlow};
   }
 
   &:active {
@@ -248,10 +237,10 @@ export const FilterChip = styled.button`
     ? props.theme.colors.chipBg
     : 'transparent'};
   border: 1px solid ${props => props.$active
-    ? (props.$color || props.theme.colors.accent1)
+    ? (props.$color || props.theme.colors.accent)
     : props.theme.colors.chipBorder};
   box-shadow: ${props => props.$active
-    ? `0 0 20px ${(props.$color || '#f77f00')}33`
+    ? `0 0 20px ${props.$color ? props.$color + '33' : props.theme.colors.accentGlow}`
     : 'none'};
   transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease,
     box-shadow 0.25s ease, transform 0.2s ease;
@@ -262,17 +251,17 @@ export const FilterChip = styled.button`
     height: 7px;
     border-radius: 50%;
     flex-shrink: 0;
-    background: ${props => props.$color || props.theme.colors.accent1};
+    background: ${props => props.$color || props.theme.colors.accent};
     opacity: ${props => props.$active ? 1 : 0.45};
     box-shadow: ${props => props.$active
-      ? `0 0 10px ${props.$color || '#f77f00'}`
+      ? `0 0 10px ${props.$color || props.theme.colors.accent}`
       : 'none'};
     transition: opacity 0.25s ease, box-shadow 0.25s ease;
   }
 
   &:hover {
     color: ${props => props.theme.colors.primary1};
-    border-color: ${props => props.$color || props.theme.colors.accent1};
+    border-color: ${props => props.$color || props.theme.colors.accent};
     transform: translateY(-2px);
   }
 
@@ -312,7 +301,7 @@ export const ShowAllBtn = styled.button`
 
   &:hover {
     color: ${props => props.theme.colors.primary1};
-    border-color: ${props => props.theme.colors.accent1};
+    border-color: ${props => props.theme.colors.accent};
     box-shadow: 0 0 22px ${props => props.theme.colors.borderSubtle};
     transform: translateY(-2px);
   }

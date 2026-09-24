@@ -25,6 +25,18 @@ const lightTheme = {
     cardFade: "linear-gradient(to bottom, rgba(255, 255, 255, 0) 45%, rgba(255, 255, 255, 0.7) 78%, #FFFFFF 100%)",
     chipBg: "rgba(15, 22, 36, 0.05)",
     chipBorder: "rgba(15, 22, 36, 0.1)",
+    // Accent system — see default.js
+    accent: "#0369A1",
+    accentStrong: "#075985",
+    accentGradient: "linear-gradient(120deg, #0284C7 0%, #075985 100%)",
+    accentGradientHover: "linear-gradient(120deg, #0EA5E9 0%, #0369A1 100%)",
+    accentTextGradient: "linear-gradient(120deg, #0EA5E9 0%, #0369A1 55%, #075985 100%)",
+    accentSoft: "rgba(3, 105, 161, 0.08)",
+    accentGlow: "rgba(3, 105, 161, 0.25)",
+    secondary: "#D97706",
+    success: "#16A34A",
+    pageGlow: "radial-gradient(60rem 40rem at 85% -10%, rgba(14, 165, 233, 0.12), transparent 60%), radial-gradient(50rem 36rem at -10% 30%, rgba(3, 105, 161, 0.06), transparent 60%)",
+    gridDot: "rgba(15, 22, 36, 0.05)",
   },
   breakpoints: {
     sm: 'screen and (max-width: 640px)',

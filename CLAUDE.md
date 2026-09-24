@@ -26,7 +26,7 @@ No test suite is configured. There is no `npm test` command.
 
 ## Architecture
 
-This is a **Next.js static portfolio site** (`output: 'export'`) — a single page (`src/pages/index.js`) that assembles all sections. It uses **styled-components** for all styling (no Tailwind, no CSS modules except `hero.module.css`).
+This is a **Next.js static portfolio site** (`output: 'export'`) — a single page (`src/pages/index.js`) that assembles all sections. It uses **styled-components** for all styling (no Tailwind, no CSS modules).
 
 ### Theme System (Dark/Light Mode)
 
@@ -53,6 +53,13 @@ The app has a dual-theme system:
 - `cardSheen` — gradient used for the hairline border that lights up on card hover
 - `cardFade` — overlay that fades a card image into the card surface
 - `chipBg` / `chipBorder` — stack/tag pill background and border
+- `accent` / `accentStrong` — the single brand accent (sky blue); use it for highlights, active states and hover borders instead of `accent1`
+- `accentGradient` / `accentGradientHover` — buttons and section dividers
+- `accentTextGradient` — gradient text (the hero's typed role)
+- `accentSoft` / `accentGlow` — tinted backgrounds and glow shadows
+- `secondary` — gold, used sparingly (hero orbit decoration)
+- `success` — the "Open to remote work" status dot
+- `pageGlow` / `gridDot` — the fixed page backdrop drawn in `globals.js` (`body::before`)
 
 When adding new styled-components that need theme-awareness, always use `${props => props.theme.colors.TOKEN}` — never hardcode colors like `white`, `#fff`, or `rgba(255,255,255,...)`.
 

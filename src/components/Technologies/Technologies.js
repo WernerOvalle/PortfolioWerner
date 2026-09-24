@@ -19,6 +19,7 @@ import {
   ListItem,
   ListParagraph,
   ListTitle,
+  Chip,
 } from "./TechnologiesStyles";
 
 const stack = [
@@ -31,7 +32,7 @@ const stack = [
 
 const Technologies = () => (
   <Section id="tech">
-    <AnimatedTitle>Technologies</AnimatedTitle>
+    <AnimatedTitle eyebrow="02 — Stack">Technologies</AnimatedTitle>
     <AnimatedText delay={0.3}>
       7+ years building .NET systems for banks and financial institutions, backed by a modern front-end stack and AI-powered workflows.
     </AnimatedText>
@@ -39,16 +40,16 @@ const Technologies = () => (
     <AnimatedContainer animation="stagger" delay={0.5} staggerDelay={0.2}>
       <List>
         {stack.map(({ title, Icon, items }) => (
-          <motion.div key={title} whileHover={{ scale: 1.05, y: -5 }}>
+          <motion.div key={title} whileHover={{ y: -6 }}>
             <ListItem>
               <ListIconWrapper>
-                <Icon size="4rem" />
+                <Icon />
               </ListIconWrapper>
               <ListContainer>
                 <ListTitle>{title}</ListTitle>
                 <ListParagraph>
                   {items.map((item) => (
-                    <span key={item}>{item}</span>
+                    <Chip key={item}>{item}</Chip>
                   ))}
                 </ListParagraph>
               </ListContainer>

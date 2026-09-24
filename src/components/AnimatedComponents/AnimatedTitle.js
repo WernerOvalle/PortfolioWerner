@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { SectionTitle } from "../../styles/GlobalComponents";
+import { SectionEyebrow, SectionTitle } from "../../styles/GlobalComponents";
 
 // The title animates as ONE block, and deliberately so.
 //
@@ -38,6 +38,8 @@ const buildTitleVariants = (delay) => ({
 
 const AnimatedTitle = ({
   children,
+  eyebrow,
+  spaced = false, // extra top space for sections that open without a divider gap
   delay = 0,
   animation = "block", // "block", "slide", "bounce", "fade"
   ...props
@@ -83,10 +85,11 @@ const AnimatedTitle = ({
       style={{
         transformOrigin: 'center',
         overflow: 'visible',
-        padding: '0 10px'
+        padding: spaced ? '6rem 10px 0' : '0 10px'
       }}
       {...getAnimation()}
     >
+      {eyebrow && <SectionEyebrow>{eyebrow}</SectionEyebrow>}
       <SectionTitle {...props}>
         {children}
       </SectionTitle>

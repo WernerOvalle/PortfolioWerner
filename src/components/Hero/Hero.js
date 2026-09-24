@@ -4,11 +4,9 @@ import { motion } from "framer-motion";
 
 import {
   Section,
-  SectionTitle,
 } from "../../styles/GlobalComponents";
 import Button from "../../styles/GlobalComponents/Button";
-import { HeroText, LeftSection, TypedContainer } from "./HeroStyles";
-import styles from "./hero.module.css";
+import { Availability, HeroText, HeroTitle, LeftSection, TypedContainer } from "./HeroStyles";
 const Hero = (props) => (
   <>
     <Section row nopadding>
@@ -23,9 +21,10 @@ const Hero = (props) => (
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <SectionTitle main center>
+            <Availability>Open to remote work</Availability>
+            <HeroTitle main center>
               Werner Ovalle <br />
-              <TypedContainer className={styles.gradientText}>
+              <TypedContainer>
                 <ReactTyped
                   strings={[
                     "Software Engineer",
@@ -39,7 +38,7 @@ const Hero = (props) => (
                   loop
                 />
               </TypedContainer>
-            </SectionTitle>
+            </HeroTitle>
           </motion.div>
 
           <motion.div

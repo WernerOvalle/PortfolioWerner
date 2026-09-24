@@ -69,7 +69,7 @@ const Certificates = () => {
 
   return (
     <Section nopadding id="certificates">
-      <AnimatedTitle main>Certificates</AnimatedTitle>
+      <AnimatedTitle eyebrow="04 — Credentials">Certificates</AnimatedTitle>
 
       <FilterBar>
         {filters.map((f) => (

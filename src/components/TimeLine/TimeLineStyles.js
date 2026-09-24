@@ -1,154 +1,116 @@
-
 import styled from 'styled-components'
 
-export const CarouselContainer = styled.ul`
-  max-width: 1040px;
-  background: ${props => props.theme.colors.background1};
-  padding: 0rem;
-  list-style:none;
-  display: flex;
-  justify-content: space-between; 
-  /* overflow-x: hidden; */
+// Horizontal track on desktop (one dot per milestone on a shared line),
+// vertical list on tablet/mobile. The latest milestone is highlighted.
+export const Track = styled.ol`
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 1.6rem;
+  list-style: none;
+  margin: 2rem 0 7rem;
+  padding: 0;
 
-  margin-left: 32px;
-  &:first-of-type{
-    margin-left: 0px;
+  /* the connecting line, drawn through the centre of the dots */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(
+      90deg,
+      ${props => props.theme.colors.borderSubtle} 0%,
+      ${props => props.theme.colors.borderMuted} 70%,
+      ${props => props.theme.colors.accent} 100%
+    );
   }
-
-  margin-bottom: 80px;
-
-  //remove scrollbar
-  scrollbar-width: none;  
-   &::-webkit-scrollbar {
-     display: none;
-   }
-
-  @media ${props => props.theme.breakpoints.sm} {
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    touch-action: pan-x;
-    justify-content: initial;
-    margin-bottom: 8px;
-  }
-`
-export const CarouselMobileScrollNode = styled.div`
-  @media ${props => props.theme.breakpoints.sm} {
-    display: flex;
-    min-width: ${({ final }) => final ? `120%;` : `min-content`}
-  }
-`
-
-export const CarouselItem = styled.div`
-  background: ${props => props.theme.colors.background1};
-  border-radius: 3px;
-  max-width: 196px;
 
   @media ${props => props.theme.breakpoints.md} {
-    max-width: 124px;
-  }
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    margin: 1rem 0 5rem;
+    padding-left: 3rem;
 
-  @media ${props => props.theme.breakpoints.sm} {
-    margin-left: 32px;
-    min-width: 120px;
-    background: ${props => props.theme.colors.background1};
-    padding: 4px;
-    align-content: start;
-    scroll-snap-align: start;
-    border-radius: 3px;
-    overflow: visible;
-    position: relative;
-    height: fit-content;
-    
-    ${(props) => props.active === props.index ? `opacity: 1` : `opacity: 0.5`}; 
+    &::before {
+      top: 0;
+      bottom: 0;
+      left: 7px;
+      right: auto;
+      width: 2px;
+      height: auto;
+      background: linear-gradient(
+        180deg,
+        ${props => props.theme.colors.borderSubtle} 0%,
+        ${props => props.theme.colors.borderMuted} 70%,
+        ${props => props.theme.colors.accent} 100%
+      );
+    }
   }
 `
 
-export const CarouselItemTitle = styled.h4`
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: 0.02em;
-  display: flex;
-  /* This gradient is different due to the size of the Title container, it must transition sooner to be visible on the text */
-  background: ${props => props.theme.colors.titleGradient};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 8px;
+export const Milestone = styled.li`
+  position: relative;
+  padding-top: 3.2rem;
 
   @media ${props => props.theme.breakpoints.md} {
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 4px;
-  }
-  
-  @media ${props => props.theme.breakpoints.sm} {
-    font-size: 16px;
-    line-height: 24px;
-  }
-`
-export const CarouselItemImg = styled.svg`
-  margin-left: 21px;
-  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
-  width: 100%;
-
-  @media ${props => props.theme.breakpoints.sm} {
-    -webkit-mask-image: none;
-    margin-left: 16px;
-    overflow: visible;
+    padding-top: 0;
   }
 `
 
-export const CarouselItemText = styled.p`
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: 0.02em;
+export const MilestoneDot = styled.span`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: ${props => props.$current ? props.theme.colors.accent : props.theme.colors.background1};
+  border: 2px solid ${props => props.$current ? props.theme.colors.accent : props.theme.colors.borderMuted};
+  box-shadow: ${props => props.$current ? `0 0 0 5px ${props.theme.colors.accentSoft}, 0 0 18px ${props.theme.colors.accentGlow}` : 'none'};
+
+  @media ${props => props.theme.breakpoints.md} {
+    top: 4px;
+    left: -3rem;
+  }
+`
+
+export const MilestoneYear = styled.h4`
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+  color: ${props => props.$current ? props.theme.colors.accent : props.theme.colors.primary1};
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 1.9rem;
+  }
+`
+
+export const MilestoneNow = styled.span`
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  color: ${props => props.theme.colors.accent};
+  background: ${props => props.theme.colors.accentSoft};
+  border: 1px solid ${props => props.theme.colors.chipBorder};
+`
+
+export const MilestoneText = styled.p`
+  font-size: 1.4rem;
+  line-height: 1.6;
   color: ${props => props.theme.colors.textMuted};
-  padding-right: 16px;
 
   @media ${props => props.theme.breakpoints.md} {
-    font-size: 12px;
-    line-height: 18px;
-    padding-right: 32px;
+    font-size: 1.5rem;
+    max-width: 52rem;
   }
-  @media ${props => props.theme.breakpoints.sm} {
-    font-size: 10px;
-    line-height: 16px;
-    padding-right: 0;
-  }
-`
-export const CarouselButtons = styled.div`
-  width: 288px;
-
-  display: none;
-  visibility: hidden;
-
-  @media ${props => props.theme.breakpoints.sm} {
-    display: flex;
-    visibility: visible;
-    margin-bottom: 48px;
-  }
-`
-
-export const CarouselButton = styled.button`
-  box-sizing: border-box;
-  background: none;
-  padding: 4px;
-  border: none;
-  cursor: pointer;
-  margin-right: 4px;
-  opacity: ${(props) => props.active === props.index ? `1` : `.33`};
-  transform: ${(props) => props.active === props.index ? `scale(1.6)` : `scale(1)`};
-
-  &:focus {
-    outline: none;
-  }
-`
-
-export const CarouselButtonDot = styled.div`
-  background-color: ${props => props.theme.colors.primary1};
-  border-radius: 10px;
-  margin: auto;
-  width: 3px;
-  height: 3px;
 `

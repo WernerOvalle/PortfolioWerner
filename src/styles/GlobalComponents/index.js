@@ -56,6 +56,23 @@ export const SectionTitle = styled.h2`
   }
 `
 
+// Small numbered label shown above a section title, e.g. "01 — About".
+export const SectionEyebrow = styled.span`
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.accent};
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.6rem;
+  }
+`
+
 export const SectionText = styled.p`
   max-width: 800px;
   font-size: 24px;
@@ -83,10 +100,7 @@ export const SectionDivider = styled.div`
   width: 64px;
   height: 6px;
   border-radius: 10px;
-  background-color: #fff;
-  background: ${(props) => props.colorAlt ? 
-    'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
-    'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
+  background: ${(props) => props.theme.colors.accentGradient};
 
     margin: ${(props) => props.divider ? "4rem 0" : "" };
 
@@ -179,7 +193,8 @@ export const ButtonBack = styled.div`
   justify-content: center;
   margin: ${({ alt, form }) => (alt || form) ? '0' : '0 0 80px'};
   color: #fff;
-  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #ff622e 0%, #B133FF 100%)' : 'linear-gradient(270deg, #00DBD8 0%, #B133FF 100%)'};
+  background: ${(props) => props.theme.colors.accentGradientHover};
+  box-shadow: 0 6px 18px ${(props) => props.theme.colors.accentGlow};
   cursor: pointer;
   transition: 0.5s ease;
   position: relative;
@@ -211,7 +226,7 @@ export const ButtonFront = styled.button`
   left: 0;
   width: 100%;
   height: 100%;
-  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
+  background: ${(props) => props.theme.colors.accentGradient};
   opacity: ${({ disabled }) => disabled ? '.5' : '1'};
   transition: .4s ease;
   font-size: ${({ alt }) => alt ? '20px' : '24px'};
@@ -233,7 +248,7 @@ export const ButtonFront = styled.button`
   }
 
   &:disabled{
-    background: linear-gradient(270deg, #00DBD8 0%, #B133FF 100%);
+    background: ${(props) => props.theme.colors.accentGradient};
     opacity: 0.5;
     box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
   }

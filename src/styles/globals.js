@@ -26,6 +26,22 @@ const GlobalStyles = createGlobalStyle`
     background: ${props => props.theme.colors.background1};
     color: ${props => props.theme.colors.primary1};
     cursor: default;
+    position: relative;
+  }
+
+  /* Fixed backdrop: soft accent glows plus a faint dot grid that fades out
+     towards the bottom, so the page has depth without competing with content. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      ${props => props.theme.colors.pageGlow},
+      radial-gradient(${props => props.theme.colors.gridDot} 1px, transparent 1px) 0 0 / 28px 28px;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
   }
   
   h1,h2,h3,h4,h5,h6,button {

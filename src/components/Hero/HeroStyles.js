@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { SectionText } from '../../styles/GlobalComponents'
 
 export const LeftSection = styled.div`
   width: 100%;
@@ -31,7 +32,7 @@ export const TypedContainer = styled.span`
   }
   
   &::before {
-    content: "Full Stack Developer_";
+    content: "Software Engineer_";
     grid-column: 1;
     grid-row: 1;
     visibility: hidden;
@@ -51,3 +52,13 @@ export const TypedContainer = styled.span`
   }
 `;
 
+
+// Kept narrower than the hero's grid column so the copy never runs
+// underneath the profile photo on desktop.
+export const HeroText = styled(SectionText)`
+  max-width: 540px;
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    max-width: 800px;
+  }
+`;

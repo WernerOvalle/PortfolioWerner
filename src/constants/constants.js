@@ -339,7 +339,7 @@ export const certificateCategories = [
         title: "AZ-204 PREP COURSE — UDEMY",
         image: "/images/udemy-az204-certificate.jpg",
         visit: "https://www.udemy.com/certificate/UC-1b880a76-4fc7-48ad-86ad-e720ab9520ff/",
-        description: "Covers App Service, Azure Functions, Cosmos DB, Azure Storage, Microsoft Identity Platform and API Management.",
+        description: "Covers App Service, Azure Functions, Cosmos DB, Azure Storage, Microsoft Identity Platform and API Management. Complemented with the AZ-204 Exam Guide (2nd ed., Packt 2024) by Paul Ivey & Alex Ivanov, with strong results on official mock exams.",
         id: 17,
       },
       {

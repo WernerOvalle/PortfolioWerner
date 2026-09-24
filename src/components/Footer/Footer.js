@@ -1,7 +1,7 @@
 import React from "react";
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { FaTelegramPlane } from "react-icons/fa";
-import { DiCssdeck, DiBitbucket } from "react-icons/di";
+import { DiCssdeck } from "react-icons/di";
 import { HiMail } from "react-icons/hi";
 import { SiNetlify } from "react-icons/si";
 import { SocialIcons } from "../Header/HeaderStyles";
@@ -51,9 +51,6 @@ const Footer = () => {
         <SocialContainer>
           <SocialIcons href="https://github.com/WernerOvalle">
             <AiFillGithub size="3rem" />
-          </SocialIcons>
-          <SocialIcons href="https://bitbucket.org/wjop5bb/">
-            <DiBitbucket size="3rem" />
           </SocialIcons>
           <SocialIcons href="https://www.linkedin.com/in/werner-ovalle/">
             <AiFillLinkedin size="3rem" />

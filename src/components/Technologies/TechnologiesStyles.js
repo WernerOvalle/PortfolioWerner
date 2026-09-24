@@ -82,6 +82,8 @@ export const ListTitle = styled.h4`
 `
 
 export const ListParagraph = styled.p`
+  display: flex;
+  flex-direction: column;
   font-size: 18px;
   line-height: 30px;
   color: ${props => props.theme.colors.textMuted};
@@ -111,6 +113,24 @@ export const ListItem = styled.li`
   max-width: 320px;
   flex-direction: row;
 }
+`
+
+// Fixed-height slot so every column's title starts on the same line
+// regardless of each icon's intrinsic proportions.
+export const ListIconWrapper = styled.div`
+  display: flex;
+  align-items: flex-end;
+  height: 48px;
+  margin-bottom: 12px;
+  color: ${props => props.theme.colors.primary1};
+
+  @media ${props => props.theme.breakpoints.sm}{
+    align-items: flex-start;
+    height: auto;
+    width: 48px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
 `
 
 export const ListIcon = styled.img`

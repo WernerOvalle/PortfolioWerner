@@ -2,15 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { AnimatedTitle, AnimatedText, AnimatedContainer } from '../AnimatedComponents';
 import {
-  DiFirebase,
-  DiReact,
-  DiZend,
-  DiDocker,
-  DiNodejsSmall,
-  DiScrum,
-} from "react-icons/di";
-import { FaDocker, FaEthereum, FaCloud } from "react-icons/fa";
-import { AiOutlineConsoleSql, AiOutlineCloud } from "react-icons/ai";
+  TbBrandCSharp,
+  TbBrandDocker,
+  TbBrandReact,
+  TbDatabase,
+  TbSparkles,
+} from "react-icons/tb";
 import {
   Section,
   SectionDivider,
@@ -18,107 +15,49 @@ import {
 import {
   List,
   ListContainer,
+  ListIconWrapper,
   ListItem,
   ListParagraph,
   ListTitle,
 } from "./TechnologiesStyles";
 
+const stack = [
+  { title: "Back-End", Icon: TbBrandCSharp, items: ["C#", "ASP.NET", "Entity Framework", "Node.js"] },
+  { title: "Database", Icon: TbDatabase, items: ["SQL Server", "T-SQL", "PostgreSQL", "Prisma"] },
+  { title: "Front-End", Icon: TbBrandReact, items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+  { title: "DevOps", Icon: TbBrandDocker, items: ["Azure DevOps", "TFS", "Docker", "CI/CD"] },
+  { title: "Agentic AI", Icon: TbSparkles, items: ["Claude Code", "GitHub Copilot", "Agent Skills", "Prompt Engineering"] },
+];
+
 const Technologies = () => (
   <Section id="tech">
     <AnimatedTitle>Technologies</AnimatedTitle>
     <AnimatedText delay={0.3}>
-      I&apos;ve worked with a range of technologies in the web development world. From Back-end To Design
+      7+ years building .NET systems for banks and financial institutions, backed by a modern front-end stack and AI-powered workflows.
     </AnimatedText>
-    
+
     <AnimatedContainer animation="stagger" delay={0.5} staggerDelay={0.2}>
       <List>
-        <motion.div whileHover={{ scale: 1.05, y: -5 }}>
-          <ListItem>
-            <picture>
-              <DiReact size="3rem" />
-            </picture>
-            <ListContainer>
-              <ListTitle>Front-End</ListTitle>
-              <ListParagraph>
-                Knowledge in <br />
-                ASP.NET<br />
-                React.js <br />
-                NextJS
-              </ListParagraph>
-            </ListContainer>
-          </ListItem>
-        </motion.div>
-        
-        <motion.div whileHover={{ scale: 1.05, y: -5 }}>
-          <ListItem>
-            <picture>
-              <DiNodejsSmall size="3rem" />
-            </picture>
-            <ListContainer>
-              <ListTitle>Back-End</ListTitle>
-              <ListParagraph>
-                Knowledge in <br />
-                .NET <br />
-                C# <br />
-                NodeJS
-              </ListParagraph>
-            </ListContainer>
-          </ListItem>
-        </motion.div>
-        
-        <motion.div whileHover={{ scale: 1.05, y: -5 }}>
-          <ListItem>
-            <picture>
-              <AiOutlineConsoleSql size="3rem" />
-            </picture>
-            <ListContainer>
-              <ListTitle>Database</ListTitle>
-              <ListParagraph>
-                Knowledge in <br />
-                SQL Server <br />
-                MariaDB <br />
-                PostgreSQL
-              </ListParagraph>
-            </ListContainer>
-          </ListItem>
-        </motion.div>
-        
-        <motion.div whileHover={{ scale: 1.05, y: -5 }}>
-          <ListItem>
-            <picture>
-              <FaDocker size="3rem" />
-            </picture>
-            <ListContainer>
-              <ListTitle>DevOps</ListTitle>
-              <ListParagraph>
-                Knowledge in <br />
-                Azure DevOps <br />
-                Docker <br />
-                Git
-              </ListParagraph>
-            </ListContainer>
-          </ListItem>
-        </motion.div>
-
-        <motion.div whileHover={{ scale: 1.05, y: -5 }}>
-          <ListItem>
-            <picture>
-              <AiOutlineCloud size="3rem" />
-            </picture>
-            <ListContainer>
-              <ListTitle>Cloud</ListTitle>
-              <ListParagraph>
-                Knowledge in <br />
-                Microsoft Azure <br />
-                PaaS & IaaS <br />
-                Cloud Solutions
-              </ListParagraph>
-            </ListContainer>
-          </ListItem>
-        </motion.div>
+        {stack.map(({ title, Icon, items }) => (
+          <motion.div key={title} whileHover={{ scale: 1.05, y: -5 }}>
+            <ListItem>
+              <ListIconWrapper>
+                <Icon size="4rem" />
+              </ListIconWrapper>
+              <ListContainer>
+                <ListTitle>{title}</ListTitle>
+                <ListParagraph>
+                  {items.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </ListParagraph>
+              </ListContainer>
+            </ListItem>
+          </motion.div>
+        ))}
       </List>
     </AnimatedContainer>
-    
+
     <SectionDivider colorAlt />
   </Section>
 );

@@ -270,41 +270,41 @@ export const certificateCategories = [
     color: "#d4af37",
     items: [
       {
-        title: "MASTER'S DEGREE IN COMPUTER SCIENCE — ELECTRONIC BANKING",
+        title: "Master's Degree in Computer Science — Electronic Banking",
         image: "/images/master-degree-informatics-banking.jpg",
         visit: "https://drive.google.com/file/d/1W-PBAGia13hxmFtzqwJ00AzH3OOGYjOF/view",
         featured: true,
         id: 2,
       },
       {
-        title: "BACHELOR'S DEGREE IN SYSTEMS ENGINEERING",
+        title: "Bachelor's Degree in Systems Engineering",
         image: "/images/bachelor-degree-systems-engineering.jpg",
         visit: "https://drive.google.com/file/d/1JpxYRTsGJfDIUs7y6kJBDPwm4p5NC2Bn/view",
         featured: true,
         id: 0,
       },
       {
-        title: "MASTER'S THESIS — ELECTRONIC BANKING",
+        title: "Master's Thesis — Electronic Banking",
         description: "Thesis completed for the Master's Degree in Computer Science with an emphasis on Electronic Banking & Communications.",
         image: "/images/master-thesis-informatics-banking.jpg",
         visit: "https://drive.google.com/file/d/1-wR6KmFYW7q6SCI7qMMnvIbNhSWhtqri/view",
         id: 19,
       },
       {
-        title: "BACHELOR'S THESIS — SYSTEMS ENGINEERING",
+        title: "Bachelor's Thesis — Systems Engineering",
         description: "Thesis completed for the Bachelor's Degree in Information Systems Engineering & Computer Science.",
         image: "/images/bachelor-thesis-systems-engineering.jpg",
         visit: "https://drive.google.com/file/d/1_UHBSDxC54dHOFzt0aghxkL4SpeJGyJh/view",
         id: 20,
       },
       {
-        title: "BACHELOR'S DIPLOMA — SYSTEMS ENGINEERING",
+        title: "Bachelor's Diploma — Systems Engineering",
         image: "/images/bachelor-diploma-systems-engineering.jpg",
         visit: "https://drive.google.com/file/d/1TxxB7a42UPRb4Z2fx7TcAyMrnFgCvP6Y/view",
         id: 1,
       },
       {
-        title: "EFSET ENGLISH CERTIFICATE — B2 UPPER INTERMEDIATE",
+        title: "EFSET English Certificate — B2 Upper Intermediate",
         image: "/images/efset-english-certificate.jpg",
         visit: "https://www.efset.org/cert/gSKS8F",
         id: 16,
@@ -316,14 +316,14 @@ export const certificateCategories = [
     color: "#a855f7",
     items: [
       {
-        title: "CLAUDE CODE IN ACTION",
+        title: "Claude Code in Action",
         image: "/images/claude-code-action-certificate.jpg",
         visit: "https://verify.skilljar.com/c/zzivhd7k6hgy",
         featured: true,
         id: 6,
       },
       {
-        title: "INTRODUCTION TO AGENT SKILLS",
+        title: "Introduction to Agent Skills",
         image: "/images/introduction-agent-skills-certificate.png",
         visit: "https://verify.skilljar.com/c/c524fjzst4ki",
         featured: true,
@@ -336,26 +336,26 @@ export const certificateCategories = [
     color: "#0078d4",
     items: [
       {
-        title: "AZ-204 PREP COURSE — UDEMY",
+        title: "AZ-204 Prep Course — Udemy",
         image: "/images/udemy-az204-certificate.jpg",
         visit: "https://www.udemy.com/certificate/UC-1b880a76-4fc7-48ad-86ad-e720ab9520ff/",
         description: "Covers App Service, Azure Functions, Cosmos DB, Azure Storage, Microsoft Identity Platform and API Management. Complemented with the AZ-204 Exam Guide (2nd ed., Packt 2024) by Paul Ivey & Alex Ivanov, with strong results on official mock exams.",
         id: 17,
       },
       {
-        title: "PROFESSIONAL DEVOPS COURSE",
+        title: "Professional DevOps Course",
         image: "/images/devops-professional-course-certificate.jpg",
         visit: "https://platzi.com/p/werner-ovalle/curso/1431-devops/diploma/detalle/",
         id: 11,
       },
       {
-        title: "GETTING STARTED WITH GOOGLE KUBERNETES ENGINE",
+        title: "Getting Started with Google Kubernetes Engine",
         image: "/images/kubernetes-course.jpg",
         visit: "https://coursera.org/share/1daa46b324cc27189a69978c14c6e65d",
         id: 3,
       },
       {
-        title: "JENKINS FUNDAMENTALS",
+        title: "Jenkins Fundamentals",
         image: "/images/jenkins-basic-course-certificate.jpg",
         visit: "https://platzi.com/p/werner-ovalle/curso/1436-jenkins-basico/diploma/detalle/",
         id: 10,
@@ -367,63 +367,63 @@ export const certificateCategories = [
     color: "#10b981",
     items: [
       {
-        title: "SOFTWARE ARCHITECTURE: DOMAIN-DRIVEN DESIGN",
+        title: "Software Architecture: Domain-Driven Design",
         image: "/images/linkedin-ddd-software-architecture-certificate.jpg",
         visit: "https://www.linkedin.com/learning/certificates/c35e782b117f7e386f8d4f5368d14c8952745ec7612feb1869dd352ff321e4a1",
         featured: true,
         id: 21,
       },
       {
-        title: "ADVANCED .NET",
+        title: "Advanced .NET",
         image: "/images/linkedin-dotnet-advanced-certificate.jpg",
         visit: "https://www.linkedin.com/learning/certificates/54548f4b36b0dd6fdafac21c3a082b01bc5329d32bba73bf10ea30f9d64f342f",
         featured: true,
         id: 22,
       },
       {
-        title: "NEXT.JS COURSE",
+        title: "Next.js Course",
         image: "/images/nextjs-course-certificate.jpg",
         visit: "https://platzi.com/p/werner-ovalle/curso/1991-next/diploma/detalle/",
         id: 12,
       },
       {
-        title: "NEXT.JS AUTHENTICATION",
+        title: "Next.js Authentication",
         image: "/images/nextjs-authentication-certificate.jpg",
         visit: "https://platzi.com/p/werner-ovalle/curso/2428-course/diploma/detalle/",
         id: 13,
       },
       {
-        title: "TYPESCRIPT FUNDAMENTALS",
+        title: "TypeScript Fundamentals",
         image: "/images/typescript-fundamentals-certificate.jpg",
         visit: "https://platzi.com/p/werner-ovalle/curso/1869-typescript-2020/diploma/detalle/",
         id: 14,
       },
       {
-        title: "REACT & NODE.JS DEVELOPER",
+        title: "React & Node.js Developer",
         image: "/images/react-nodejs-developer-certificate.jpg",
         visit: "https://drive.google.com/file/d/1qbW2fvXiLMQlrcRZu-bjpmVf8MyeFaXX/view?usp=sharing",
         id: 8,
       },
       {
-        title: "BUILDING APPS WITH REACT & ASP.NET CORE",
+        title: "Building Apps with React & ASP.NET Core",
         image: "/images/react-aspnet-core-certificate.jpg",
         visit: "https://www.udemy.com/certificate/UC-a8156d0d-8cdd-4a6e-8548-8efd35f2544a/",
         id: 9,
       },
       {
-        title: "BUILDING REST APIS WITH .NET CORE",
+        title: "Building REST APIs with .NET Core",
         image: "/images/dotnet-core-api-certificate.jpg",
         visit: "https://ed.team/@wernerovalle59a/curso/api-punto-net",
         id: 7,
       },
       {
-        title: "UNIT TESTING REACT WITH JEST",
+        title: "Unit Testing React with Jest",
         image: "/images/jest-unit-testing-certificate.jpg",
         visit: "https://platzi.com/p/werner-ovalle/curso/1788-course/diploma/detalle/",
         id: 15,
       },
       {
-        title: "FRONT-END WEB UI FRAMEWORKS AND TOOLS BOOTSTRAP 4",
+        title: "Front-End Web UI Frameworks and Tools: Bootstrap 4",
         image: "/images/bootstrap-course.jpg",
         visit: "https://coursera.org/share/450f0cd06a293548edbbf468deb6695e",
         id: 5,
@@ -438,7 +438,7 @@ export const projectCategories = [
     color: "#0077b6",
     items: [
       {
-        title: "ENTERPRISE CRM PLATFORM",
+        title: "Enterprise CRM Platform",
         description: "CRM for banks and credit cooperatives across Central America, deployed per client on the institution's own servers and tailored to how each one operates. I develop and maintain it end to end, and migrated its legacy modules to modern .NET to improve platform stability.",
         image: "/images/enterprise-crm.jpg",
         tags: [".NET", "C#", "Entity Framework", "SQL Server"],
@@ -449,7 +449,7 @@ export const projectCategories = [
         id: 14,
       },
       {
-        title: "CREDILINK SV",
+        title: "Credilink SV",
         description: "Loan origination portal for a Salvadoran credit cooperative, guiding applicants from a five-minute request to instant pre-approval and feeding each one into the CRM built for the same client.",
         image: "/images/credilink-sv.jpg",
         tags: [".NET", "ASP.NET Core", "Bootstrap", "jQuery"],
@@ -459,7 +459,7 @@ export const projectCategories = [
         id: 13,
       },
       {
-        title: "FHA - GUATEMALA",
+        title: "FHA Guatemala",
         description: "Public site for the Guatemalan state institution behind insured mortgage loans, guiding citizens through its mortgage services and housing programs. I architected and built it from scratch.",
         image: "/images/fha-guatemala.jpg",
         tags: ["Next.js", "Tailwind", "Prisma", "PostgreSQL"],
@@ -469,7 +469,7 @@ export const projectCategories = [
         id: 10,
       },
       {
-        title: "PETER GIESEMANN ARQUITECTO",
+        title: "Peter Giesemann Arquitecto",
         description: "Website for a Guatemalan architecture studio with over 50 years of practice, presenting its residences, buildings and master plans in a full-bleed editorial layout.",
         image: "/images/peter-giesemann-arquitecto.jpg",
         tags: ["Next.js", "Tailwind", "Claude Code", "Cloudflare"],
@@ -479,7 +479,7 @@ export const projectCategories = [
         id: 12,
       },
       {
-        title: "HTD - GUATEMALA",
+        title: "HTD Guatemala",
         description: "Corporate site for HTD Guatemala, showcasing their product range with a responsive layout and a contact portal for enquiries.",
         image: "/images/htd-guatemala.jpg",
         tags: ["HTML", "CSS", "Bootstrap", "JS"],
@@ -489,7 +489,7 @@ export const projectCategories = [
         id: 0,
       },
       {
-        title: "ATF CONSULTORES",
+        title: "ATF Consultores",
         description: "Business site for ATF Consultores, presenting their services and giving clients direct access to their contact details.",
         image: "/images/atf-consultores.jpg",
         tags: ["ReactJS", "Bootstrap", "NodeJS"],
@@ -505,7 +505,7 @@ export const projectCategories = [
     color: "#2d6a4f",
     items: [
       {
-        title: "IMPOSTOR GAME",
+        title: "Impostor Game",
         description: "A party game where everyone gets a secret word — except the impostor, who has to bluff through the conversation and work out what it is.",
         image: "/images/impostor-game.png",
         tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
@@ -514,7 +514,7 @@ export const projectCategories = [
         id: 11,
       },
       {
-        title: "IPTV SERVICES",
+        title: "IPTV Services",
         description: "Streaming platform offering access to more than 10,000 IPTV channels through a responsive, uncluttered interface.",
         image: "/images/iptv-services.jpg",
         tags: ["Next.js", "TypeScript", "MagicUI", "Vercel"],
@@ -529,7 +529,7 @@ export const projectCategories = [
     color: "#7b2cbf",
     items: [
       {
-        title: "UDEMY — FULL-STACK CRUD WITH PHP & DOCKER",
+        title: "Udemy — Full-Stack CRUD with PHP & Docker",
         description: "Published Udemy course on building a full-stack CRUD application end to end, from the database layer to a containerised deployment.",
         image: "/images/udemy-php-course.jpg",
         tags: ["PHP", "MySQL", "JQuery", "Docker"],
@@ -538,7 +538,7 @@ export const projectCategories = [
         id: 7,
       },
       {
-        title: "UDEMY — FINGERPRINT ATTENDANCE SYSTEM WITH .NET",
+        title: "Udemy — Fingerprint Attendance System with .NET",
         description: "Published Udemy course on building a biometric attendance system, from fingerprint authentication to a deployed PostgreSQL backend. Now closed to new enrollments — the listing stays live for enrolled students.",
         image: "/images/udemy-dotnet-attendance-course.jpg",
         tags: [".NET", "Railway", "PostgreSQL"],

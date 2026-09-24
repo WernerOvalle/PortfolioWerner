@@ -109,8 +109,8 @@ export const TitleContent = styled.div`
 
 
 export const HeaderThree = styled.h3`
-  font-weight: 600;
-  letter-spacing: 1.5px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
   color: ${props => props.theme.colors.cardTitle};
   padding: ${(props) => props.title ? '1.6rem 1.8rem 0' : '.5rem 0'};
   margin: 0;
@@ -124,11 +124,7 @@ export const Hr = styled.hr`
   margin: 1.4rem auto 0;
   border: 0;
   border-radius: 2px;
-  background: linear-gradient(
-    90deg,
-    ${props => props.theme.colors.accent1} 0%,
-    ${props => props.theme.colors.button} 100%
-  );
+  background: ${props => props.theme.colors.accentGradient};
 `;
 
 export const Intro = styled.div`
@@ -173,16 +169,9 @@ export const ExternalLinks = styled.a`
   font-weight: 600;
   letter-spacing: 0.5px;
   padding: 1.1rem 2.6rem;
-  background: linear-gradient(
-    120deg,
-    hsl(34.9, 98.6%, 72.9%) 0%,
-    hsl(205.1, 100%, 36.1%) 50%,
-    hsl(34.9, 98.6%, 72.9%) 100%
-  );
-  background-size: 220% 100%;
-  background-position: 0% 50%;
+  background: ${props => props.theme.colors.accentGradient};
   border-radius: 999px;
-  transition: background-position 0.55s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transition: filter 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -190,9 +179,9 @@ export const ExternalLinks = styled.a`
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 
   &:hover {
-    background-position: 100% 50%;
+    filter: brightness(1.12);
     transform: translateY(-2px);
-    box-shadow: 0 10px 26px rgba(0, 119, 182, 0.35);
+    box-shadow: 0 10px 26px ${props => props.theme.colors.accentGlow};
   }
 
   &:active {
@@ -233,7 +222,7 @@ export const Tag = styled.li`
 
   &:hover {
     color: ${props => props.theme.colors.primary1};
-    border-color: ${props => props.theme.colors.accent1};
+    border-color: ${props => props.theme.colors.accent};
     background: ${props => props.theme.colors.borderSubtle};
   }
 `
@@ -255,7 +244,7 @@ export const CategoryTitle = styled.h3`
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background: ${props => props.$color || props.theme.colors.accent1};
+    background: ${props => props.$color || props.theme.colors.accent};
     box-shadow: 0 0 0 4px ${props => (props.$color || '#f77f00') + '22'},
       0 0 16px ${props => props.$color || '#f77f00'};
   }

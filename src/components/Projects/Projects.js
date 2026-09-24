@@ -29,7 +29,7 @@ const catVariants = {
 
 const Projects = () => (
   <Section nopadding id="projects">
-    <AnimatedTitle main>Projects</AnimatedTitle>
+    <AnimatedTitle spaced eyebrow="03 — Work">Projects</AnimatedTitle>
 
     {projectCategories.map((cat, catIndex) => (
       <motion.div

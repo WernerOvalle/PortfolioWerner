@@ -1,49 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 import { AnimatedTitle, AnimatedText, AnimatedContainer } from '../AnimatedComponents';
 
-import { CarouselButton, CarouselButtonDot, CarouselButtons, CarouselContainer, CarouselItem, CarouselItemImg, CarouselItemText, CarouselItemTitle, CarouselMobileScrollNode } from './TimeLineStyles';
+import { Milestone, MilestoneDot, MilestoneNow, MilestoneText, MilestoneYear, Track } from './TimeLineStyles';
 import { Section, SectionDivider } from '../../styles/GlobalComponents';
 import { TimeLineData } from '../../constants/constants';
 
-const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
+const LAST_INDEX = TimeLineData.length - 1;
 
 const Timeline = () => {
-  const [activeItem, setActiveItem] = useState(0);
   const [yearsOfExperience, setYearsOfExperience] = useState(5);
-  const carouselRef = useRef();
 
-  const scroll = (node, left) => {
-    return node.scrollTo({ left, behavior: 'smooth' });
-  }
-
-  const handleClick = (e, i) => {
-    e.preventDefault();
-
-    if (carouselRef.current) {
-      const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length));
-      
-      scroll(carouselRef.current, scrollLeft);
-    }
-  }
-
-  const handleScroll = () => {
-    if (carouselRef.current) {
-      const index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * TimeLineData.length);
-
-      setActiveItem(index);
-    }
-  }
-
-  // snap back to beginning of scroll when window is resized
-  // avoids a bug where content is covered up if coming from smaller screen
   useEffect(() => {
-    const handleResize = () => {
-      scroll(carouselRef.current, 0);
-    }
-
-    window.addEventListener('resize', handleResize);
-    
     // Calculate years of experience on client side only to avoid hydration mismatch
     // Started working in February 2019
     const now = new Date();
@@ -56,87 +23,29 @@ const Timeline = () => {
   return (
     <Section id="about">
       <SectionDivider divider />
-      
-      {/* Título animado */}
-      <AnimatedTitle>About Me</AnimatedTitle>
-      
-      {/* Texto animado */}
+
+      <AnimatedTitle eyebrow="01 — About">About Me</AnimatedTitle>
+
       <AnimatedText delay={0.3}>
         Software Engineer with {yearsOfExperience}+ years of experience, specialized in .NET back-end development for the banking sector. Based in Guatemala and working remotely for BDG Panama, I build and modernize the CRM and lending systems that banks and credit cooperatives across Central America run on.
       </AnimatedText>
 
-      {/* Carousel con animación de contenedor */}
-      <AnimatedContainer animation="scale" delay={0.5}>
-        <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
-          <>
-            {TimeLineData.map((item, index) => (
-              <div key={index}>
-                <CarouselMobileScrollNode
-                  final={index === TOTAL_CAROUSEL_COUNT - 1}>
-                  <CarouselItem
-                    index={index}
-                    id={`carousel__item-${index}`}
-                    active={activeItem}
-                    onClick={(e) => handleClick(e, index)}>
-                    <CarouselItemTitle>
-                      {`${item.year}`}
-                      <CarouselItemImg
-                        width="208"
-                        height="6"
-                        viewBox="0 0 208 6"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M2.5 5.5C3.88071 5.5 5 4.38071 5 3V3.5L208 3.50002V2.50002L5 2.5V3C5 1.61929 3.88071 0.5 2.5 0.5C1.11929 0.5 0 1.61929 0 3C0 4.38071 1.11929 5.5 2.5 5.5Z"
-                          fill="url(#paint0_linear)"
-                          fillOpacity="0.33"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear"
-                            x1="-4.30412e-10"
-                            y1="0.5"
-                            x2="208"
-                            y2="0.500295"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stopColor="white" />
-                            <stop
-                              offset="0.79478"
-                              stopColor="white"
-                              stopOpacity="0"
-                            />
-                          </linearGradient>
-                        </defs>
-                      </CarouselItemImg>
-                    </CarouselItemTitle>
-                    <CarouselItemText>{item.text}</CarouselItemText>
-                  </CarouselItem>
-                </CarouselMobileScrollNode>
-              </div>
-            ))}
-          </>
-        </CarouselContainer>
-      </AnimatedContainer>
-
-      {/* Botones del carousel animados */}
-      <AnimatedContainer animation="stagger" delay={0.8} staggerDelay={0.1}>
-        <CarouselButtons>
+      <AnimatedContainer animation="stagger" delay={0.5} staggerDelay={0.08}>
+        <Track>
           {TimeLineData.map((item, index) => {
+            const current = index === LAST_INDEX;
             return (
-              <div key={index}>
-                <CarouselButton
-                  index={index}
-                  active={activeItem}
-                  onClick={(e) => handleClick(e, index)}
-                  type="button">
-                  <CarouselButtonDot active={activeItem} />
-                </CarouselButton>
-              </div>
+              <Milestone key={index} $current={current}>
+                <MilestoneDot $current={current} />
+                <MilestoneYear $current={current}>
+                  {item.year}
+                  {current && <MilestoneNow>Now</MilestoneNow>}
+                </MilestoneYear>
+                <MilestoneText>{item.text}</MilestoneText>
+              </Milestone>
             );
           })}
-        </CarouselButtons>
+        </Track>
       </AnimatedContainer>
 
       <SectionDivider colorAlt />

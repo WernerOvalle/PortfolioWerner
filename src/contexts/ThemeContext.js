@@ -8,6 +8,7 @@ export const ThemeContextProvider = ({ children }) => {
   useEffect(() => {
     const saved = localStorage.getItem('portfolioTheme');
     if (saved !== null) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage is only readable after mount in a static export
       setIsDark(saved === 'dark');
     }
   }, []);

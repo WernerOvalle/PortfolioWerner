@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 
 import {
   Section,
-  SectionText,
   SectionTitle,
 } from "../../styles/GlobalComponents";
 import Button from "../../styles/GlobalComponents/Button";
-import { LeftSection, TypedContainer } from "./HeroStyles";
+import { HeroText, LeftSection, TypedContainer } from "./HeroStyles";
 import styles from "./hero.module.css";
 const Hero = (props) => (
   <>
@@ -29,13 +28,9 @@ const Hero = (props) => (
               <TypedContainer className={styles.gradientText}>
                 <ReactTyped
                   strings={[
-                    "Software Developer",
                     "Software Engineer",
-                    "Full Stack Developer",
                     ".NET Specialist",
-                    "React Expert",
-                    "Backend Developer",
-                    "Frontend Developer"
+                    "Backend Engineer",
                   ]}
                   typeSpeed={60}
                   backSpeed={40}
@@ -52,9 +47,9 @@ const Hero = (props) => (
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <SectionText>
-              Hello there, welcome to my portfolio! If you&apos;d like to discover my experience and skills, you can view my resume by clicking the button below.
-            </SectionText>
+            <HeroText>
+              Building CRM and lending platforms for banks across Central America. 7+ years in .NET, now shipping faster with agentic AI.
+            </HeroText>
           </motion.div>
 
           <motion.div
@@ -65,8 +60,11 @@ const Hero = (props) => (
           >
             <Button
               onClick={() =>
-              (window.location =
-                "https://drive.google.com/file/d/1HOPuUsdMT8opDl6zbX_MwAnotSYjW13G/view?usp=sharing")
+                window.open(
+                  "https://drive.google.com/file/d/1HOPuUsdMT8opDl6zbX_MwAnotSYjW13G/view?usp=sharing",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
               }
             >
               View Resume

@@ -49,6 +49,7 @@ const Timeline = () => {
     const now = new Date();
     const startDate = new Date(2019, 1); // February 2019 (month is 0-indexed)
     const years = Math.floor((now - startDate) / (365.25 * 24 * 60 * 60 * 1000));
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- client-only value; computing it during render would mismatch the static HTML
     setYearsOfExperience(years);
   }, []);
 
@@ -61,7 +62,7 @@ const Timeline = () => {
       
       {/* Texto animado */}
       <AnimatedText delay={0.3}>
-        With over {yearsOfExperience} years of experience in frontend and backend development. I&apos;m a software developer in Guatemala City. I really enjoy learning and growing in this field.
+        Software Engineer with {yearsOfExperience}+ years of experience, specialized in .NET back-end development for the banking sector. Based in Guatemala and working remotely for BDG Panama, I build and modernize the CRM and lending systems that banks and credit cooperatives across Central America run on.
       </AnimatedText>
 
       {/* Carousel con animación de contenedor */}

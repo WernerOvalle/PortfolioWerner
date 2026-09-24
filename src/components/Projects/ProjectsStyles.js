@@ -312,3 +312,15 @@ export const Badge = styled.span`
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
   z-index: 4;
 `
+
+// Shown instead of a Visit button for work that has no public URL.
+export const PrivateNote = styled.li`
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  color: ${props => props.theme.colors.textSubtle};
+  background: ${props => props.theme.colors.chipBg};
+  border: 1px dashed ${props => props.theme.colors.chipBorder};
+`;

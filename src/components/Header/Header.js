@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { RiBook2Line } from "react-icons/ri";
 import { RiMenu4Line, RiCloseLine } from "react-icons/ri";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
@@ -23,15 +23,16 @@ import {
 } from "./HeaderStyles";
 
 const navItems = [
+  { label: "About", href: "#about" },
+  { label: "Technologies", href: "#tech" },
   { label: "Projects", href: "#projects" },
   { label: "Certificates", href: "#certificates" },
-  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const socials = [
   { href: "https://github.com/WernerOvalle", icon: AiFillGithub },
   { href: "https://www.linkedin.com/in/werner-ovalle/", icon: AiFillLinkedin },
-  { href: "https://www.instagram.com/werner_ovalle", icon: AiFillInstagram },
 ];
 
 const menuVariants = {

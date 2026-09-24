@@ -17,6 +17,7 @@ import {
   Badge,
   CategoryTitle,
   StackLabel,
+  PrivateNote,
 } from './ProjectsStyles';
 import { Section, SectionDivider } from '../../styles/GlobalComponents';
 import { projectCategories } from '../../constants/constants';
@@ -72,6 +73,7 @@ const Projects = () => (
                     </TagList>
                   </div>
                   <UtilityList>
+                    {p.privateNote && <PrivateNote>{p.privateNote}</PrivateNote>}
                     {p.visit !== '' && (
                       <motion.div
                         whileHover={{ scale: 1.05 }}

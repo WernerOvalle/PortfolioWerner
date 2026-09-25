@@ -22,6 +22,7 @@ export const LinkItem = styled.a`
 	transition: .3s ease;
 	position: relative;
 	left: 0;
+	overflow-wrap: anywhere;
 
 	&:hover {
 		color: ${props => props.theme.colors.primary1};
@@ -35,8 +36,8 @@ export const LinkItem = styled.a`
 	}
 
 	@media ${props => props.theme.breakpoints.sm} {
-		font-size: 13px;
-		line-height: 18px;
+		font-size: 15px;
+		line-height: 22px;
 		margin-bottom: 8px;
 		display: flex;
 		align-items: center;
@@ -116,7 +117,7 @@ export const SocialContainer = styled.div`
 export const LinkList = styled.ul`
 	border-top: 1px solid ${props => props.theme.colors.borderSubtle};
   display: grid;
-	grid-template-columns: repeat(2, minmax(85px, 300px));
+	grid-template-columns: repeat(2, minmax(0, 300px));
 	gap: 40px;
   padding: 40px 0 28px;
 
@@ -124,15 +125,16 @@ export const LinkList = styled.ul`
 		padding: 32px 0 16px;
 	}
 
+	/* stacked on tablet/mobile: an e-mail address has no break points, so two
+	   side-by-side columns overflow into each other on narrow screens */
 	@media ${props => props.theme.breakpoints.md} {
 		width: 100%;
+		grid-template-columns: 1fr;
 		padding: 32px 0 16px;
-		gap: 16px;
+		gap: 12px;
 	}
 	@media ${props => props.theme.breakpoints.sm} {
-		width: 100%;
-		padding: 32px 4px 16px;
-		gap: 5px;
+		padding: 28px 4px 12px;
 	}
 `
 
@@ -141,6 +143,7 @@ export const LinkColumn = styled.div`
 	flex-direction: column;
 	max-width: 300px;
 	width: 100%;
+	min-width: 0;
 `
 export const LinkTitle = styled.h4`
 	font-style: normal;

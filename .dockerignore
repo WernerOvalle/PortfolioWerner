@@ -1,0 +1,14 @@
+# Excludes heavy/unnecessary paths from the Docker build context.
+# This speeds up builds and prevents the host's node_modules from
+# being copied into the image (which would conflict with the container's
+# own pnpm install). Note: this does NOT affect runtime volume mounts.
+
+node_modules
+.next
+out
+.git
+.gitignore
+*.md
+.env*
+npm-debug.log*
+yarn-debug.log*

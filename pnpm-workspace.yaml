@@ -1,0 +1,34 @@
+packages:
+  - "**"
+
+# ---------------------------------------------------------------------------
+# Supply chain protection.
+#
+# IMPORTANT: pnpm 11 no longer reads these settings from .npmrc, and it does NOT
+# warn when it ignores them — it silently installs with no protection at all.
+# They must live here, in camelCase. .npmrc is kept only as a fallback in case
+# something ever runs pnpm 10.x; both files must be kept in sync.
+# ---------------------------------------------------------------------------
+ignoreScripts: true
+saveExact: true
+minimumReleaseAge: 10080        # 7 days: refuse versions published more recently
+blockExoticSubdeps: true
+trustPolicy: no-downgrade
+
+# trustPolicy flags these two as "trust downgrades" because newer releases of both
+# are published through npm trusted publishing while these older, legitimate
+# versions predate it. Both were verified by hand against the registry:
+#   semver@6.3.1                          published 2023-07-10 by lukekarrys (npm CLI team)
+#   eslint-import-resolver-typescript@3.10.1  published by jounqin, its long-time maintainer
+# Pinned to the exact version on purpose: a takeover of any OTHER version still fails.
+# Re-check these if the lockfile ever bumps them.
+trustPolicyExclude:
+  - 'semver@6.3.1'
+  - 'eslint-import-resolver-typescript@3.10.1'
+
+# Replaces pnpm 10's onlyBuiltDependencies/ignoredBuiltDependencies.
+# false = this package may NOT run its install scripts. Listing them explicitly
+# is what stops pnpm 11 failing the install with ERR_PNPM_IGNORED_BUILDS.
+allowBuilds:
+  sharp: false
+  unrs-resolver: false

@@ -450,7 +450,7 @@ export const projectCategories = [
       },
       {
         title: "Credilink SV",
-        description: "Loan origination portal for a Salvadoran credit cooperative, guiding applicants from a five-minute request to instant pre-approval and feeding each one into the CRM built for the same client.",
+        description: "Loan origination portal for a Salvadoran credit cooperative, guiding applicants from a five-minute request to instant pre-approval.",
         image: "/images/credilink-sv.jpg",
         tags: [".NET", "ASP.NET Core", "Bootstrap", "jQuery"],
         visitpreview: "",

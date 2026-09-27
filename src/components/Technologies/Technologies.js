@@ -26,7 +26,7 @@ const stack = [
   { title: "Back-End", Icon: TbBrandCSharp, items: ["C#", "ASP.NET", "Entity Framework", "Node.js"] },
   { title: "Database", Icon: TbDatabase, items: ["SQL Server", "T-SQL", "PostgreSQL", "Prisma"] },
   { title: "Front-End", Icon: TbBrandReact, items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
-  { title: "DevOps", Icon: TbBrandDocker, items: ["Azure DevOps", "TFS", "Docker", "CI/CD"] },
+  { title: "DevOps", Icon: TbBrandDocker, items: ["Azure DevOps", "Microsoft Azure", "Docker", "CI/CD"] },
   { title: "Agentic AI", Icon: TbSparkles, items: ["Claude Code", "GitHub Copilot", "Agent Skills", "Prompt Engineering"] },
 ];
 

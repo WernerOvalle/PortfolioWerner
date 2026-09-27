@@ -98,16 +98,6 @@ export const projects = [
     badge: "Course",
     id: 7,
   }, {
-    title: "IPTV Services",
-    description:
-      "I developed a modern IPTV platform using Next.js and TypeScript, allowing users to access over 10,000 channels. The application features a responsive design and an intuitive interface for a seamless streaming experience.",
-    image: "/images/iptv-services.jpg",
-    tags: ["Next.js", "TypeScript", "MagicUI", "Vercel"],
-    visitpreview: "",
-    visit: "https://iptv-app-buster.vercel.app/",
-    badge: "Personal",
-    id: 9,
-  }, {
     title: "IMPOSTOR GAME",
     description:
       "A party web game where everyone receives a secret word — except the impostor, who gets nothing and must figure it out from the conversation. Players discuss and try to expose who's bluffing, while the impostor uses every clue to stay hidden.",
@@ -514,12 +504,13 @@ export const projectCategories = [
         id: 11,
       },
       {
-        title: "IPTV Services",
-        description: "Streaming platform offering access to more than 10,000 IPTV channels through a responsive, uncluttered interface.",
-        image: "/images/iptv-services.jpg",
-        tags: ["Next.js", "TypeScript", "MagicUI", "Vercel"],
+        title: "Hospital Appointment System",
+        description: "Prototype of an appointment scheduling system built as a proposal for a private hospital in Guatemala. Live demo with fictional data.",
+        image: "/images/hospital-appointment-system.jpg",
+        tags: ["Next.js", "TypeScript", "Tailwind CSS", "Azure Static Web Apps"],
         visitpreview: "",
-        visit: "https://iptv-app-buster.vercel.app/",
+        visit: "https://mango-river-0da4e4410.1.azurestaticapps.net",
+        badge: "Prototype",
         id: 9,
       },
     ],

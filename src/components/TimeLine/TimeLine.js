@@ -8,7 +8,7 @@ import { TimeLineData } from '../../constants/constants';
 const LAST_INDEX = TimeLineData.length - 1;
 
 const Timeline = () => {
-  const [yearsOfExperience, setYearsOfExperience] = useState(5);
+  const [yearsOfExperience, setYearsOfExperience] = useState(7);
 
   useEffect(() => {
     // Calculate years of experience on client side only to avoid hydration mismatch
@@ -27,7 +27,7 @@ const Timeline = () => {
       <AnimatedTitle eyebrow="01 — About">About Me</AnimatedTitle>
 
       <AnimatedText delay={0.3}>
-        Software Engineer with {yearsOfExperience}+ years of experience, specialized in .NET back-end development for the banking sector. Based in Guatemala and working remotely for BDG Panama, I build and modernize the CRM and lending systems that banks and credit cooperatives across Central America run on.
+        Full-Stack Software Engineer with {yearsOfExperience}+ years of experience turning business needs into working software. Most of that time has gone into CRM systems for banks and credit cooperatives across Central America, first at Banco Industrial and now remotely from Guatemala for BDG Panama, alongside public-sector sites, freelance projects and products of my own. I pick up whatever stack the problem needs.
       </AnimatedText>
 
       <AnimatedContainer animation="stagger" delay={0.5} staggerDelay={0.08}>

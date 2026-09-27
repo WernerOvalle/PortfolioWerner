@@ -20,6 +20,9 @@ export const LeftSection = styled.div`
 
 export const TypedContainer = styled.span`
   font-weight: 800;
+  /* slightly smaller than the name so the longest role ("Full-Stack
+     Engineer") stays clear of the profile photo on desktop */
+  font-size: 0.9em;
   background: ${props => props.theme.colors.accentTextGradient};
   background-size: 200% 200%;
   -webkit-background-clip: text;
@@ -37,7 +40,7 @@ export const TypedContainer = styled.span`
   }
   
   &::before {
-    content: "Software Engineer_";
+    content: "Full-Stack Engineer_";
     grid-column: 1;
     grid-row: 1;
     visibility: hidden;

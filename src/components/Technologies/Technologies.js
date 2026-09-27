@@ -26,7 +26,7 @@ const stack = [
   { title: "Back-End", Icon: TbBrandCSharp, items: ["C#", "ASP.NET", "Entity Framework", "Node.js"] },
   { title: "Database", Icon: TbDatabase, items: ["SQL Server", "T-SQL", "PostgreSQL", "Prisma"] },
   { title: "Front-End", Icon: TbBrandReact, items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
-  { title: "DevOps", Icon: TbBrandDocker, items: ["Azure DevOps", "TFS", "Docker", "CI/CD"] },
+  { title: "DevOps", Icon: TbBrandDocker, items: ["Azure DevOps", "Microsoft Azure", "Docker", "CI/CD"] },
   { title: "Agentic AI", Icon: TbSparkles, items: ["Claude Code", "GitHub Copilot", "Agent Skills", "Prompt Engineering"] },
 ];
 
@@ -34,7 +34,7 @@ const Technologies = () => (
   <Section id="tech">
     <AnimatedTitle eyebrow="02 — Stack">Technologies</AnimatedTitle>
     <AnimatedText delay={0.3}>
-      7+ years building .NET systems for banks and financial institutions, backed by a modern front-end stack and AI-powered workflows.
+      The stack I work with most. I learn whatever a project needs, but this is where I have shipped the most: .NET and SQL, modern front ends, cloud and AI-assisted workflows.
     </AnimatedText>
 
     <AnimatedContainer animation="stagger" delay={0.5} staggerDelay={0.2}>

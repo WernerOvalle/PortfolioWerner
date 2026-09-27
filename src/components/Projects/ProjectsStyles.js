@@ -294,6 +294,8 @@ export const Badge = styled.span`
         return 'linear-gradient(135deg, rgba(123, 44, 191, 0.9) 0%, rgba(199, 125, 255, 0.9) 100%)';
       case 'Personal':
         return 'linear-gradient(135deg, rgba(45, 106, 79, 0.9) 0%, rgba(82, 183, 136, 0.9) 100%)';
+      case 'Prototype':
+        return 'linear-gradient(135deg, rgba(3, 105, 161, 0.9) 0%, rgba(56, 189, 248, 0.9) 100%)';
       default:
         return 'linear-gradient(135deg, rgba(247, 127, 0, 0.9) 0%, rgba(252, 191, 73, 0.9) 100%)';
     }

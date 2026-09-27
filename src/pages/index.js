@@ -10,9 +10,9 @@ import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
 
 const SITE_URL = 'https://portfoliowerner.netlify.app';
-const TITLE = 'Werner Ovalle — Software Engineer (.NET)';
+const TITLE = 'Werner Ovalle — Full-Stack Software Engineer';
 const DESCRIPTION =
-  'Software Engineer building CRM and lending platforms for banks across Central America. 7+ years in .NET, React and SQL Server.';
+  'Full-stack software engineer with 7+ years of experience across .NET, React, Next.js, SQL and Azure, and deep experience building systems for the financial sector.';
 
 const Home = () => {
   return (

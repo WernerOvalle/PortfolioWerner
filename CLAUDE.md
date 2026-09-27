@@ -69,7 +69,7 @@ All portfolio content lives in `src/constants/constants.js`: projects, certifica
 
 Two grouped arrays drive the page:
 
-- `projectCategories` — three groups: `Client Work` (keeps the `badge` field, `Work` vs `Freelance`), `Side Projects` and `Teaching` (no badge; the category name already says it).
+- `projectCategories` — three groups: `Client Work` (keeps the `badge` field, `Work` vs `Freelance`), `Side Projects` (no badge, except `Prototype` for demos built as proposals) and `Teaching` (no badge; the category name already says it).
 - `certificateCategories` — four groups: `🎓 Education & Research` (degrees + theses), `🤖 AI & Automation`, `☁️ Cloud & DevOps`, `🌐 Web Development`. The `Certificates` component flattens these into a single filterable grid, so the category name and `color` become a filter chip and the tag shown on each card.
 
 The certificates grid shows `PREVIEW_COUNT` (6) cards and a `Show all (N)` toggle. In the unfiltered `All` view, items marked `featured: true` are sorted first — that flag controls which six a recruiter sees before expanding.

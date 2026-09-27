@@ -452,7 +452,7 @@ export const projectCategories = [
         title: "FHA Guatemala",
         description: "Public site for the Guatemalan state institution behind insured mortgage loans, guiding citizens through its mortgage services and housing programs. I architected and built it from scratch.",
         image: "/images/fha-guatemala.jpg",
-        tags: ["Next.js", "Tailwind", "Prisma", "PostgreSQL"],
+        tags: ["Next.js", "Tailwind", "Prisma", "PostgreSQL", "Azure VM"],
         visitpreview: "",
         visit: "https://fha.gob.gt/",
         badge: "Work",

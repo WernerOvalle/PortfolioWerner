@@ -47,7 +47,7 @@ const Hero = (props) => (
             transition={{ duration: 1, delay: 0.6 }}
           >
             <HeroText>
-              Building CRM and lending platforms for banks across Central America. 7+ years in .NET, now shipping faster with agentic AI.
+              Building CRM and lending platforms for banks across Central America with .NET, now shipping faster with agentic AI.
             </HeroText>
           </motion.div>
 

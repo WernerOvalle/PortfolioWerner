@@ -27,7 +27,7 @@ const Timeline = () => {
       <AnimatedTitle eyebrow="01 — About">About Me</AnimatedTitle>
 
       <AnimatedText delay={0.3}>
-        Software Engineer with {yearsOfExperience}+ years of experience, specialized in .NET back-end development for the banking sector. Based in Guatemala and working remotely for BDG Panama, I build and modernize the CRM and lending systems that banks and credit cooperatives across Central America run on.
+        Software Engineer with {yearsOfExperience}+ years of experience. I started in business intelligence, spent almost four years building banking CRM projects at Banco Industrial, and today work remotely from Guatemala for BDG Panama, modernizing the .NET systems that banks and credit cooperatives rely on every day.
       </AnimatedText>
 
       <AnimatedContainer animation="stagger" delay={0.5} staggerDelay={0.08}>

@@ -27,7 +27,7 @@ const Timeline = () => {
       <AnimatedTitle eyebrow="01 — About">About Me</AnimatedTitle>
 
       <AnimatedText delay={0.3}>
-        Software Engineer with {yearsOfExperience}+ years of experience. I started in business intelligence, spent almost four years building banking CRM projects at Banco Industrial, and today work remotely from Guatemala for BDG Panama, modernizing the .NET systems that banks and credit cooperatives rely on every day.
+        Software Engineer with {yearsOfExperience}+ years of experience turning business needs into working software. Most of that time has gone into CRM and lending systems for the financial sector, first at Banco Industrial and now remotely from Guatemala for BDG Panama, alongside public-sector sites, freelance projects and products of my own. I pick up whatever stack the problem needs.
       </AnimatedText>
 
       <AnimatedContainer animation="stagger" delay={0.5} staggerDelay={0.08}>

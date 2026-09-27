@@ -34,7 +34,7 @@ const Technologies = () => (
   <Section id="tech">
     <AnimatedTitle eyebrow="02 — Stack">Technologies</AnimatedTitle>
     <AnimatedText delay={0.3}>
-      The tools I use day to day, from .NET back ends and SQL databases to a modern front-end stack and AI-assisted workflows.
+      The stack I work with most. I learn whatever a project needs, but this is where I have shipped the most: .NET and SQL, modern front ends, cloud and AI-assisted workflows.
     </AnimatedText>
 
     <AnimatedContainer animation="stagger" delay={0.5} staggerDelay={0.2}>

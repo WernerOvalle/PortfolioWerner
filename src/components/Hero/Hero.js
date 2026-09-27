@@ -28,8 +28,8 @@ const Hero = (props) => (
                 <ReactTyped
                   strings={[
                     "Software Engineer",
+                    "Full-Stack Engineer",
                     ".NET Specialist",
-                    "Backend Engineer",
                   ]}
                   typeSpeed={60}
                   backSpeed={40}
@@ -47,7 +47,7 @@ const Hero = (props) => (
             transition={{ duration: 1, delay: 0.6 }}
           >
             <HeroText>
-              Building CRM and lending platforms for banks across Central America with .NET, now shipping faster with agentic AI.
+              I build software end to end, from the database to the interface, with deep experience in systems for the financial sector. Now shipping faster with agentic AI.
             </HeroText>
           </motion.div>
 

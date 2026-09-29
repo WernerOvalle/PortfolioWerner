@@ -521,7 +521,7 @@ export const projectCategories = [
     items: [
       {
         title: "Udemy — Clean Architecture with .NET & C#",
-        description: "Published Udemy course that explains Clean Architecture visually: SOLID, dependency inversion, hexagonal and Onion, EF Core kept out of the domain and fast xUnit tests, all through an online store example. Produced with an AI-assisted pipeline I built (Claude Code, AI voice, Marp, Mermaid, FFmpeg), with every script reviewed by me.",
+        description: "Published Udemy course that explains Clean Architecture visually: SOLID, dependency inversion, hexagonal and Onion, EF Core kept out of the domain and fast xUnit tests, all through an online store example. Produced with an AI-assisted pipeline I built (Claude Code, MiniMax text-to-speech, Marp, Mermaid, FFmpeg), with every script reviewed by me.",
         image: "/images/udemy-clean-architecture-course.png",
         tags: [".NET", "C#", "EF Core", "xUnit"],
         visitpreview: "",

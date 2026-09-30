@@ -326,10 +326,10 @@ export const certificateCategories = [
     color: "#0078d4",
     items: [
       {
-        title: "AZ-204 Prep Course — Udemy",
+        title: "Azure Developer Course — Udemy",
         image: "/images/udemy-az204-certificate.jpg",
         visit: "https://www.udemy.com/certificate/UC-1b880a76-4fc7-48ad-86ad-e720ab9520ff/",
-        description: "Covers App Service, Azure Functions, Cosmos DB, Azure Storage, Microsoft Identity Platform and API Management. Complemented with the AZ-204 Exam Guide (2nd ed., Packt 2024) by Paul Ivey & Alex Ivanov, with strong results on official mock exams.",
+        description: "Azure app development: compute (App Service, Functions, containers), data (Cosmos DB, Blob Storage, Redis), security (Entra ID, Key Vault), messaging (Service Bus, Event Grid, Event Hubs), monitoring (Application Insights) and API Management. Complemented with the AZ-204 Exam Guide (2nd ed., Packt 2024) by Paul Ivey & Alex Ivanov, with strong results on official mock exams.",
         id: 17,
       },
       {

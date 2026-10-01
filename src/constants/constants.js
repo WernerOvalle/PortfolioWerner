@@ -544,12 +544,12 @@ export const projectCategories = [
 ];
 export const TimeLineData = [
   { year: 2014, text: "Started my journey in Systems Engineering at university." },
-  { year: 2019, text: "Joined Claro as a Business Intelligence Developer and began my Master's degree program." },
-  { year: 2019, text: "Transitioned to Banco Industrial as a Software Developer." },
-  { year: 2020, text: "Earned my Bachelor's degree in Systems Engineering and Computer Science." },
-  { year: 2021, text: "Completed my Master's degree in IT with a focus on Electronic Banking." },
+  { year: 2019, text: "Joined Claro as a Business Intelligence Developer and began my Master's degree." },
+  { year: 2019, text: "Moved to Banco Industrial as a Software Developer." },
+  { year: 2020, text: "Graduated in Systems Engineering and Computer Science." },
+  { year: 2021, text: "Graduated with a Master's in Computer Science, focused on Electronic Banking." },
   { year: 2023, text: "Joined FHA Guatemala as a Software Engineer." },
-  { year: 2024, text: "Expanded my career internationally at BDG Panama, S.A. as a Software Engineer." },
+  { year: 2024, text: "Took my career international as a Software Engineer at BDG Panama." },
 ];
 export const data = [
   { number: 1, text: "Course" },

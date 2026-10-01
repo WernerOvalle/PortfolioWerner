@@ -521,7 +521,7 @@ export const projectCategories = [
     items: [
       {
         title: "Udemy — Clean Architecture with .NET & C#",
-        description: "Published Udemy course (2026) that explains Clean Architecture visually: SOLID, hexagonal and Onion, EF Core and xUnit tests through an online store example. Produced with an AI pipeline I built (Claude Code, MiniMax, Marp, Mermaid, FFmpeg).",
+        description: "Published Udemy course (2026) that explains Clean Architecture visually: SOLID, hexagonal and Onion, EF Core and xUnit tests through an online store example. Produced with an AI pipeline I built (Claude Code, MiniMax text-to-speech, Marp, Mermaid, FFmpeg).",
         image: "/images/udemy-clean-architecture-course.png",
         tags: [".NET", "C#", "EF Core", "xUnit"],
         visitpreview: "",

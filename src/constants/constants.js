@@ -521,7 +521,7 @@ export const projectCategories = [
     items: [
       {
         title: "Udemy — Clean Architecture with .NET & C#",
-        description: "Published Udemy course (2026) that explains Clean Architecture visually: SOLID, dependency inversion, hexagonal and Onion, EF Core kept out of the domain and fast xUnit tests, all through an online store example. Produced with an AI-assisted pipeline I built (Claude Code, MiniMax text-to-speech, Marp, Mermaid, FFmpeg), with every script reviewed by me.",
+        description: "Published Udemy course (2026) that explains Clean Architecture visually: SOLID, hexagonal and Onion, EF Core and xUnit tests through an online store example. Produced with an AI pipeline I built (Claude Code, MiniMax, Marp, Mermaid, FFmpeg).",
         image: "/images/udemy-clean-architecture-course.png",
         tags: [".NET", "C#", "EF Core", "xUnit"],
         visitpreview: "",
@@ -531,7 +531,7 @@ export const projectCategories = [
       },
       {
         title: "Udemy — Claude Code & MCP: Agents, Skills and Hooks",
-        description: "Published Udemy course (2026) on agentic AI for developers: how Claude Code works as an agent, connecting it to external tools with MCP, and extending it with skills and hooks. Produced with the same AI-assisted pipeline.",
+        description: "Published Udemy course (2026) on agentic AI for developers: how Claude Code works as an agent, connecting it to external tools with MCP, and extending it with skills and hooks. Produced with the same AI pipeline.",
         image: "/images/udemy-claude-code-mcp-course.png",
         tags: ["Claude Code", "MCP", "Agent Skills", "Hooks"],
         visitpreview: "",

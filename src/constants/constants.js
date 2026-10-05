@@ -240,9 +240,9 @@ export const certficates = [
     id: 15,
   },
   {
-    title: "EFSET English Certificate 55/100 (B2 Upper Intermediate)",
+    title: "EF SET English Certificate 59/100 (B2 Upper Intermediate)",
     image: "/images/efset-english-certificate.jpg",
-    visit: "https://www.efset.org/cert/gSKS8F",
+    visit: "https://cert.efset.org/en/gSKS8F",
     id: 16,
   },
   {
@@ -294,9 +294,9 @@ export const certificateCategories = [
         id: 1,
       },
       {
-        title: "EFSET English Certificate — B2 Upper Intermediate",
+        title: "EF SET English Certificate — 59/100 B2 Upper Intermediate",
         image: "/images/efset-english-certificate.jpg",
-        visit: "https://www.efset.org/cert/gSKS8F",
+        visit: "https://cert.efset.org/en/gSKS8F",
         id: 16,
       },
     ],

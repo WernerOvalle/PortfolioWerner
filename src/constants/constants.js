@@ -431,7 +431,7 @@ export const projectCategories = [
         title: "Enterprise CRM Platform",
         description: "CRM for banks and credit cooperatives across Central America, deployed per client on the institution's own servers and tailored to how each one operates. I develop and maintain it end to end, and migrated its legacy modules to modern .NET to improve platform stability.",
         image: "/images/enterprise-crm.jpg",
-        tags: [".NET", "C#", "Entity Framework", "SQL Server"],
+        tags: [".NET", "C#", "Entity Framework", "SQL Server", "RabbitMQ"],
         visitpreview: "",
         visit: "",
         privateNote: "Private — deployed on-premise for each bank",

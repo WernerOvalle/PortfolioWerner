@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { AnimatedTitle, AnimatedContainer } from '../AnimatedComponents';
+import { AnimatedTitle, AnimatedContainer, TiltCard } from '../AnimatedComponents';
 import {
   BlogCard,
   CardInfo,
@@ -48,54 +48,56 @@ const Projects = () => (
                 key={i}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
               >
-                <BlogCard>
-                  {p.badge && <Badge type={p.badge}>{p.badge}</Badge>}
-                  <ImgWrapper>
-                    <Img src={p.image} alt={p.title} loading="lazy" />
-                  </ImgWrapper>
-                  <TitleContent>
-                    <HeaderThree title>{p.title}</HeaderThree>
-                    <Hr />
-                  </TitleContent>
-                  <CardInfo className="card-info">{p.description}</CardInfo>
-                  <div>
-                    <StackLabel>Stack</StackLabel>
-                    <TagList>
-                      {p.tags.map((t, j) => (
+                <TiltCard>
+                  <BlogCard>
+                    {p.badge && <Badge type={p.badge}>{p.badge}</Badge>}
+                    <ImgWrapper>
+                      <Img src={p.image} alt={p.title} loading="lazy" />
+                    </ImgWrapper>
+                    <TitleContent>
+                      <HeaderThree title>{p.title}</HeaderThree>
+                      <Hr />
+                    </TitleContent>
+                    <CardInfo className="card-info">{p.description}</CardInfo>
+                    <div>
+                      <StackLabel>Stack</StackLabel>
+                      <TagList>
+                        {p.tags.map((t, j) => (
+                          <motion.div
+                            key={j}
+                            whileHover={{ scale: 1.08, y: -2 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            <Tag>{t}</Tag>
+                          </motion.div>
+                        ))}
+                      </TagList>
+                    </div>
+                    <UtilityList>
+                      {p.privateNote && <PrivateNote>{p.privateNote}</PrivateNote>}
+                      {p.visit !== '' && (
                         <motion.div
-                          key={j}
-                          whileHover={{ scale: 1.08, y: -2 }}
-                          transition={{ duration: 0.2 }}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
                         >
-                          <Tag>{t}</Tag>
+                          <ExternalLinks href={p.visit} target="_blank" rel="noopener noreferrer">
+                            {p.visitLabel || 'Visit'}
+                          </ExternalLinks>
                         </motion.div>
-                      ))}
-                    </TagList>
-                  </div>
-                  <UtilityList>
-                    {p.privateNote && <PrivateNote>{p.privateNote}</PrivateNote>}
-                    {p.visit !== '' && (
-                      <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <ExternalLinks href={p.visit} target="_blank" rel="noopener noreferrer">
-                          {p.visitLabel || 'Visit'}
-                        </ExternalLinks>
-                      </motion.div>
-                    )}
-                    {p.visitpreview !== '' && (
-                      <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <ExternalLinks href={p.visitpreview} target="_blank" rel="noopener noreferrer">
-                          Visit Preview
-                        </ExternalLinks>
-                      </motion.div>
-                    )}
-                  </UtilityList>
-                </BlogCard>
+                      )}
+                      {p.visitpreview !== '' && (
+                        <motion.div
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <ExternalLinks href={p.visitpreview} target="_blank" rel="noopener noreferrer">
+                            Visit Preview
+                          </ExternalLinks>
+                        </motion.div>
+                      )}
+                    </UtilityList>
+                  </BlogCard>
+                </TiltCard>
               </motion.div>
             ))}
           </GridContainer>

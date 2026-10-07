@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AnimatedTitle } from '../AnimatedComponents';
+import { AnimatedTitle, TiltCard } from '../AnimatedComponents';
 import {
   BlogCard,
   ExternalLinks,
@@ -98,34 +98,36 @@ const Certificates = () => {
               transition={{ duration: 0.32, ease: 'easeOut' }}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
-              <BlogCard>
-                <ImgWrapper>
-                  <Img src={p.image} alt={p.title} loading="lazy" />
-                </ImgWrapper>
-                <TitleContent>
-                  <CardTag $color={p.color}>{p.category}</CardTag>
-                  <HeaderThree title>{p.title}</HeaderThree>
-                  <Hr />
-                </TitleContent>
-                {p.description && <CardDesc>{p.description}</CardDesc>}
-                <UtilityList>
-                  {p.visit && p.visit.trim() !== '' && (
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <ExternalLinks
-                        href={p.visit}
-                        target="_blank"
-                        rel="noopener noreferrer"
+              <TiltCard>
+                <BlogCard>
+                  <ImgWrapper>
+                    <Img src={p.image} alt={p.title} loading="lazy" />
+                  </ImgWrapper>
+                  <TitleContent>
+                    <CardTag $color={p.color}>{p.category}</CardTag>
+                    <HeaderThree title>{p.title}</HeaderThree>
+                    <Hr />
+                  </TitleContent>
+                  {p.description && <CardDesc>{p.description}</CardDesc>}
+                  <UtilityList>
+                    {p.visit && p.visit.trim() !== '' && (
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
                       >
-                        {p.inProgress ? 'Learn More' : 'View Certificate'}
-                      </ExternalLinks>
-                    </motion.div>
-                  )}
-                </UtilityList>
-              </BlogCard>
+                        <ExternalLinks
+                          href={p.visit}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {p.inProgress ? 'Learn More' : 'View Certificate'}
+                        </ExternalLinks>
+                      </motion.div>
+                    )}
+                  </UtilityList>
+                </BlogCard>
+              </TiltCard>
             </motion.div>
           ))}
         </AnimatePresence>

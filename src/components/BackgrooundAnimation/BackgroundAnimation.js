@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import TiltCard from '../AnimatedComponents/TiltCard';
 
 const BackgroundAnimation = () => (
   <div>
@@ -24,7 +25,6 @@ const BackgroundAnimation = () => (
          }}
          whileHover={{ 
            scale: 1.05,
-           rotate: 5,
            transition: { duration: 0.3 }
          }}
          style={{
@@ -34,16 +34,19 @@ const BackgroundAnimation = () => (
            zIndex: 10,
          }}
        >
-         <Image 
-           id="profileImg"
-           src="/images/profile.png" 
-           alt="Profile picture" 
-           width={420}
-           height={420}
-           style={{
-             borderRadius: "20px"
-           }}
-         />
+         <TiltCard maxTilt={14} glare={false}>
+           <Image 
+             id="profileImg"
+             src="/images/profile.png" 
+             alt="Profile picture" 
+             width={420}
+             height={420}
+             style={{
+               display: "block",
+               borderRadius: "20px"
+             }}
+           />
+         </TiltCard>
        </motion.div>
     <motion.svg
       className="BgAnimation__svg"

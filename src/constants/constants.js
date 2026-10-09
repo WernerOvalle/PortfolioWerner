@@ -496,9 +496,9 @@ export const projectCategories = [
     items: [
       {
         title: "Party Arcade",
-        description: "A browser arcade of multiplayer party games: Impostor, where everyone gets a secret word except the impostor, who has to bluff to work it out, and a multiplayer Snake.",
-        image: "/images/impostor-game.png",
-        tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+        description: "Party games you play in the browser. Impostor: everyone gets a secret word except one player, who has to pretend they know it. Snake: up to 8 players on one big screen, using their phones as controllers.",
+        image: "/images/party-arcade.png",
+        tags: ["Next.js", "TypeScript", "Tailwind CSS", "PeerJS"],
         visitpreview: "",
         visit: "https://party-arcade-werner.vercel.app/",
         id: 11,

@@ -495,12 +495,12 @@ export const projectCategories = [
     color: "#2d6a4f",
     items: [
       {
-        title: "Impostor Game",
-        description: "A party game where everyone gets a secret word — except the impostor, who has to bluff through the conversation and work out what it is.",
+        title: "Party Arcade",
+        description: "A browser arcade of multiplayer party games: Impostor, where everyone gets a secret word except the impostor, who has to bluff to work it out, and a multiplayer Snake.",
         image: "/images/impostor-game.png",
         tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
         visitpreview: "",
-        visit: "https://impostor-game-eight-bay.vercel.app/game",
+        visit: "https://party-arcade-werner.vercel.app/",
         id: 11,
       },
       {

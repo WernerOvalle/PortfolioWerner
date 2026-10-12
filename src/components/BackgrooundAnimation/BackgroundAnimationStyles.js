@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 // Right-hand column of the hero: the profile photo with the orbiting lights
 // behind it. Below 1150px there is no room for it next to the text, so it is
 // hidden (it used to be cropped on tablets).
-export const HeroVisual = styled(motion.div)`
+export const HeroVisual = styled.div`
   position: relative;
   height: 100%;
   min-height: 460px;

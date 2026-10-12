@@ -1,23 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
-import { useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import { useTheme } from 'styled-components';
 import TiltCard from '../AnimatedComponents/TiltCard';
 import { HeroVisual, Orbit, PhotoWrap } from './BackgroundAnimationStyles';
 
 const BackgroundAnimation = () => {
   const { colors } = useTheme();
-  const reduceMotion = useReducedMotion();
-
-  // As the page scrolls past the hero, the photo and its lights fade out and
-  // drift up slightly, so the hero leaves gently instead of being cut off.
-  const { scrollY } = useScroll();
-  const opacity = useTransform(scrollY, [0, 450], [1, 0]);
-  const y = useTransform(scrollY, [0, 450], [0, -60]);
-  const scale = useTransform(scrollY, [0, 450], [1, 0.94]);
 
   return (
-    <HeroVisual style={reduceMotion ? { opacity } : { opacity, y, scale }}>
+    <HeroVisual>
       <PhotoWrap
         initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
         animate={{

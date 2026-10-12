@@ -112,6 +112,12 @@ export const ListParagraph = styled.p`
   flex-wrap: wrap;
   gap: 0.7rem;
   margin: 0;
+
+  /* one chip per row, for short lists that would otherwise look sparse */
+  ${props => props.$stacked && `
+    flex-direction: column;
+    align-items: flex-start;
+  `}
 `
 
 export const Chip = styled(motion.span)`

@@ -26,7 +26,7 @@ const stack = [
   { title: "Database", Icon: TbDatabase, items: ["SQL Server", "T-SQL", "PostgreSQL", "Prisma"] },
   { title: "Front-End", Icon: TbBrandReact, items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
   { title: "DevOps", Icon: TbBrandDocker, items: ["Azure DevOps", "Microsoft Azure", "Docker", "CI/CD"] },
-  { title: "Agentic AI", Icon: TbSparkles, items: ["Claude Code", "GitHub Copilot", "Agent Skills"] },
+  { title: "Agentic AI", Icon: TbSparkles, items: ["Claude Code", "Agent Skills", "SDD"], stacked: true },
 ];
 
 // Cards reveal one after another, then each card's chips pop in one by one.
@@ -64,7 +64,7 @@ const Technologies = () => (
       whileInView="visible"
       viewport={{ once: true, margin: "200px" }}
     >
-      {stack.map(({ title, Icon, items }, i) => (
+      {stack.map(({ title, Icon, items, stacked }, i) => (
         <ListItem
           as={motion.li}
           key={title}
@@ -77,7 +77,7 @@ const Technologies = () => (
           </ListIconWrapper>
           <ListContainer>
             <ListTitle>{title}</ListTitle>
-            <ListParagraph>
+            <ListParagraph $stacked={stacked}>
               {items.map((item, j) => (
                 <Chip key={item} custom={{ card: i, chip: j }} variants={chipVariants}>
                   {item}

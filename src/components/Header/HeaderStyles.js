@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const NavBar = styled.header`
   position: fixed;
@@ -54,15 +55,29 @@ export const NavLinks = styled.nav`
 export const NavLink = styled.a`
   font-size: 1.6rem;
   font-weight: 500;
-  color: ${(props) => props.theme.colors.primary1};
-  opacity: 0.75;
+  color: ${(props) =>
+    props.$active ? props.theme.colors.accent : props.theme.colors.primary1};
+  opacity: ${(props) => (props.$active ? 1 : 0.75)};
   cursor: pointer;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease, color 0.25s ease;
   text-decoration: none;
 
   &:hover {
     opacity: 1;
   }
+`;
+
+// Underline under the link of the section in view. It is shared through
+// framer's layoutId, so it slides from one link to the next.
+export const NavIndicator = styled(motion.span)`
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.8rem;
+  height: 2px;
+  border-radius: 2px;
+  background: ${(props) => props.theme.colors.accentGradient};
+  box-shadow: 0 0 8px ${(props) => props.theme.colors.accentGlow};
 `;
 
 export const NavActions = styled.div`
@@ -140,13 +155,14 @@ export const MobileMenuPanel = styled.div`
 export const MobileNavLink = styled.a`
   font-size: 1.9rem;
   font-weight: 500;
-  color: ${(props) => props.theme.colors.primary1};
+  color: ${(props) =>
+    props.$active ? props.theme.colors.accent : props.theme.colors.primary1};
   padding: 1.1rem 0;
   border-bottom: 1px solid ${(props) => props.theme.colors.borderSubtle};
-  opacity: 0.85;
+  opacity: ${(props) => (props.$active ? 1 : 0.85)};
   cursor: pointer;
   text-decoration: none;
-  transition: opacity 0.2s ease, padding-left 0.2s ease;
+  transition: opacity 0.2s ease, padding-left 0.2s ease, color 0.2s ease;
 
   &:hover {
     opacity: 1;

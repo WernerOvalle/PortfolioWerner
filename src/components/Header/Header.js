@@ -5,6 +5,7 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { RiBook2Line } from "react-icons/ri";
 import { RiMenu4Line, RiCloseLine } from "react-icons/ri";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import ScrollProgress from "../ScrollProgress/ScrollProgress";
 import { useThemeContext } from "../../contexts/ThemeContext";
 
 import {
@@ -13,6 +14,7 @@ import {
   Logo,
   NavLinks,
   NavLink,
+  NavIndicator,
   NavActions,
   SocialIcons,
   HamburgerBtn,
@@ -35,6 +37,23 @@ const socials = [
   { href: "https://www.linkedin.com/in/werner-ovalle/", icon: AiFillLinkedin },
 ];
 
+const sectionIds = navItems.map((item) => item.href.slice(1));
+
+// The section in view: the last one whose top has passed ~40% of the screen.
+// At the very bottom of the page the footer (Contact) wins even if it is short.
+const findActiveSection = () => {
+  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+    return sectionIds[sectionIds.length - 1];
+  }
+  const line = window.innerHeight * 0.4;
+  let active = null;
+  for (const id of sectionIds) {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= line) active = id;
+  }
+  return active;
+};
+
 const menuVariants = {
   hidden: { opacity: 0, y: -16 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.22, ease: "easeOut" } },
@@ -56,10 +75,20 @@ const Header = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
   const navRef = useRef(null);
 
+  const [activeSection, setActiveSection] = useState(null);
+
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 10);
+      setActiveSection(findActiveSection());
+    };
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -91,11 +120,22 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 whileHover={{ y: -2 }}
-                style={{ listStyle: "none" }}
+                style={{ listStyle: "none", position: "relative" }}
               >
                 <Link href={item.href} legacyBehavior>
-                  <NavLink>{item.label}</NavLink>
+                  <NavLink
+                    $active={activeSection === item.href.slice(1)}
+                    aria-current={activeSection === item.href.slice(1) ? "location" : undefined}
+                  >
+                    {item.label}
+                  </NavLink>
                 </Link>
+                {activeSection === item.href.slice(1) && (
+                  <NavIndicator
+                    layoutId="nav-indicator"
+                    transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                  />
+                )}
               </motion.li>
             ))}
           </NavLinks>
@@ -142,6 +182,7 @@ const Header = () => {
             </AnimatePresence>
           </HamburgerBtn>
         </NavInner>
+        <ScrollProgress />
       </NavBar>
 
       {/* Mobile menu */}
@@ -173,7 +214,13 @@ const Header = () => {
               {navItems.map((item, i) => (
                 <motion.div key={item.href} custom={i} variants={itemVariants} initial="hidden" animate="visible">
                   <Link href={item.href} legacyBehavior>
-                    <MobileNavLink onClick={closeMenu}>{item.label}</MobileNavLink>
+                    <MobileNavLink
+                      onClick={closeMenu}
+                      $active={activeSection === item.href.slice(1)}
+                      aria-current={activeSection === item.href.slice(1) ? "location" : undefined}
+                    >
+                      {item.label}
+                    </MobileNavLink>
                   </Link>
                 </motion.div>
               ))}

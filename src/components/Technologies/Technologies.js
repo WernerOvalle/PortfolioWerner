@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { AnimatedTitle, AnimatedText, AnimatedContainer } from '../AnimatedComponents';
+import { AnimatedTitle, AnimatedText, AnimatedContainer, AnimatedDivider } from '../AnimatedComponents';
 import {
   TbBrandCSharp,
   TbBrandDocker,
@@ -10,7 +10,6 @@ import {
 } from "react-icons/tb";
 import {
   Section,
-  SectionDivider,
 } from "../../styles/GlobalComponents";
 import {
   List,
@@ -30,6 +29,27 @@ const stack = [
   { title: "Agentic AI", Icon: TbSparkles, items: ["Claude Code", "GitHub Copilot", "Agent Skills"] },
 ];
 
+// Card hover lifts the card and gives the icon a small playful turn.
+const cardVariants = {
+  hover: { y: -6 },
+};
+
+const iconVariants = {
+  visible: { rotate: 0, scale: 1 },
+  hover: { rotate: -8, scale: 1.1, transition: { type: "spring", stiffness: 300, damping: 14 } },
+};
+
+// Once a card has revealed, its chips pop in one after another.
+const chipListVariants = {
+  hidden: {},
+  visible: { transition: { delayChildren: 0.25, staggerChildren: 0.05 } },
+};
+
+const chipVariants = {
+  hidden: { opacity: 0, scale: 0.85 },
+  visible: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 420, damping: 22 } },
+};
+
 const Technologies = () => (
   <Section id="tech">
     <AnimatedTitle eyebrow="02 — Stack">Technologies</AnimatedTitle>
@@ -40,16 +60,16 @@ const Technologies = () => (
     <AnimatedContainer animation="stagger" delay={0.5} staggerDelay={0.2}>
       <List>
         {stack.map(({ title, Icon, items }) => (
-          <motion.div key={title} whileHover={{ y: -6 }}>
+          <motion.div key={title} variants={cardVariants} whileHover="hover">
             <ListItem>
-              <ListIconWrapper>
+              <ListIconWrapper variants={iconVariants}>
                 <Icon />
               </ListIconWrapper>
               <ListContainer>
                 <ListTitle>{title}</ListTitle>
-                <ListParagraph>
+                <ListParagraph variants={chipListVariants}>
                   {items.map((item) => (
-                    <Chip key={item}>{item}</Chip>
+                    <Chip key={item} variants={chipVariants}>{item}</Chip>
                   ))}
                 </ListParagraph>
               </ListContainer>
@@ -59,7 +79,7 @@ const Technologies = () => (
       </List>
     </AnimatedContainer>
 
-    <SectionDivider colorAlt />
+    <AnimatedDivider colorAlt />
   </Section>
 );
 

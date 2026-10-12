@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { AnimatedTitle, AnimatedContainer, TiltCard } from '../AnimatedComponents';
+import { AnimatedTitle, AnimatedContainer, AnimatedDivider, TiltCard, EASE_OUT } from '../AnimatedComponents';
 import {
   BlogCard,
   CardInfo,
@@ -19,12 +19,12 @@ import {
   StackLabel,
   PrivateNote,
 } from './ProjectsStyles';
-import { Section, SectionDivider } from '../../styles/GlobalComponents';
+import { Section } from '../../styles/GlobalComponents';
 import { projectCategories } from '../../constants/constants';
 
 const catVariants = {
-  hidden: { opacity: 0, y: 36 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: 'easeOut' } },
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE_OUT } },
 };
 
 const Projects = () => (
@@ -105,7 +105,7 @@ const Projects = () => (
       </motion.div>
     ))}
 
-    <SectionDivider divider />
+    <AnimatedDivider divider />
   </Section>
 );
 

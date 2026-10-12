@@ -15,6 +15,11 @@ const GlobalStyles = createGlobalStyle`
 
   }
 
+  /* Keep anchored sections clear of the fixed navbar when jumping from the menu */
+  section[id] {
+    scroll-margin-top: 7rem;
+  }
+
   @media only screen and (max-width: 1150px) {
     #profileImg {
       display: none;

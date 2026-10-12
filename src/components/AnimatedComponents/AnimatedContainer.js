@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { revealVariants } from "./easing";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -13,18 +14,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      type: "spring",
-      bounce: 0.3
-    }
-  }
-};
+const itemVariants = revealVariants(24);
 
 const AnimatedContainer = ({ 
   children, 

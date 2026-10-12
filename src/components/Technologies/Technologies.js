@@ -29,11 +29,6 @@ const stack = [
   { title: "Agentic AI", Icon: TbSparkles, items: ["Claude Code", "Agent Skills", "SDD"] },
 ];
 
-// full names for abbreviated chips, shown as a tooltip
-const chipTitles = {
-  SDD: "Spec-Driven Development",
-};
-
 // Cards reveal one after another, then each card's chips pop in one by one.
 // Hover is a plain object (not a variant label) so the cards keep inheriting
 // the list's reveal; the icon's turn on hover lives in TechnologiesStyles.
@@ -84,7 +79,7 @@ const Technologies = () => (
             <ListTitle>{title}</ListTitle>
             <ListParagraph>
               {items.map((item, j) => (
-                <Chip key={item} custom={{ card: i, chip: j }} variants={chipVariants} title={chipTitles[item]}>
+                <Chip key={item} custom={{ card: i, chip: j }} variants={chipVariants}>
                   {item}
                 </Chip>
               ))}

@@ -20,11 +20,6 @@ const GlobalStyles = createGlobalStyle`
     scroll-margin-top: 7rem;
   }
 
-  @media only screen and (max-width: 1150px) {
-    #profileImg {
-      display: none;
-    }
-  }
   body {
     font-family: ${props => props.theme.fonts.main};
     font-size: 1.6rem;

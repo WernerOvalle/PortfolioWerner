@@ -26,14 +26,6 @@ const buildTitleVariants = (delay) => ({
       delay,
       ease: EASE_OUT
     }
-  },
-  hover: {
-    scale: 1.01,
-    transition: {
-      duration: 0.2,
-      type: "spring",
-      stiffness: 150
-    }
   }
 });
 
@@ -74,8 +66,7 @@ const AnimatedTitle = ({
         return {
           variants: buildTitleVariants(delay),
           initial: "hidden",
-          whileInView: "visible",
-          whileHover: "hover"
+          whileInView: "visible"
         };
     }
   };

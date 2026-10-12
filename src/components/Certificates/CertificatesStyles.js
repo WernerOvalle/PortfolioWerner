@@ -6,8 +6,6 @@ export const Img = styled.img`
   object-fit: cover;
   display: block;
   backface-visibility: hidden;
-  will-change: transform;
-  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 `
 
 export const ImgWrapper = styled.div`
@@ -89,10 +87,6 @@ export const BlogCard = styled.div`
 
   &:hover::before {
     opacity: 1;
-  }
-
-  &:hover ${Img} {
-    transform: scale(1.07);
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {

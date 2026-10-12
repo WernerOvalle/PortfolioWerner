@@ -9,7 +9,7 @@ import Button from "../../styles/GlobalComponents/Button";
 import { Availability, HeroText, HeroTitle, LeftSection, TypedContainer } from "./HeroStyles";
 const Hero = (props) => (
   <>
-    <Section row nopadding>
+    <Section $row $nopadding>
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
@@ -22,7 +22,7 @@ const Hero = (props) => (
             transition={{ duration: 1, delay: 0.3 }}
           >
             <Availability>Open to remote work</Availability>
-            <HeroTitle main center>
+            <HeroTitle $main>
               Werner Ovalle <br />
               <TypedContainer>
                 <ReactTyped
@@ -57,15 +57,7 @@ const Hero = (props) => (
             transition={{ duration: 0.8, delay: 0.9 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/172yyV0j_3D0WizSe4Md4oPIeEBm6Flux/view?usp=sharing",
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
-            >
+            <Button href="https://drive.google.com/file/d/172yyV0j_3D0WizSe4Md4oPIeEBm6Flux/view?usp=sharing">
               View Resume
             </Button>
           </motion.div>

@@ -35,6 +35,7 @@ const lightTheme = {
     accentGlow: "rgba(3, 105, 161, 0.25)",
     secondary: "#D97706",
     success: "#16A34A",
+    scrim: "rgba(15, 23, 42, 0.35)",
     pageGlow: "radial-gradient(60rem 40rem at 85% -10%, rgba(14, 165, 233, 0.12), transparent 60%), radial-gradient(50rem 36rem at -10% 30%, rgba(3, 105, 161, 0.06), transparent 60%)",
     gridDot: "rgba(15, 22, 36, 0.05)",
   },

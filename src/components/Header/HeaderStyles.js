@@ -15,18 +15,31 @@ export const NavBar = styled.header`
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 `;
 
+// Navbar heights. NavSpacer reserves the same space in the page flow so the
+// content starts below the fixed navbar from the very first paint.
+const NAV_HEIGHT = '6.4rem';
+const NAV_HEIGHT_SM = '5.6rem';
+
+export const NavSpacer = styled.div`
+  height: ${NAV_HEIGHT};
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    height: ${NAV_HEIGHT_SM};
+  }
+`;
+
 export const NavInner = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2.4rem;
-  height: 6.4rem;
+  height: ${NAV_HEIGHT};
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0 1.6rem;
-    height: 5.6rem;
+    height: ${NAV_HEIGHT_SM};
   }
 `;
 
@@ -134,13 +147,13 @@ export const MobileMenuOverlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: ${(props) => props.theme.colors.scrim};
   z-index: 998;
 `;
 
 export const MobileMenuPanel = styled.div`
   position: fixed;
-  top: 5.6rem;
+  top: ${NAV_HEIGHT};
   left: 0;
   right: 0;
   z-index: 999;
@@ -150,9 +163,14 @@ export const MobileMenuPanel = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    top: ${NAV_HEIGHT_SM};
+  }
 `;
 
 export const MobileNavLink = styled.a`
+  display: block;
   font-size: 1.9rem;
   font-weight: 500;
   color: ${(props) =>

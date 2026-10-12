@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { RiBook2Line } from "react-icons/ri";
@@ -10,6 +10,7 @@ import { useThemeContext } from "../../contexts/ThemeContext";
 
 import {
   NavBar,
+  NavSpacer,
   NavInner,
   Logo,
   NavLinks,
@@ -33,8 +34,8 @@ const navItems = [
 ];
 
 const socials = [
-  { href: "https://github.com/WernerOvalle", icon: AiFillGithub },
-  { href: "https://www.linkedin.com/in/werner-ovalle/", icon: AiFillLinkedin },
+  { href: "https://github.com/WernerOvalle", icon: AiFillGithub, label: "GitHub" },
+  { href: "https://www.linkedin.com/in/werner-ovalle/", icon: AiFillLinkedin, label: "LinkedIn" },
 ];
 
 const sectionIds = navItems.map((item) => item.href.slice(1));
@@ -72,8 +73,6 @@ const Header = () => {
   const { isDark } = useThemeContext();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [headerHeight, setHeaderHeight] = useState(0);
-  const navRef = useRef(null);
 
   const [activeSection, setActiveSection] = useState(null);
 
@@ -91,25 +90,19 @@ const Header = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (navRef.current) setHeaderHeight(navRef.current.offsetHeight);
-  }, []);
-
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
-      <div style={{ height: headerHeight }} />
+      <NavSpacer />
 
-      <NavBar ref={navRef} $scrolled={scrolled}>
+      <NavBar $scrolled={scrolled}>
         <NavInner>
           {/* Logo */}
-          <Link href="/" passHref legacyBehavior>
-            <Logo>
-              <RiBook2Line size="2.8rem" />
-              <span>Portfolio</span>
-            </Logo>
-          </Link>
+          <Logo as={Link} href="/">
+            <RiBook2Line size="2.8rem" />
+            <span>Portfolio</span>
+          </Logo>
 
           {/* Desktop nav links */}
           <NavLinks>
@@ -122,14 +115,13 @@ const Header = () => {
                 whileHover={{ y: -2 }}
                 style={{ listStyle: "none", position: "relative" }}
               >
-                <Link href={item.href} legacyBehavior>
-                  <NavLink
-                    $active={activeSection === item.href.slice(1)}
-                    aria-current={activeSection === item.href.slice(1) ? "location" : undefined}
-                  >
-                    {item.label}
-                  </NavLink>
-                </Link>
+                <NavLink
+                  href={item.href}
+                  $active={activeSection === item.href.slice(1)}
+                  aria-current={activeSection === item.href.slice(1) ? "location" : undefined}
+                >
+                  {item.label}
+                </NavLink>
                 {activeSection === item.href.slice(1) && (
                   <NavIndicator
                     layoutId="nav-indicator"
@@ -144,7 +136,7 @@ const Header = () => {
           <NavActions>
             <ThemeToggle />
             {socials.map((s) => (
-              <SocialIcons key={s.href} href={s.href} target="_blank" rel="noopener noreferrer">
+              <SocialIcons key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}>
                 <s.icon size="2.6rem" />
               </SocialIcons>
             ))}
@@ -189,16 +181,13 @@ const Header = () => {
       <AnimatePresence>
         {menuOpen && (
           <>
-            <motion.div
+            <MobileMenuOverlay
+              as={motion.div}
               key="overlay"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              style={{
-                position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
-                background: "rgba(0,0,0,0.45)", zIndex: 998,
-              }}
               onClick={closeMenu}
             />
 
@@ -209,26 +198,28 @@ const Header = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              style={{ top: headerHeight }}
             >
               {navItems.map((item, i) => (
-                <motion.div key={item.href} custom={i} variants={itemVariants} initial="hidden" animate="visible">
-                  <Link href={item.href} legacyBehavior>
-                    <MobileNavLink
-                      onClick={closeMenu}
-                      $active={activeSection === item.href.slice(1)}
-                      aria-current={activeSection === item.href.slice(1) ? "location" : undefined}
-                    >
-                      {item.label}
-                    </MobileNavLink>
-                  </Link>
-                </motion.div>
+                <MobileNavLink
+                  as={motion.a}
+                  key={item.href}
+                  custom={i}
+                  variants={itemVariants}
+                  initial="hidden"
+                  animate="visible"
+                  href={item.href}
+                  onClick={closeMenu}
+                  $active={activeSection === item.href.slice(1)}
+                  aria-current={activeSection === item.href.slice(1) ? "location" : undefined}
+                >
+                  {item.label}
+                </MobileNavLink>
               ))}
 
               <MobileSocials>
                 <ThemeToggle />
                 {socials.map((s) => (
-                  <SocialIcons key={s.href} href={s.href} target="_blank" rel="noopener noreferrer">
+                  <SocialIcons key={s.href} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}>
                     <s.icon size="2.8rem" />
                   </SocialIcons>
                 ))}

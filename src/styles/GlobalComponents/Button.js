@@ -2,9 +2,14 @@ import React from 'react'
 
 import { ButtonBack, ButtonFront } from './index'
 
-const Button = (props) => (
-  <ButtonBack alt={props.alt} form={props.form} disabled={props.disabled}>{props.children}
-    <ButtonFront alt={props.alt} onClick={props.onClick} disabled={props.disabled}>{props.children}</ButtonFront>
+// A link styled as the site's pill button. External links open in a new tab.
+const Button = ({ href, children, external = true }) => (
+  <ButtonBack
+    href={href}
+    {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+  >
+    {children}
+    <ButtonFront aria-hidden="true">{children}</ButtonFront>
   </ButtonBack>
 );
 

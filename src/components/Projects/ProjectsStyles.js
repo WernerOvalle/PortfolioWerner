@@ -107,9 +107,9 @@ export const HeaderThree = styled.h3`
   font-weight: 700;
   letter-spacing: 0.2px;
   color: ${props => props.theme.colors.cardTitle};
-  padding: ${(props) => props.title ? '1.6rem 1.8rem 0' : '.5rem 0'};
+  padding: ${(props) => props.$title ? '1.6rem 1.8rem 0' : '.5rem 0'};
   margin: 0;
-  font-size: ${(props) => props.title ? '2.2rem' : '1.8rem'};
+  font-size: ${(props) => props.$title ? '2.2rem' : '1.8rem'};
   line-height: 1.25;
 `;
 
@@ -282,7 +282,7 @@ export const Badge = styled.span`
   border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(6px);
   background: ${(props) => {
-    switch(props.type) {
+    switch(props.$type) {
       case 'Work':
         return 'linear-gradient(135deg, rgba(0, 119, 182, 0.9) 0%, rgba(0, 180, 216, 0.9) 100%)';
       case 'Course':

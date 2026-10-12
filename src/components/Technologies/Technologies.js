@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { AnimatedTitle, AnimatedText, AnimatedContainer, AnimatedDivider } from '../AnimatedComponents';
+import { AnimatedTitle, AnimatedText, AnimatedDivider, staggeredReveal } from '../AnimatedComponents';
 import {
   TbBrandCSharp,
   TbBrandDocker,
@@ -29,25 +29,26 @@ const stack = [
   { title: "Agentic AI", Icon: TbSparkles, items: ["Claude Code", "GitHub Copilot", "Agent Skills"] },
 ];
 
-// Card hover lifts the card and gives the icon a small playful turn.
-const cardVariants = {
-  hover: { y: -6 },
-};
+// Cards reveal one after another, then each card's chips pop in one by one.
+// Hover is a plain object (not a variant label) so the cards keep inheriting
+// the list's reveal; the icon's turn on hover lives in TechnologiesStyles.
+const CARD_DELAY = 0.4;
+const CARD_STEP = 0.12;
 
-const iconVariants = {
-  visible: { rotate: 0, scale: 1 },
-  hover: { rotate: -8, scale: 1.1, transition: { type: "spring", stiffness: 300, damping: 14 } },
-};
-
-// Once a card has revealed, its chips pop in one after another.
-const chipListVariants = {
-  hidden: {},
-  visible: { transition: { delayChildren: 0.25, staggerChildren: 0.05 } },
-};
+const cardVariants = staggeredReveal(CARD_DELAY, CARD_STEP);
 
 const chipVariants = {
   hidden: { opacity: 0, scale: 0.85 },
-  visible: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 420, damping: 22 } },
+  visible: ({ card, chip }) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: CARD_DELAY + card * CARD_STEP + 0.25 + chip * 0.05,
+      type: "spring",
+      stiffness: 420,
+      damping: 22,
+    },
+  }),
 };
 
 const Technologies = () => (
@@ -57,29 +58,38 @@ const Technologies = () => (
       The stack I work with most. I learn whatever a project needs, but this is where I have shipped the most: .NET and SQL, modern front ends, cloud and AI-assisted workflows.
     </AnimatedText>
 
-    <AnimatedContainer animation="stagger" delay={0.5} staggerDelay={0.2}>
-      <List>
-        {stack.map(({ title, Icon, items }) => (
-          <motion.div key={title} variants={cardVariants} whileHover="hover">
-            <ListItem>
-              <ListIconWrapper variants={iconVariants}>
-                <Icon />
-              </ListIconWrapper>
-              <ListContainer>
-                <ListTitle>{title}</ListTitle>
-                <ListParagraph variants={chipListVariants}>
-                  {items.map((item) => (
-                    <Chip key={item} variants={chipVariants}>{item}</Chip>
-                  ))}
-                </ListParagraph>
-              </ListContainer>
-            </ListItem>
-          </motion.div>
-        ))}
-      </List>
-    </AnimatedContainer>
+    <List
+      as={motion.ul}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "200px" }}
+    >
+      {stack.map(({ title, Icon, items }, i) => (
+        <ListItem
+          as={motion.li}
+          key={title}
+          custom={i}
+          variants={cardVariants}
+          whileHover={{ y: -6 }}
+        >
+          <ListIconWrapper>
+            <Icon />
+          </ListIconWrapper>
+          <ListContainer>
+            <ListTitle>{title}</ListTitle>
+            <ListParagraph>
+              {items.map((item, j) => (
+                <Chip key={item} custom={{ card: i, chip: j }} variants={chipVariants}>
+                  {item}
+                </Chip>
+              ))}
+            </ListParagraph>
+          </ListContainer>
+        </ListItem>
+      ))}
+    </List>
 
-    <AnimatedDivider colorAlt />
+    <AnimatedDivider />
   </Section>
 );
 

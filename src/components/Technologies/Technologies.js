@@ -26,8 +26,13 @@ const stack = [
   { title: "Database", Icon: TbDatabase, items: ["SQL Server", "T-SQL", "PostgreSQL", "Prisma"] },
   { title: "Front-End", Icon: TbBrandReact, items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
   { title: "DevOps", Icon: TbBrandDocker, items: ["Azure DevOps", "Microsoft Azure", "Docker", "CI/CD"] },
-  { title: "Agentic AI", Icon: TbSparkles, items: ["Claude Code", "GitHub Copilot", "Agent Skills", "Spec-Driven Development"] },
+  { title: "Agentic AI", Icon: TbSparkles, items: ["Claude Code", "Agent Skills", "SDD"] },
 ];
+
+// full names for abbreviated chips, shown as a tooltip
+const chipTitles = {
+  SDD: "Spec-Driven Development",
+};
 
 // Cards reveal one after another, then each card's chips pop in one by one.
 // Hover is a plain object (not a variant label) so the cards keep inheriting
@@ -79,7 +84,7 @@ const Technologies = () => (
             <ListTitle>{title}</ListTitle>
             <ListParagraph>
               {items.map((item, j) => (
-                <Chip key={item} custom={{ card: i, chip: j }} variants={chipVariants}>
+                <Chip key={item} custom={{ card: i, chip: j }} variants={chipVariants} title={chipTitles[item]}>
                   {item}
                 </Chip>
               ))}

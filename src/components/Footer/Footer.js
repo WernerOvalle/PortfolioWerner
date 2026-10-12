@@ -52,9 +52,6 @@ const Footer = () => {
           <SocialIcons href="https://github.com/WernerOvalle" target="_blank" rel="noopener noreferrer">
             <AiFillGithub size="3rem" />
           </SocialIcons>
-          <SocialIcons href="https://www.linkedin.com/in/werner-ovalle/" target="_blank" rel="noopener noreferrer">
-            <AiFillLinkedin size="3rem" />
-          </SocialIcons>
           <SocialIcons href="https://www.youtube.com/@OvalleWerner" target="_blank" rel="noopener noreferrer">
             <AiFillYoutube size="3rem" />
           </SocialIcons>

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export const List = styled.ul`
   list-style-type: none;
@@ -51,7 +52,7 @@ export const ListItem = styled.li`
   }
 `
 
-export const ListIconWrapper = styled.div`
+export const ListIconWrapper = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,14 +102,14 @@ export const ListTitle = styled.h4`
   }
 `
 
-export const ListParagraph = styled.p`
+export const ListParagraph = styled(motion.p)`
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
   margin: 0;
 `
 
-export const Chip = styled.span`
+export const Chip = styled(motion.span)`
   color: ${props => props.theme.colors.textMuted};
   background: ${props => props.theme.colors.chipBg};
   border: 1px solid ${props => props.theme.colors.chipBorder};

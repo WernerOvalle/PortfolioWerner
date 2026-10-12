@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { SectionEyebrow, SectionTitle } from "../../styles/GlobalComponents";
+import { EASE_OUT } from "./easing";
 
 // The title animates as ONE block, and deliberately so.
 //
@@ -21,17 +22,9 @@ const buildTitleVariants = (delay) => ({
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.6,
       delay,
-      ease: "easeOut"
-    }
-  },
-  hover: {
-    scale: 1.01,
-    transition: {
-      duration: 0.2,
-      type: "spring",
-      stiffness: 150
+      ease: EASE_OUT
     }
   }
 });
@@ -73,8 +66,7 @@ const AnimatedTitle = ({
         return {
           variants: buildTitleVariants(delay),
           initial: "hidden",
-          whileInView: "visible",
-          whileHover: "hover"
+          whileInView: "visible"
         };
     }
   };

@@ -15,11 +15,11 @@ const GlobalStyles = createGlobalStyle`
 
   }
 
-  @media only screen and (max-width: 1150px) {
-    #profileImg {
-      display: none;
-    }
+  /* Keep anchored sections clear of the fixed navbar when jumping from the menu */
+  section[id] {
+    scroll-margin-top: 7rem;
   }
+
   body {
     font-family: ${props => props.theme.fonts.main};
     font-size: 1.6rem;

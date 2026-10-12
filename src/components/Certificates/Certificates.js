@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AnimatedTitle, TiltCard } from '../AnimatedComponents';
+import { AnimatedTitle, AnimatedDivider, TiltCard } from '../AnimatedComponents';
 import {
   BlogCard,
   ExternalLinks,
@@ -19,7 +19,7 @@ import {
   ShowAllRow,
   ShowAllBtn,
 } from './CertificatesStyles';
-import { Section, SectionDivider } from '../../styles/GlobalComponents';
+import { Section } from '../../styles/GlobalComponents';
 import { certificateCategories } from '../../constants/constants';
 
 const ALL = 'All';
@@ -141,7 +141,7 @@ const Certificates = () => {
         </ShowAllRow>
       )}
 
-      <SectionDivider divider />
+      <AnimatedDivider divider />
     </Section>
   );
 };

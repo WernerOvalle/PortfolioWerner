@@ -49,10 +49,10 @@ const Footer = () => {
           <Slogan>Open to remote opportunities — let&apos;s talk.</Slogan>
         </CompanyContainer>
         <SocialContainer>
-          <SocialIcons href="https://github.com/WernerOvalle" target="_blank" rel="noopener noreferrer">
+          <SocialIcons href="https://github.com/WernerOvalle" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <AiFillGithub size="3rem" />
           </SocialIcons>
-          <SocialIcons href="https://www.youtube.com/@OvalleWerner" target="_blank" rel="noopener noreferrer">
+          <SocialIcons href="https://www.youtube.com/@OvalleWerner" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
             <AiFillYoutube size="3rem" />
           </SocialIcons>
         </SocialContainer>
@@ -62,7 +62,7 @@ const Footer = () => {
         <CopyrightDivider>—</CopyrightDivider>
         <TechBadge>Built with Next.js</TechBadge>
         <CopyrightDivider>•</CopyrightDivider>
-        <TechBadge netlify><SiNetlify /> Deployed on Netlify</TechBadge>
+        <TechBadge $netlify><SiNetlify /> Deployed on Netlify</TechBadge>
       </CopyrightBar>
     </FooterWrapper>
   );

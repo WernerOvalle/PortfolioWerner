@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { AnimatedTitle, AnimatedContainer, AnimatedDivider, TiltCard, EASE_OUT } from '../AnimatedComponents';
+import { AnimatedTitle, AnimatedDivider, TiltCard, EASE_OUT, staggeredReveal } from '../AnimatedComponents';
 import {
   BlogCard,
   CardInfo,
@@ -27,8 +27,11 @@ const catVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE_OUT } },
 };
 
+// Cards in a category come in one after another once the category reveals.
+const cardVariants = staggeredReveal(0.2, 0.15);
+
 const Projects = () => (
-  <Section nopadding id="projects">
+  <Section $nopadding id="projects">
     <AnimatedTitle spaced eyebrow="03 — Work">Projects</AnimatedTitle>
 
     {projectCategories.map((cat, catIndex) => (
@@ -41,71 +44,71 @@ const Projects = () => (
       >
         <CategoryTitle $color={cat.color}>{cat.category}</CategoryTitle>
 
-        <AnimatedContainer animation="stagger" delay={0.2} staggerDelay={0.15}>
-          <GridContainer>
-            {cat.items.map((p, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -10, transition: { duration: 0.3 } }}
-              >
-                <TiltCard>
-                  <BlogCard>
-                    {p.badge && <Badge type={p.badge}>{p.badge}</Badge>}
-                    <ImgWrapper>
-                      <Img src={p.image} alt={p.title} loading="lazy" />
-                    </ImgWrapper>
-                    <TitleContent>
-                      <HeaderThree title>{p.title}</HeaderThree>
-                      <Hr />
-                    </TitleContent>
-                    <CardInfo className="card-info">{p.description}</CardInfo>
-                    <div>
-                      <StackLabel>Stack</StackLabel>
-                      <TagList>
-                        {p.tags.map((t, j) => (
-                          <motion.div
-                            key={j}
-                            whileHover={{ scale: 1.08, y: -2 }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            <Tag>{t}</Tag>
-                          </motion.div>
-                        ))}
-                      </TagList>
-                    </div>
-                    <UtilityList>
-                      {p.privateNote && <PrivateNote>{p.privateNote}</PrivateNote>}
-                      {p.visit !== '' && (
+        <GridContainer>
+          {cat.items.map((p, i) => (
+            <motion.div
+              key={i}
+              custom={i}
+              variants={cardVariants}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
+            >
+              <TiltCard>
+                <BlogCard>
+                  {p.badge && <Badge $type={p.badge}>{p.badge}</Badge>}
+                  <ImgWrapper>
+                    <Img src={p.image} alt={p.title} loading="lazy" />
+                  </ImgWrapper>
+                  <TitleContent>
+                    <HeaderThree $title>{p.title}</HeaderThree>
+                    <Hr />
+                  </TitleContent>
+                  <CardInfo className="card-info">{p.description}</CardInfo>
+                  <div>
+                    <StackLabel>Stack</StackLabel>
+                    <TagList>
+                      {p.tags.map((t, j) => (
                         <motion.div
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
+                          key={j}
+                          whileHover={{ scale: 1.08, y: -2 }}
+                          transition={{ duration: 0.2 }}
                         >
-                          <ExternalLinks href={p.visit} target="_blank" rel="noopener noreferrer">
-                            {p.visitLabel || 'Visit'}
-                          </ExternalLinks>
+                          <Tag>{t}</Tag>
                         </motion.div>
-                      )}
-                      {p.visitpreview !== '' && (
-                        <motion.div
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <ExternalLinks href={p.visitpreview} target="_blank" rel="noopener noreferrer">
-                            Visit Preview
-                          </ExternalLinks>
-                        </motion.div>
-                      )}
-                    </UtilityList>
-                  </BlogCard>
-                </TiltCard>
-              </motion.div>
-            ))}
-          </GridContainer>
-        </AnimatedContainer>
+                      ))}
+                    </TagList>
+                  </div>
+                  <UtilityList>
+                    {p.privateNote && <PrivateNote>{p.privateNote}</PrivateNote>}
+                    {p.visit !== '' && (
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <ExternalLinks href={p.visit} target="_blank" rel="noopener noreferrer">
+                          {p.visitLabel || 'Visit'}
+                        </ExternalLinks>
+                      </motion.div>
+                    )}
+                    {p.visitpreview !== '' && (
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <ExternalLinks href={p.visitpreview} target="_blank" rel="noopener noreferrer">
+                          Visit Preview
+                        </ExternalLinks>
+                      </motion.div>
+                    )}
+                  </UtilityList>
+                </BlogCard>
+              </TiltCard>
+            </motion.div>
+          ))}
+        </GridContainer>
       </motion.div>
     ))}
 
-    <AnimatedDivider divider />
+    <AnimatedDivider $divider />
   </Section>
 );
 

@@ -8,11 +8,6 @@ export const List = styled.ul`
   gap: 1.6rem;
   margin: 3rem 0 4rem;
 
-  /* motion.div wrappers must stretch so every card has the same height */
-  > * {
-    display: flex;
-  }
-
   @media ${props => props.theme.breakpoints.lg}{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -52,7 +47,7 @@ export const ListItem = styled.li`
   }
 `
 
-export const ListIconWrapper = styled(motion.div)`
+export const ListIconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,6 +59,16 @@ export const ListIconWrapper = styled(motion.div)`
   color: ${props => props.theme.colors.accent};
   background: ${props => props.theme.colors.accentSoft};
   border: 1px solid ${props => props.theme.colors.chipBorder};
+
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  li:hover > & {
+    transform: rotate(-8deg) scale(1.1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 
   svg {
     width: 28px;
@@ -102,7 +107,7 @@ export const ListTitle = styled.h4`
   }
 `
 
-export const ListParagraph = styled(motion.p)`
+export const ListParagraph = styled.p`
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;

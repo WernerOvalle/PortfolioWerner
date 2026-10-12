@@ -104,9 +104,9 @@ export const HeaderThree = styled.h3`
   font-weight: 700;
   letter-spacing: 0.2px;
   color: ${props => props.theme.colors.cardTitle};
-  padding: ${(props) => props.title ? '1.6rem 1.8rem 0' : '.5rem 0'};
+  padding: ${(props) => props.$title ? '1.6rem 1.8rem 0' : '.5rem 0'};
   margin: 0;
-  font-size: ${(props) => props.title ? '1.8rem' : '1rem'};
+  font-size: ${(props) => props.$title ? '1.8rem' : '1rem'};
   line-height: 1.35;
 `;
 

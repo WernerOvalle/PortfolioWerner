@@ -68,7 +68,7 @@ const Certificates = () => {
   };
 
   return (
-    <Section nopadding id="certificates">
+    <Section $nopadding id="certificates">
       <AnimatedTitle eyebrow="04 — Credentials">Certificates</AnimatedTitle>
 
       <FilterBar>
@@ -105,7 +105,7 @@ const Certificates = () => {
                   </ImgWrapper>
                   <TitleContent>
                     <CardTag $color={p.color}>{p.category}</CardTag>
-                    <HeaderThree title>{p.title}</HeaderThree>
+                    <HeaderThree $title>{p.title}</HeaderThree>
                     <Hr />
                   </TitleContent>
                   {p.description && <CardDesc>{p.description}</CardDesc>}
@@ -141,7 +141,7 @@ const Certificates = () => {
         </ShowAllRow>
       )}
 
-      <AnimatedDivider divider />
+      <AnimatedDivider $divider />
     </Section>
   );
 };

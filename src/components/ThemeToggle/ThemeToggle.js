@@ -16,11 +16,11 @@ const Pill = styled(motion.button)`
   padding: 3px;
   flex-shrink: 0;
   outline: none;
-  background: ${({ isDark }) => isDark ? '#1a2847' : '#C8D8E8'};
+  background: ${({ $isDark }) => $isDark ? '#1a2847' : '#C8D8E8'};
   transition: background 0.4s ease;
 
   &:focus-visible {
-    box-shadow: 0 0 0 2px ${({ isDark }) => isDark ? '#4a90d9' : '#f5a623'};
+    box-shadow: 0 0 0 2px ${({ $isDark }) => $isDark ? '#4a90d9' : '#f5a623'};
   }
 `;
 
@@ -28,13 +28,13 @@ const Circle = styled(motion.div)`
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: ${({ isDark }) => isDark ? '#e8f0fe' : '#fff7e0'};
+  background: ${({ $isDark }) => $isDark ? '#e8f0fe' : '#fff7e0'};
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: ${({ isDark }) =>
-    isDark
+  box-shadow: ${({ $isDark }) =>
+    $isDark
       ? '0 0 8px rgba(74, 144, 217, 0.7)'
       : '0 0 8px rgba(245, 166, 35, 0.7)'};
 `;
@@ -44,14 +44,14 @@ const ThemeToggle = () => {
 
   return (
     <Pill
-      isDark={isDark}
+      $isDark={isDark}
       onClick={toggleTheme}
-      aria-label={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       whileHover={{ scale: 1.08 }}
       whileTap={{ scale: 0.95 }}
     >
       <Circle
-        isDark={isDark}
+        $isDark={isDark}
         layout
         transition={{ type: 'spring', stiffness: 500, damping: 30 }}
         style={{ marginLeft: isDark ? 0 : 'auto' }}

@@ -60,12 +60,15 @@ The app has a dual-theme system:
 - `secondary` — gold, used sparingly (hero orbit decoration)
 - `success` — the "Open to remote work" status dot
 - `pageGlow` / `gridDot` — the fixed page backdrop drawn in `globals.js` (`body::before`)
+- `scrim` — the dimmed overlay behind the open mobile menu
 
 When adding new styled-components that need theme-awareness, always use `${props => props.theme.colors.TOKEN}` — never hardcode colors like `white`, `#fff`, or `rgba(255,255,255,...)`.
 
 ### Data / Content
 
-All portfolio content lives in `src/constants/constants.js`: projects, certificates, timeline entries, technologies. To add/edit portfolio entries, edit only this file.
+All portfolio content lives in `src/constants/constants.js`: projects, certificates and timeline entries. To add/edit portfolio entries, edit only this file. The technology cards are the `stack` array in `src/components/Technologies/Technologies.js`.
+
+`CAREER_START` / `yearsOfExperience()` (also in `constants.js`) drive every "N+ years": `index.js` computes it in `getStaticProps` (build time) for the meta description and passes it to `Timeline`, which refreshes it on the client.
 
 Two grouped arrays drive the page:
 
@@ -79,7 +82,9 @@ There is no separate Research/Theses section: the two theses are entries inside 
 ### Global Styles
 
 - `src/styles/globals.js` — `createGlobalStyle` with normalize + body/html base styles. Font size base is `62.5%` (so `1rem = 10px`, `2rem = 20px`).
-- `src/styles/GlobalComponents/index.js` — shared layout primitives: `Section`, `SectionTitle`, `SectionText`, `SectionSubText`, `SectionDivider`, `SecondaryBtn`, `ButtonBack`, `ButtonFront`, `LinkContainer`, `LinkIconImg`.
+- `src/styles/GlobalComponents/index.js` — shared layout primitives: `Section`, `SectionTitle`, `SectionEyebrow`, `SectionText`, `SectionDivider`, `ButtonBack`, `ButtonFront`.
+- `src/styles/GlobalComponents/Button.js` — pill call-to-action rendered as a link (`<Button href=...>`), used for "View Resume".
+- Boolean styling props on styled-components are transient (`$grid`, `$nopadding`, `$main`, `$divider`, `$title`, `$type`…) so they never reach the DOM.
 
 ### Component Pattern
 
@@ -92,8 +97,8 @@ The `ThemeToggle` component (`src/components/ThemeToggle/ThemeToggle.js`) is the
 ### Static Export Notes
 
 - `next.config.js` sets `output: 'export'` — no SSR, no API routes
-- Images must be in `/public/images/` and referenced as `/images/filename.jpg`
-- Image optimization is disabled (`unoptimized: true`)
+- Images must be in `/public/images/` and referenced as `/images/filename.webp`
+- Image optimization is disabled (`unoptimized: true`), so images are served as-is: add them as WebP, resized to about twice their displayed size (cards ~960px wide, hero photo 840px). `profile.jpg` is kept only for `og:image`/`twitter:image`
 - Build output goes to `/out/`
 
 ### Docker / Local Dev

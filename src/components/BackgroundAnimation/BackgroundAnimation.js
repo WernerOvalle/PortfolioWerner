@@ -38,7 +38,6 @@ const BackgroundAnimation = () => {
             fetchPriority="high"
             style={{
               display: "block",
-              objectFit: "cover",
               borderRadius: "20px"
             }}
           />

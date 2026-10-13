@@ -126,5 +126,20 @@ export const Availability = styled.span`
 export const HeroTitle = styled(SectionTitle)`
   && {
     padding-top: 2rem;
+    /* rendered as the page's <h1>: drop normalize's default h1 margin */
+    margin-top: 0;
   }
+`;
+
+// Text for screen readers and crawlers that is not painted on screen.
+export const VisuallyHidden = styled.span`
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 `;

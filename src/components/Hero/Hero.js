@@ -33,7 +33,7 @@ const Hero = () => (
               <VisuallyHidden>{ROLE}</VisuallyHidden>
               <TypedContainer aria-hidden="true">
                 <ReactTyped
-                  strings={["Software Engineer", "Full-Stack Engineer"]}
+                  strings={["Full-Stack Engineer", "Software Engineer"]}
                   typeSpeed={60}
                   backSpeed={40}
                   backDelay={2000}

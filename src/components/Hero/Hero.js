@@ -6,8 +6,15 @@ import {
   Section,
 } from "../../styles/GlobalComponents";
 import Button from "../../styles/GlobalComponents/Button";
-import { Availability, HeroText, HeroTitle, LeftSection, TypedContainer } from "./HeroStyles";
-const Hero = (props) => (
+import { Availability, HeroText, HeroTitle, LeftSection, TypedContainer, VisuallyHidden } from "./HeroStyles";
+
+// Same title as the CV. The typing effect is decorative; the real text is the
+// VisuallyHidden copy, which is what crawlers and screen readers get.
+const ROLE = "Full-Stack Software Engineer";
+// How the role is drawn: two lines, so it fits the text column next to the photo.
+const ROLE_LINES = ["Full-Stack", "Software Engineer"];
+
+const Hero = () => (
   <>
     <Section $row $nopadding>
       <motion.div
@@ -22,21 +29,11 @@ const Hero = (props) => (
             transition={{ duration: 1, delay: 0.3 }}
           >
             <Availability>Open to remote work</Availability>
-            <HeroTitle $main>
+            <HeroTitle as="h1" $main>
               Werner Ovalle <br />
-              <TypedContainer>
-                <ReactTyped
-                  strings={[
-                    "Software Engineer",
-                    "Full-Stack Engineer",
-                    ".NET Specialist",
-                  ]}
-                  typeSpeed={60}
-                  backSpeed={40}
-                  backDelay={2000}
-                  startDelay={500}
-                  loop
-                />
+              <VisuallyHidden>{ROLE}</VisuallyHidden>
+              <TypedContainer aria-hidden="true" data-ghost={`${ROLE_LINES.join("\n")}_`}>
+                <ReactTyped strings={[ROLE_LINES.join("<br>")]} typeSpeed={60} startDelay={500} />
               </TypedContainer>
             </HeroTitle>
           </motion.div>
@@ -47,7 +44,7 @@ const Hero = (props) => (
             transition={{ duration: 1, delay: 0.6 }}
           >
             <HeroText>
-              I build software end to end, from the database to the interface, with deep experience in systems for the financial sector. Now shipping faster with agentic AI.
+              I build software end to end with .NET, React and SQL Server, with deep experience in systems for the financial sector. Now shipping faster with agentic AI.
             </HeroText>
           </motion.div>
 

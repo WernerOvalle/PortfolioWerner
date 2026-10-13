@@ -18,11 +18,13 @@ export const LeftSection = styled.div`
   }
 `;
 
+// The role is typed in once. Its final text (passed as data-ghost) is laid out
+// invisibly in the same grid cell, so the space it needs, wrapping included,
+// is reserved from the start and nothing moves while it types.
 export const TypedContainer = styled.span`
   font-weight: 800;
-  /* slightly smaller than the name so the longest role ("Full-Stack
-     Engineer") stays clear of the profile photo on desktop */
-  font-size: 0.9em;
+  /* smaller than the name so "Software Engineer" fits the text column */
+  font-size: 0.8em;
   background: ${props => props.theme.colors.accentTextGradient};
   background-size: 200% 200%;
   -webkit-background-clip: text;
@@ -40,12 +42,12 @@ export const TypedContainer = styled.span`
   }
   
   &::before {
-    content: "Full-Stack Engineer_";
+    content: attr(data-ghost);
     grid-column: 1;
     grid-row: 1;
     visibility: hidden;
     font-weight: 800;
-    white-space: nowrap;
+    white-space: pre-line;
   }
   
   .typed-cursor {
@@ -126,5 +128,23 @@ export const Availability = styled.span`
 export const HeroTitle = styled(SectionTitle)`
   && {
     padding-top: 2rem;
+    /* rendered as the page's <h1>: drop normalize's default h1 margin */
+    margin-top: 0;
+    /* SectionTitle is max-content wide; here the role has to wrap within the
+       text column instead of pushing into the photo */
+    width: auto;
   }
+`;
+
+// Text for screen readers and crawlers that is not painted on screen.
+export const VisuallyHidden = styled.span`
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 `;

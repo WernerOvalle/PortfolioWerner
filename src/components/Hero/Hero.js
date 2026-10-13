@@ -8,11 +8,10 @@ import {
 import Button from "../../styles/GlobalComponents/Button";
 import { Availability, HeroText, HeroTitle, LeftSection, TypedContainer, VisuallyHidden } from "./HeroStyles";
 
-// Same title as the CV. The typing effect is decorative; the real text is the
-// VisuallyHidden copy, which is what crawlers and screen readers get.
+// Same title as the CV. The typing animation is decorative (it alternates two
+// shorter forms of it); the VisuallyHidden copy is the real text that crawlers
+// and screen readers get.
 const ROLE = "Full-Stack Software Engineer";
-// How the role is drawn: two lines, so it fits the text column next to the photo.
-const ROLE_LINES = ["Full-Stack", "Software Engineer"];
 
 const Hero = () => (
   <>
@@ -32,8 +31,15 @@ const Hero = () => (
             <HeroTitle as="h1" $main>
               Werner Ovalle <br />
               <VisuallyHidden>{ROLE}</VisuallyHidden>
-              <TypedContainer aria-hidden="true" data-ghost={`${ROLE_LINES.join("\n")}_`}>
-                <ReactTyped strings={[ROLE_LINES.join("<br>")]} typeSpeed={60} startDelay={500} />
+              <TypedContainer aria-hidden="true">
+                <ReactTyped
+                  strings={["Software Engineer", "Full-Stack Engineer"]}
+                  typeSpeed={60}
+                  backSpeed={40}
+                  backDelay={2000}
+                  startDelay={500}
+                  loop
+                />
               </TypedContainer>
             </HeroTitle>
           </motion.div>

@@ -11,12 +11,6 @@ export const Section = styled.section`
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
 
-  /* the hero's photo column is hidden below this width (HeroVisual), so the
-     text takes the full row instead of half of it */
-  @media only screen and (max-width: 1150px) {
-    grid-template-columns: 1fr;
-  }
-
 
   
   @media ${(props) => props.theme.breakpoints.md} {

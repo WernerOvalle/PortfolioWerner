@@ -22,9 +22,9 @@ import {
 } from "./TechnologiesStyles";
 
 const stack = [
-  { title: "Back-End", Icon: TbBrandCSharp, items: ["C#", "ASP.NET", "Entity Framework", "Node.js"] },
+  { title: "Back-End", Icon: TbBrandCSharp, items: ["C#", ".NET", "Entity Framework", "Node.js"] },
   { title: "Database", Icon: TbDatabase, items: ["SQL Server", "T-SQL", "PostgreSQL", "Prisma"] },
-  { title: "Front-End", Icon: TbBrandReact, items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+  { title: "Front-End", Icon: TbBrandReact, items: ["React", "Next.js", "TypeScript", "ASP.NET"] },
   { title: "DevOps", Icon: TbBrandDocker, items: ["Azure DevOps", "Microsoft Azure", "Docker", "CI/CD"] },
   { title: "Agentic AI", Icon: TbSparkles, items: ["Claude Code", "Agent Skills", "SDD"], stacked: true },
 ];

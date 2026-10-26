@@ -77,10 +77,11 @@ export const certificateCategories = [
     color: "#0078d4",
     items: [
       {
-        title: "Azure Developer Course — Udemy",
-        image: "/images/udemy-az204-certificate.webp",
-        visit: "https://www.udemy.com/certificate/UC-1b880a76-4fc7-48ad-86ad-e720ab9520ff/",
-        description: "Azure application development: App Service, Azure Functions, containers, Cosmos DB, Blob Storage, Redis Cache, Entra ID, Key Vault, Service Bus, Event Grid, Event Hubs, Application Insights and API Management. Complemented with the AZ-204 Exam Guide (2nd ed., Packt 2024) and practice exams.",
+        title: "Develop AI Cloud Solutions on Azure (AI-200T00) — Microsoft",
+        image: "/images/microsoft-ai200-azure-ai-cloud-certificate.webp",
+        visit: "https://learn.microsoft.com/api/achievements/share/en-us/WernerOvalle-5426/3Z9BTSTH?sharingId=1AB1E00336B5B3FE",
+        description: "Microsoft Official Course (2026): containerized apps (App Service, Container Apps, AKS), data services for AI (Cosmos DB), serverless and event-driven integration (Azure Functions), and security and monitoring on Azure.",
+        featured: true,
         id: 17,
       },
       {

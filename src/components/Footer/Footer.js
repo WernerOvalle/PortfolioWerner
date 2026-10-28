@@ -1,7 +1,7 @@
 import React from "react";
 import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
 import { HiMail } from "react-icons/hi";
-import { SiNetlify } from "react-icons/si";
+import { SiNetlify, SiUdemy } from "react-icons/si";
 import { SocialIcons } from "../Header/HeaderStyles";
 import {
   CompanyContainer,
@@ -54,6 +54,9 @@ const Footer = () => {
           </SocialIcons>
           <SocialIcons href="https://www.youtube.com/@OvalleWerner" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
             <AiFillYoutube size="3rem" />
+          </SocialIcons>
+          <SocialIcons href="https://www.udemy.com/user/werner-ovalle/" target="_blank" rel="noopener noreferrer" aria-label="Udemy">
+            <SiUdemy size="3rem" />
           </SocialIcons>
         </SocialContainer>
       </SocialIconsContainer>

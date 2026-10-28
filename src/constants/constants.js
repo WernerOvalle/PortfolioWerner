@@ -39,12 +39,6 @@ export const certificateCategories = [
         id: 20,
       },
       {
-        title: "Bachelor's Diploma — Systems Engineering",
-        image: "/images/bachelor-diploma-systems-engineering.webp",
-        visit: "https://drive.google.com/file/d/1TxxB7a42UPRb4Z2fx7TcAyMrnFgCvP6Y/view",
-        id: 1,
-      },
-      {
         title: "EF SET English Certificate — 59/100 B2 Upper Intermediate",
         image: "/images/efset-english-certificate.webp",
         visit: "https://cert.efset.org/en/gSKS8F",

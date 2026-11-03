@@ -26,7 +26,7 @@ const stack = [
   { title: "Database", Icon: TbDatabase, items: ["SQL Server", "T-SQL", "PostgreSQL", "Prisma"] },
   { title: "Front-End", Icon: TbBrandReact, items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
   { title: "DevOps", Icon: TbBrandDocker, items: ["Azure DevOps", "Microsoft Azure", "Docker", "CI/CD"] },
-  { title: "Agentic AI", Icon: TbSparkles, items: ["Claude Code", "Cursor", "Agent Skills", "SDD"], stacked: true },
+  { title: "Agentic AI", Icon: TbSparkles, items: ["Claude Code", "Agent Skills", "SDD", "Cursor"] },
 ];
 
 // Cards reveal one after another, then each card's chips pop in one by one.
